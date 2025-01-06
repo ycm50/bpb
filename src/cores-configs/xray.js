@@ -1,1 +1,973 @@
-const a0_0x72653=a0_0x50ee;(function(_0x5c5c0e,_0x3af812){const _0x10f2b6=a0_0x50ee,_0x491d68=_0x5c5c0e();while(!![]){try{const _0xc3a83a=parseInt(_0x10f2b6(0xc1))/0x1+parseInt(_0x10f2b6(0x6f))/0x2+parseInt(_0x10f2b6(0xea))/0x3+parseInt(_0x10f2b6(0xf1))/0x4+-parseInt(_0x10f2b6(0xaf))/0x5+-parseInt(_0x10f2b6(0xe2))/0x6+-parseInt(_0x10f2b6(0xc5))/0x7*(parseInt(_0x10f2b6(0x101))/0x8);if(_0xc3a83a===_0x3af812)break;else _0x491d68['push'](_0x491d68['shift']());}catch(_0x585570){_0x491d68['push'](_0x491d68['shift']());}}}(a0_0x4661,0xdbc28));import{resolveDNS,isDomain}from'../helpers/helpers';import{getConfigAddresses,extractWireguardParams,base64ToDecimal,generateRemark,randomUpperCase,getRandomPath}from'./helpers';function a0_0x4661(){const _0x440863=['bn1','prox-','2606:4700:4700::1001','50-70','2778996NPioJP','30s','dns-in','443','wsSettings','prox-2','ipv6','unshift','probeInterval','http','60-70','dns','push','settings','reality','tls','2295848lfESEl','geoip:cn','includes','grpc','cloudflare-dns.com','tnp','dialerProxy','geosite:category-ads-all','expectIPs','destOverride','inbounds','no-store','field','30-40','split','shift','auto','geosite:category-ru','stringify','geosite:private','3577986BMaLgk','https://cloudflare-dns.com/dns-query','nikang','direct','fallbackTag','IPIfNonMatch','ipv4','userID','staticIPs','chain-','10-30','http/1.1','full:','google.com','dokodemo-door','leastPing','entries','200','tcp','domainStrategy','all','prox','Trojan','dns-out','balancers','70-90','streamSettings','20-30','fakedns','path','outboundTag','rules','geosite:category-ir','server','reject','40-60','proxySettings','outbounds','interval','1.0.0.1','multi','sniffing','-\x20Best\x20Ping\x20🚀','keys','10-20','\x20-\x20WoW','💦\x20BPB\x20F\x20-\x20Best\x20Ping\x20💥','50-60','defaultHttpsPorts','noauth','geosite:category-ads-ir','dash.cloudflare.com','tcpNoDelay','geoip:ru','UseIPv4','servers','http-in','127.0.0.1','packets','1.1','80-90','grpcSettings','routing','UseIPv4v6','1600280WAOZJQ','hostName','length','forEach','100-200','tcpSettings','udp','chain-2','none','parse','put','proxy','90-100','hostname','chain','fragment','sockopt','no-store,\x20no-cache,\x20must-revalidate,\x20proxy-revalidate','953308wjGhoz','1.1.1.1','socks','all-proxy','49jjRjpO','socks-in','domain','mux','domains','fake-outbound','block','assign','🇮🇷','application/octet-stream','80-100','observatory','60-80','Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/127.0.0.0\x20Safari/537.36','realitySettings','20-40','text/plain;charset=utf-8','freedom','💦\x20','40-50','\x20Pro\x20','domain:','map','geosite:cn','VLESS','tag','remarks','tcpKeepAliveIdle','?ed=2560','5160972aPrYpz','filter','geoip:ir','\x20-\x20Warp','70-80','security','randomized','1-1','1956513ayavYz','tlsSettings','tcp,udp'];a0_0x4661=function(){return _0x440863;};return a0_0x4661();}import{getDataset}from'../kv/handlers';async function buildXrayDNS(_0x2c42cf,_0x13da7e,_0x8bf658,_0x2326a5,_0x1dfe16){const _0x4f9d26=a0_0x50ee,{remoteDNS:_0x56e854,resolvedRemoteDNS:_0x5cadff,localDNS:_0x4c394c,vnpTrojanFakeDNS:_0x5e5d75,enableIPv6:_0x16fcb4,warpFakeDNS:_0x4a2d86,warpEnableIPv6:_0xca33da,blockAds:_0x3f71fa,bypassIran:_0x628c74,bypassChina:_0x341d25,blockPorn:_0x184961,bypassRussia:_0x565b96,customBypassRules:_0x58a5fc,customBlockRules:_0x20cca8}=_0x2c42cf,_0x246909=[{'rule':_0x628c74,'domain':'geosite:category-ir','ip':_0x4f9d26(0xe4)},{'rule':_0x341d25,'domain':_0x4f9d26(0xdc),'ip':'geoip:cn'},{'rule':_0x565b96,'domain':_0x4f9d26(0x112),'ip':_0x4f9d26(0xa4)}],_0x4b21df=[{'rule':_0x3f71fa,'host':_0x4f9d26(0x108)},{'rule':_0x3f71fa,'host':_0x4f9d26(0xa1)},{'rule':_0x184961,'host':'geosite:category-porn'}],_0xee76a9=_0x5e5d75&&!_0x1dfe16||_0x4a2d86&&_0x1dfe16,_0x3fefbe=_0x16fcb4&&!_0x1dfe16||_0xca33da&&_0x1dfe16,_0x561378=_0x13da7e['filter'](_0x119151=>isDomain(_0x119151)),_0x4cf941=_0x58a5fc[_0x4f9d26(0x10f)](',')[_0x4f9d26(0xe3)](_0x4d13bf=>isDomain(_0x4d13bf)),_0xe3b76e=_0x20cca8[_0x4f9d26(0x10f)](',')[_0x4f9d26(0xe3)](_0x155947=>isDomain(_0x155947)),_0xbbc8fe=[...new Set(_0x561378)],_0x4d9863=[..._0xbbc8fe,..._0x4cf941][_0x4f9d26(0xb1)]>0x0,_0x4e637a=_0x628c74||_0x341d25||_0x565b96,_0x296566=_0x3f71fa||_0x184961||_0xe3b76e[_0x4f9d26(0xb1)]>0x0,_0xb83939=_0x2326a5?[_0x4f9d26(0x70)]:_0x1dfe16?_0xca33da?['1.1.1.1','1.0.0.1','2606:4700:4700::1111',_0x4f9d26(0xef)]:[_0x4f9d26(0xc2),_0x4f9d26(0x96)]:[_0x56e854],_0x4b844b={};_0x296566&&(_0x4b21df['forEach'](({rule:_0x537af4,host:_0x3d260e})=>{const _0xa14cbb=_0x4f9d26;if(_0x537af4)_0x4b844b[_0x3d260e]=[_0xa14cbb(0xa8)];}),_0xe3b76e['forEach'](_0xc1ff10=>{const _0x289aaf=_0x4f9d26;_0x4b844b[_0x289aaf(0xda)+_0xc1ff10]=[_0x289aaf(0xa8)];}));const _0xcc3a84=_0x8bf658?await resolveDNS(_0x8bf658):undefined;if(_0xcc3a84)_0x4b844b[_0x8bf658]=_0x16fcb4?[..._0xcc3a84[_0x4f9d26(0x75)],..._0xcc3a84[_0x4f9d26(0xf7)]]:_0xcc3a84[_0x4f9d26(0x75)];if(_0x5cadff[_0x4f9d26(0x90)]&&!_0x2326a5&&!_0x1dfe16)_0x4b844b[_0x5cadff['server']]=_0x5cadff[_0x4f9d26(0x77)];if(_0x2326a5){const _0x15b1a5=[_0x4f9d26(0x105),'cloudflare.com',_0x4f9d26(0xa2)],_0x60bb18=await Promise['all'](_0x15b1a5['map'](resolveDNS)),_0x531d06=_0x60bb18['flatMap'](_0x5ea73e=>_0x5ea73e['ipv4']),_0x4d47cc=_0x16fcb4?_0x60bb18['flatMap'](_0x1a630c=>_0x1a630c[_0x4f9d26(0xf7)]):[];_0x4b844b[_0x4f9d26(0x105)]=[..._0x531d06,..._0x4d47cc];}const _0x3630f0=Object[_0x4f9d26(0x9a)](_0x4b844b)[_0x4f9d26(0xb1)]?{'hosts':_0x4b844b}:{},_0x242b50={..._0x3630f0,'servers':_0xb83939,'queryStrategy':_0x3fefbe?'UseIP':_0x4f9d26(0xa5),'tag':_0x4f9d26(0xfc)};if(_0x4d9863){const _0x405153=_0xbbc8fe[_0x4f9d26(0xdb)](_0x5bd774=>_0x4f9d26(0x7b)+_0x5bd774),_0x5d7086=_0x4cf941[_0x4f9d26(0xdb)](_0xc46115=>_0x4f9d26(0xda)+_0xc46115);_0x242b50[_0x4f9d26(0xa6)]['push']({'address':_0x4c394c,'domains':[..._0x405153,..._0x5d7086],'skipFallback':!![]});}const _0x1ba8e6={'address':_0x4c394c,'domains':[],'expectIPs':[],'skipFallback':!![]};!_0x2326a5&&_0x4e637a&&(_0x246909[_0x4f9d26(0xb2)](({rule:_0x45e8c3,domain:_0x494e7d,ip:_0x29417b})=>{const _0x299673=_0x4f9d26;_0x45e8c3&&(_0x1ba8e6['domains'][_0x299673(0xfd)](_0x494e7d),_0x1ba8e6[_0x299673(0x109)]['push'](_0x29417b));}),_0x242b50[_0x4f9d26(0xa6)][_0x4f9d26(0xfd)](_0x1ba8e6));if(_0xee76a9){const _0x2d1bfc=_0x4e637a&&!_0x2326a5?{'address':_0x4f9d26(0x8b),'domains':_0x1ba8e6[_0x4f9d26(0xc9)]}:_0x4f9d26(0x8b);_0x242b50['servers'][_0x4f9d26(0xf8)](_0x2d1bfc);}return _0x242b50;}function buildXrayRoutingRules(_0x5c8b5e,_0x4a9286,_0x32141b,_0x450c5f,_0x57a455,_0x407d8e){const _0x584abb=a0_0x50ee,{remoteDNS:_0x1ccd95,localDNS:_0xbdeb38,bypassLAN:_0x26bd4b,bypassIran:_0x209fe4,bypassChina:_0x3e5ea8,bypassRussia:_0x2f08a7,blockAds:_0x5dc671,blockPorn:_0x3d4616,blockUDP443:_0x43fd82,customBypassRules:_0x3df4a9,customBlockRules:_0x40c50c}=_0x5c8b5e,_0x2346f7=[{'rule':_0x26bd4b,'type':_0x584abb(0x72),'domain':_0x584abb(0x114),'ip':'geoip:private'},{'rule':_0x209fe4,'type':'direct','domain':_0x584abb(0x8f),'ip':_0x584abb(0xe4)},{'rule':_0x3e5ea8,'type':'direct','domain':_0x584abb(0xdc),'ip':_0x584abb(0x102)},{'rule':_0x5dc671,'type':_0x584abb(0xcb),'domain':_0x584abb(0x108)},{'rule':_0x5dc671,'type':_0x584abb(0xcb),'domain':_0x584abb(0xa1)},{'rule':_0x3d4616,'type':_0x584abb(0xcb),'domain':'geosite:category-porn'}],_0x3a4bd0=_0x4a9286[_0x584abb(0xe3)](_0x51f6fe=>isDomain(_0x51f6fe)),_0x22e1eb=_0x3df4a9?_0x3df4a9[_0x584abb(0x10f)](','):[],_0x416d7c=_0x40c50c?_0x40c50c[_0x584abb(0x10f)](','):[],_0x216e3c=_0x22e1eb['filter'](_0x3e27c2=>isDomain(_0x3e27c2)),_0x2345af=[..._0x3a4bd0,..._0x216e3c][_0x584abb(0xb1)]>0x0,_0x285a09=_0x5dc671||_0x3d4616||_0x416d7c['length']>0x0,_0x3a384b=_0x209fe4||_0x3e5ea8||_0x2f08a7||_0x22e1eb['length']>0x0,_0x17d5df=[{'inboundTag':[_0x584abb(0xf3)],'outboundTag':_0x584abb(0x86),'type':_0x584abb(0x10d)},{'inboundTag':[_0x584abb(0xc6),_0x584abb(0xa7)],'port':'53','outboundTag':_0x584abb(0x86),'type':'field'}];if(!_0x57a455&&(_0x2345af||_0x3a384b))_0x17d5df[_0x584abb(0xfd)]({'ip':[_0xbdeb38],'port':'53','network':'udp','outboundTag':_0x584abb(0x72),'type':_0x584abb(0x10d)});if(_0x3a384b||_0x285a09){const _0x5b249a=(_0x3f2773,_0x497ef2)=>({[_0x3f2773]:[],'outboundTag':_0x497ef2,'type':'field'});let _0x1c13a9,_0x253d43;!_0x57a455&&(_0x1c13a9=_0x5b249a(_0x584abb(0xc7),_0x584abb(0x72)),_0x253d43=_0x5b249a('ip','direct'));let _0x3cedf9=_0x5b249a(_0x584abb(0xc7),'block'),_0x5734f3=_0x5b249a('ip','block');_0x2346f7['forEach'](({rule:_0x3e26ce,type:_0x143bd8,domain:_0x3c3702,ip:_0x4ea9ef})=>{const _0x53b3f3=_0x584abb;_0x3e26ce&&(_0x143bd8===_0x53b3f3(0x72)?(_0x1c13a9?.['domain'][_0x53b3f3(0xfd)](_0x3c3702),_0x253d43?.['ip']?.[_0x53b3f3(0xfd)](_0x4ea9ef)):_0x3cedf9[_0x53b3f3(0xc7)][_0x53b3f3(0xfd)](_0x3c3702));}),_0x22e1eb['forEach'](_0x43a830=>{const _0x555309=_0x584abb;isDomain(_0x43a830)?_0x1c13a9?.[_0x555309(0xc7)][_0x555309(0xfd)]('domain:'+_0x43a830):_0x253d43?.['ip'][_0x555309(0xfd)](_0x43a830);}),_0x416d7c[_0x584abb(0xb2)](_0x235d67=>{const _0x2e97da=_0x584abb;isDomain(_0x235d67)?_0x3cedf9[_0x2e97da(0xc7)][_0x2e97da(0xfd)](_0x2e97da(0xda)+_0x235d67):_0x5734f3['ip'][_0x2e97da(0xfd)](_0x235d67);}),!_0x57a455&&(_0x1c13a9[_0x584abb(0xc7)]['length']&&_0x17d5df[_0x584abb(0xfd)](_0x1c13a9),_0x253d43['ip'][_0x584abb(0xb1)]&&_0x17d5df[_0x584abb(0xfd)](_0x253d43)),_0x3cedf9[_0x584abb(0xc7)][_0x584abb(0xb1)]&&_0x17d5df[_0x584abb(0xfd)](_0x3cedf9),_0x5734f3['ip'][_0x584abb(0xb1)]&&_0x17d5df[_0x584abb(0xfd)](_0x5734f3);}_0x43fd82&&_0x17d5df[_0x584abb(0xfd)]({'network':_0x584abb(0xb5),'port':_0x584abb(0xf4),'outboundTag':'block','type':'field'});if(_0x32141b){const _0x202a60={[_0x450c5f?'balancerTag':_0x584abb(0x8d)]:_0x450c5f?_0x584abb(0xc4):_0x584abb(0xba),'type':'field'};if(!_0x407d8e){const _0x1f167a=new URL(_0x1ccd95),_0x3130b4=_0x1f167a[_0x584abb(0xbc)];_0x17d5df[_0x584abb(0xfd)]({[isDomain(_0x3130b4)?_0x584abb(0xc7):'ip']:[_0x3130b4],'network':_0x584abb(0x81),..._0x202a60});}else _0x17d5df[_0x584abb(0xfd)]({'network':_0x584abb(0xb5),'port':'53',..._0x202a60});}return _0x450c5f?_0x17d5df[_0x584abb(0xfd)]({'network':'tcp,udp','balancerTag':_0x584abb(0x83),'type':_0x584abb(0x10d)}):_0x17d5df[_0x584abb(0xfd)]({'network':_0x584abb(0xec),'outboundTag':_0x32141b?_0x584abb(0xbd):_0x57a455?_0x584abb(0xbe):'proxy','type':'field'}),_0x17d5df;}function buildXrayVLESSOutbound(_0x2f9c9f,_0x473d7c,_0x1770da,_0x33ad5b,_0x1b4ff2,_0x1fd00a,_0x2a6bf9,_0x246003,_0x7d724a){const _0x30dbb2=a0_0x50ee,_0x1061ca={'protocol':'vnp','settings':{'vnext':[{'address':_0x473d7c,'port':+_0x1770da,'users':[{'id':globalThis[_0x30dbb2(0x76)],'encryption':_0x30dbb2(0xb7),'level':0x8}]}]},'streamSettings':{'network':'ws','security':_0x30dbb2(0xb7),'sockopt':{},'wsSettings':{'headers':{'Host':_0x33ad5b,'User-Agent':_0x30dbb2(0xd2)},'path':'/'+getRandomPath(0x10)+(_0x1fd00a?'/'+btoa(_0x1fd00a):'')+_0x30dbb2(0xe1)}},'tag':_0x2f9c9f};globalThis[_0x30dbb2(0x9f)]['includes'](_0x1770da)&&(_0x1061ca[_0x30dbb2(0x89)][_0x30dbb2(0xe7)]=_0x30dbb2(0x100),_0x1061ca['streamSettings'][_0x30dbb2(0xeb)]={'allowInsecure':_0x246003,'fingerprint':_0x30dbb2(0xe8),'alpn':['h2','http/1.1'],'serverName':_0x1b4ff2});const _0x85e3f1=_0x1061ca[_0x30dbb2(0x89)][_0x30dbb2(0xbf)];return _0x2a6bf9?_0x85e3f1[_0x30dbb2(0x107)]=_0x30dbb2(0xbe):(_0x85e3f1[_0x30dbb2(0xe0)]=0x1e,_0x85e3f1[_0x30dbb2(0xa3)]=!![],_0x85e3f1[_0x30dbb2(0x82)]=_0x7d724a?_0x30dbb2(0xae):_0x30dbb2(0xa5)),_0x1061ca;}function a0_0x50ee(_0x34f458,_0x24b886){const _0x4661a9=a0_0x4661();return a0_0x50ee=function(_0x50eeeb,_0x213f6f){_0x50eeeb=_0x50eeeb-0x6f;let _0x2f78d7=_0x4661a9[_0x50eeeb];return _0x2f78d7;},a0_0x50ee(_0x34f458,_0x24b886);}function buildXrayTrojanOutbound(_0x2d0bb8,_0x57cd82,_0x3f7f47,_0x44a0b8,_0x474415,_0x876b85,_0x1d4934,_0x1ac85e,_0x2f1c6d){const _0x4a21d2=a0_0x50ee,_0x5606d2={'protocol':_0x4a21d2(0x106),'settings':{'servers':[{'address':_0x57cd82,'port':+_0x3f7f47,'password':globalThis['tnpPassword'],'level':0x8}]},'streamSettings':{'network':'ws','security':_0x4a21d2(0xb7),'sockopt':{},'wsSettings':{'headers':{'Host':_0x44a0b8},'path':'/tr'+getRandomPath(0x10)+(_0x876b85?'/'+btoa(_0x876b85):'')+_0x4a21d2(0xe1)}},'tag':_0x2d0bb8};globalThis[_0x4a21d2(0x9f)][_0x4a21d2(0x103)](_0x3f7f47)&&(_0x5606d2[_0x4a21d2(0x89)][_0x4a21d2(0xe7)]=_0x4a21d2(0x100),_0x5606d2[_0x4a21d2(0x89)][_0x4a21d2(0xeb)]={'allowInsecure':_0x1ac85e,'fingerprint':_0x4a21d2(0xe8),'alpn':['h2',_0x4a21d2(0x7a)],'serverName':_0x474415});const _0xac7cc0=_0x5606d2['streamSettings']['sockopt'];return _0x1d4934?_0xac7cc0[_0x4a21d2(0x107)]='fragment':(_0xac7cc0['tcpKeepAliveIdle']=0x1e,_0xac7cc0[_0x4a21d2(0xa3)]=!![],_0xac7cc0[_0x4a21d2(0x82)]=_0x2f1c6d?_0x4a21d2(0xae):'UseIPv4'),_0x5606d2;}function buildXrayWarpOutbound(_0xd2fbbf,_0x97d30a,_0x380b19,_0x232931,_0x5114e2){const _0x5b642c=a0_0x50ee,{warpEnableIPv6:_0x17279f,nikaNGNoiseMode:_0x94348c,noiseCountMin:_0x3e02e5,noiseCountMax:_0x497654,noiseSizeMin:_0x2137fe,noiseSizeMax:_0x14c8cf,noiseDelayMin:_0x387bd7,noiseDelayMax:_0x81ac4b}=_0xd2fbbf,{warpIPv6:_0x2f1931,reserved:_0x992f76,publicKey:_0x396ac0,privateKey:_0x1c1249}=extractWireguardParams(_0x97d30a,_0x232931),_0x4cc0a7={'protocol':'wireguard','settings':{'address':['172.16.0.2/32',_0x2f1931],'mtu':0x500,'peers':[{'endpoint':_0x380b19,'publicKey':_0x396ac0,'keepAlive':0x5}],'reserved':base64ToDecimal(_0x992f76),'secretKey':_0x1c1249},'streamSettings':{'sockopt':{'dialerProxy':_0x5b642c(0xba),'domainStrategy':_0x17279f?_0x5b642c(0xae):_0x5b642c(0xa5)}},'tag':_0x232931?_0x5b642c(0xbd):_0x5b642c(0xba)};return!_0x232931&&delete _0x4cc0a7['streamSettings'],_0x5114e2===_0x5b642c(0x71)&&!_0x232931&&Object[_0x5b642c(0xcc)](_0x4cc0a7[_0x5b642c(0xfe)],{'wnoise':_0x94348c,'wnoisecount':_0x3e02e5===_0x497654?_0x3e02e5:_0x3e02e5+'-'+_0x497654,'wpayloadsize':_0x2137fe===_0x14c8cf?_0x2137fe:_0x2137fe+'-'+_0x14c8cf,'wnoisedelay':_0x387bd7===_0x81ac4b?_0x387bd7:_0x387bd7+'-'+_0x81ac4b}),_0x4cc0a7;}function buildXrayChainOutbound(_0x3d8b3f,_0xc72b00){const _0x36d729=a0_0x50ee;if([_0x36d729(0xc3),_0x36d729(0xfa)][_0x36d729(0x103)](_0x3d8b3f['protocol'])){const {protocol:_0x375315,server:_0x50568b,port:_0x46fd41,user:_0x383b3f,pass:_0x289d27}=_0x3d8b3f;return{'protocol':_0x375315,'settings':{'servers':[{'address':_0x50568b,'port':+_0x46fd41,'users':[{'user':_0x383b3f,'pass':_0x289d27,'level':0x8}]}]},'streamSettings':{'network':'tcp','sockopt':{'dialerProxy':_0x36d729(0xba),'domainStrategy':_0xc72b00?'UseIPv4v6':_0x36d729(0xa5),'tcpNoDelay':!![]}},'mux':{'enabled':!![],'concurrency':0x8,'xudpConcurrency':0x10,'xudpProxyUDP443':_0x36d729(0x91)},'tag':'chain'};}const {server:_0x1562da,port:_0x296bd6,uuid:_0x22f848,flow:_0x70ed2b,security:_0x16b706,type:_0x275844,sni:_0x5d2203,fp:_0x4bad54,alpn:_0x40942a,pbk:_0x7c7349,sid:_0x48468c,spx:_0x460d11,headerType:_0x11e80c,host:_0x3c16f0,path:_0x3f06b0,authority:_0x7e1e33,serviceName:_0x2bce5b,mode:_0xda5e5a}=_0x3d8b3f,_0x57510b={'mux':{'concurrency':0x8,'enabled':!![],'xudpConcurrency':0x10,'xudpProxyUDP443':'reject'},'protocol':'vnp','settings':{'vnext':[{'address':_0x1562da,'port':+_0x296bd6,'users':[{'encryption':_0x36d729(0xb7),'flow':_0x70ed2b,'id':_0x22f848,'level':0x8,'security':_0x36d729(0x111)}]}]},'streamSettings':{'network':_0x275844,'security':_0x16b706,'sockopt':{'dialerProxy':_0x36d729(0xba),'domainStrategy':_0xc72b00?_0x36d729(0xae):_0x36d729(0xa5),'tcpNoDelay':!![]}},'tag':_0x36d729(0xbd)};if(_0x16b706===_0x36d729(0x100)){const _0x4adf08=_0x40942a?_0x40942a?.[_0x36d729(0x10f)](','):[];_0x57510b[_0x36d729(0x89)][_0x36d729(0xeb)]={'allowInsecure':![],'fingerprint':_0x4bad54,'alpn':_0x4adf08,'serverName':_0x5d2203};}_0x16b706===_0x36d729(0xff)&&(delete _0x57510b[_0x36d729(0xc8)],_0x57510b['streamSettings'][_0x36d729(0xd3)]={'fingerprint':_0x4bad54,'publicKey':_0x7c7349,'serverName':_0x5d2203,'shortId':_0x48468c,'spiderX':_0x460d11});if(_0x11e80c===_0x36d729(0xfa)){const _0x53fc7b=_0x3f06b0?.['split'](','),_0x2db677=_0x3c16f0?.[_0x36d729(0x10f)](',');_0x57510b['streamSettings'][_0x36d729(0xb4)]={'header':{'request':{'headers':{'Host':_0x2db677},'method':'GET','path':_0x53fc7b,'version':_0x36d729(0xaa)},'response':{'headers':{'Content-Type':[_0x36d729(0xce)]},'reason':'OK','status':_0x36d729(0x80),'version':_0x36d729(0xaa)},'type':_0x36d729(0xfa)}};}if(_0x275844===_0x36d729(0x81)&&_0x16b706!=='reality'&&!_0x11e80c)_0x57510b[_0x36d729(0x89)][_0x36d729(0xb4)]={'header':{'type':_0x36d729(0xb7)}};if(_0x275844==='ws')_0x57510b[_0x36d729(0x89)][_0x36d729(0xf5)]={'headers':{'Host':_0x3c16f0},'path':_0x3f06b0};return _0x275844===_0x36d729(0x104)&&(delete _0x57510b[_0x36d729(0xc8)],_0x57510b['streamSettings'][_0x36d729(0xac)]={'authority':_0x7e1e33,'multiMode':_0xda5e5a===_0x36d729(0x97),'serviceName':_0x2bce5b}),_0x57510b;}function buildXrayConfig(_0x23ba20,_0x481166,_0x2cb409,_0x59ff35,_0x3a02fc,_0x5f15a2,_0x51c56f){const _0x4ae448=a0_0x50ee,{vnpTrojanFakeDNS:_0x4102d0,enableIPv6:_0x1b7a58,warpFakeDNS:_0x5bddcb,bestVLESSTrojanInterval:_0x30438a,bestWarpInterval:_0x49c037,lengthMin:_0x5349e9,lengthMax:_0x4c6512,intervalMin:_0x43d74d,intervalMax:_0x284fc1,fragmentPackets:_0x51edd4}=_0x23ba20,_0x9aa223=_0x4102d0&&!_0x51c56f||_0x5bddcb&&_0x51c56f,_0x35dbdd=structuredClone(xrayConfigTemp);_0x35dbdd[_0x4ae448(0xdf)]=_0x481166;_0x9aa223&&(_0x35dbdd[_0x4ae448(0x10b)][0x0][_0x4ae448(0x98)][_0x4ae448(0x10a)][_0x4ae448(0xfd)]('fakedns'),_0x35dbdd['inbounds'][0x1]['sniffing']['destOverride'][_0x4ae448(0xfd)](_0x4ae448(0x8b)));if(_0x2cb409){const _0x26a5bc=_0x35dbdd[_0x4ae448(0x94)][0x0][_0x4ae448(0xfe)]['fragment'];_0x26a5bc['length']=_0x5349e9+'-'+_0x4c6512,_0x26a5bc[_0x4ae448(0x95)]=_0x43d74d+'-'+_0x284fc1,_0x26a5bc[_0x4ae448(0xa9)]=_0x51edd4,_0x35dbdd[_0x4ae448(0x94)][0x0][_0x4ae448(0xfe)]['domainStrategy']=_0x1b7a58?'UseIPv4v6':_0x4ae448(0xa5);}else _0x35dbdd[_0x4ae448(0x94)][_0x4ae448(0x110)]();if(_0x59ff35){const _0xe8d3d8=_0x51c56f?_0x49c037:_0x30438a;_0x35dbdd[_0x4ae448(0xd0)][_0x4ae448(0xf9)]=_0xe8d3d8+'s';if(_0x5f15a2)_0x35dbdd[_0x4ae448(0xad)][_0x4ae448(0x87)][0x0][_0x4ae448(0x73)]=_0x4ae448(0xf6);if(_0x3a02fc){_0x35dbdd[_0x4ae448(0xd0)]['subjectSelector'][_0x4ae448(0xfd)](_0x4ae448(0xbd));const _0x2a564c=structuredClone(_0x35dbdd[_0x4ae448(0xad)][_0x4ae448(0x87)][0x0]);if(_0x5f15a2)_0x2a564c['fallbackTag']=_0x4ae448(0xb6);_0x35dbdd[_0x4ae448(0xad)]['balancers'][_0x4ae448(0xfd)]({..._0x2a564c,'selector':['chain']}),_0x35dbdd[_0x4ae448(0xad)]['balancers'][0x0][_0x4ae448(0xde)]=_0x4ae448(0xc4);}}else delete _0x35dbdd['observatory'],delete _0x35dbdd[_0x4ae448(0xad)]['balancers'];return _0x35dbdd;}async function buildXrayBestPingConfig(_0x22d812,_0x40dc4a,_0x1a7b9c,_0x573a1b,_0x25a048){const _0x2efdb3=a0_0x50ee,_0x1353bb=_0x25a048?_0x2efdb3(0x9d):'💦\x20BPB\x20-\x20Best\x20Ping\x20💥',_0x7ca293=buildXrayConfig(_0x22d812,_0x1353bb,_0x25a048,!![],_0x1a7b9c,!![]);return _0x7ca293[_0x2efdb3(0xfc)]=await buildXrayDNS(_0x22d812,_0x40dc4a,undefined,![],![]),_0x7ca293[_0x2efdb3(0xad)][_0x2efdb3(0x8e)]=buildXrayRoutingRules(_0x22d812,_0x40dc4a,_0x1a7b9c,!![],![],![]),_0x7ca293[_0x2efdb3(0x94)][_0x2efdb3(0xf8)](..._0x573a1b),_0x7ca293;}async function buildXrayBestFragmentConfig(_0x49c1d0,_0x43c1bf,_0x507983,_0xc1df5){const _0x557bb0=a0_0x50ee,_0x1dce31=[_0x557bb0(0x9b),_0x557bb0(0x8a),_0x557bb0(0x10e),_0x557bb0(0xd8),_0x557bb0(0x9e),_0x557bb0(0xfb),_0x557bb0(0xe6),_0x557bb0(0xab),_0x557bb0(0xbb),_0x557bb0(0x79),_0x557bb0(0xd4),'30-50',_0x557bb0(0x92),_0x557bb0(0xf0),_0x557bb0(0xd1),_0x557bb0(0x88),_0x557bb0(0xcf),_0x557bb0(0xb3)],_0x1893c8=buildXrayConfig(_0x49c1d0,'💦\x20BPB\x20F\x20-\x20Best\x20Fragment\x20😎',!![],!![],_0x507983,![],![]);_0x1893c8['dns']=await buildXrayDNS(_0x49c1d0,[],_0x43c1bf,![],![]),_0x1893c8[_0x557bb0(0xad)]['rules']=buildXrayRoutingRules(_0x49c1d0,[],_0x507983,!![],![],![]);const _0x5f02e2=_0x1893c8[_0x557bb0(0x94)][_0x557bb0(0x110)](),_0x5c2876=[];return _0x1dce31[_0x557bb0(0xb2)]((_0x5d459c,_0x468ac8)=>{const _0x46d6c2=_0x557bb0;if(_0x507983){const _0x7a2378=structuredClone(_0x507983);_0x7a2378[_0x46d6c2(0xde)]=_0x46d6c2(0x78)+(_0x468ac8+0x1),_0x7a2378[_0x46d6c2(0x89)][_0x46d6c2(0xbf)][_0x46d6c2(0x107)]=_0x46d6c2(0xee)+(_0x468ac8+0x1),_0x5c2876[_0x46d6c2(0xfd)](_0x7a2378);}const _0x3a5d6e=structuredClone(_0xc1df5[_0x507983?0x1:0x0]);_0x3a5d6e['tag']='prox-'+(_0x468ac8+0x1),_0x3a5d6e[_0x46d6c2(0x89)][_0x46d6c2(0xbf)][_0x46d6c2(0x107)]='frag-'+(_0x468ac8+0x1);const _0x477628=structuredClone(_0x5f02e2);_0x477628['tag']='frag-'+(_0x468ac8+0x1),_0x477628[_0x46d6c2(0xfe)][_0x46d6c2(0xbe)][_0x46d6c2(0xb1)]=_0x5d459c,_0x477628[_0x46d6c2(0xfe)][_0x46d6c2(0xbe)][_0x46d6c2(0x95)]=_0x46d6c2(0xe9),_0x5c2876[_0x46d6c2(0xfd)](_0x3a5d6e,_0x477628);}),_0x1893c8['outbounds'][_0x557bb0(0xf8)](..._0x5c2876),_0x1893c8;}async function buildXrayWorkerLessConfig(_0x44dc95){const _0x2915f3=a0_0x50ee,_0x23d61e=buildXrayConfig(_0x44dc95,'💦\x20BPB\x20F\x20-\x20WorkerLess\x20⭐',!![],![],![],![],![]);_0x23d61e[_0x2915f3(0xfc)]=await buildXrayDNS(_0x44dc95,[],undefined,!![]),_0x23d61e['routing'][_0x2915f3(0x8e)]=buildXrayRoutingRules(_0x44dc95,[],![],![],!![],![]);const _0x439c51=buildXrayVLESSOutbound(_0x2915f3(0xca),_0x2915f3(0x7c),_0x2915f3(0xf4),globalThis[_0x2915f3(0x76)],'google.com',_0x2915f3(0x7c),'',!![],![]);return delete _0x439c51['streamSettings']['sockopt'],_0x439c51[_0x2915f3(0x89)][_0x2915f3(0xf5)][_0x2915f3(0x8c)]='/',_0x23d61e['outbounds'][_0x2915f3(0xfd)](_0x439c51),_0x23d61e;}export async function getXrayCustomConfigs(_0x21136c,_0x278ad2,_0xa962b6){const _0x1b5996=a0_0x50ee,{proxySettings:_0x6efc16}=await getDataset(_0x21136c,_0x278ad2);let _0x2cf4f8=[],_0x258c52=[],_0x5a939d=[],_0x228221;const {proxyIP:_0x1ec717,outProxy:_0x554127,outProxyParams:_0x53a1ab,cleanIPs:_0x5c6702,enableIPv6:_0x182d40,customCdnAddrs:_0x527874,customCdnHost:_0x4f8b34,customCdnSni:_0x735cb4,vnpConfigs:_0x4927c2,tnpConfigs:_0x2f693b,ports:_0x1a4bb8}=_0x6efc16;if(_0x554127){const _0x39babb=JSON[_0x1b5996(0xb8)](_0x53a1ab);try{_0x228221=buildXrayChainOutbound(_0x39babb,_0x182d40);}catch(_0x4e519b){console['log']('An\x20error\x20occured\x20while\x20parsing\x20chain\x20proxy:\x20',_0x4e519b),_0x228221=undefined,await _0x278ad2[_0x1b5996(0xed)][_0x1b5996(0xb9)](_0x1b5996(0x93),JSON['stringify']({..._0x6efc16,'outProxy':'','outProxyParams':{}}));}}const _0x2f6d11=await getConfigAddresses(_0x5c6702,_0x182d40),_0x585a9e=_0x527874?_0x527874[_0x1b5996(0x10f)](','):[],_0x3f735c=_0xa962b6?[..._0x2f6d11]:[..._0x2f6d11,..._0x585a9e],_0x8d3a50=_0x1a4bb8[_0x1b5996(0xe3)](_0x4d8670=>_0xa962b6?globalThis[_0x1b5996(0x9f)][_0x1b5996(0x103)](_0x4d8670):!![]);_0x4927c2&&_0x5a939d[_0x1b5996(0xfd)](_0x1b5996(0xdd)),_0x2f693b&&_0x5a939d['push'](_0x1b5996(0x85));let _0x31b70e=0x1;for(const _0x4902ae of _0x5a939d){let _0x34372a=0x1;for(const _0x3e9879 of _0x8d3a50){for(const _0x4deb8e of _0x3f735c){const _0x1e27dd=_0x585a9e[_0x1b5996(0x103)](_0x4deb8e),_0x36d1b4=_0x1e27dd?'C':_0xa962b6?'F':'',_0x150b8b=_0x1e27dd?_0x735cb4:randomUpperCase(globalThis[_0x1b5996(0xb0)]),_0x8eecb4=_0x1e27dd?_0x4f8b34:globalThis[_0x1b5996(0xb0)],_0xc40e15=generateRemark(_0x34372a,_0x3e9879,_0x4deb8e,_0x5c6702,_0x4902ae,_0x36d1b4),_0x70f718=buildXrayConfig(_0x6efc16,_0xc40e15,_0xa962b6,![],_0x228221,![],![]);_0x70f718['dns']=await buildXrayDNS(_0x6efc16,[_0x4deb8e],undefined),_0x70f718[_0x1b5996(0xad)][_0x1b5996(0x8e)]=buildXrayRoutingRules(_0x6efc16,[_0x4deb8e],_0x228221,![],![],![]);const _0x219961=_0x4902ae===_0x1b5996(0xdd)?buildXrayVLESSOutbound(_0x1b5996(0xba),_0x4deb8e,_0x3e9879,_0x8eecb4,_0x150b8b,_0x1ec717,_0xa962b6,_0x1e27dd,_0x182d40):buildXrayTrojanOutbound('proxy',_0x4deb8e,_0x3e9879,_0x8eecb4,_0x150b8b,_0x1ec717,_0xa962b6,_0x1e27dd,_0x182d40);_0x70f718[_0x1b5996(0x94)][_0x1b5996(0xf8)]({..._0x219961}),_0x219961['tag']=_0x1b5996(0xee)+_0x31b70e;if(_0x228221){_0x70f718[_0x1b5996(0x94)][_0x1b5996(0xf8)](_0x228221);const _0x5d8498=structuredClone(_0x228221);_0x5d8498[_0x1b5996(0xde)]=_0x1b5996(0x78)+_0x31b70e,_0x5d8498[_0x1b5996(0x89)]['sockopt'][_0x1b5996(0x107)]=_0x1b5996(0xee)+_0x31b70e,_0x258c52[_0x1b5996(0xfd)](_0x5d8498);}_0x258c52[_0x1b5996(0xfd)](_0x219961),_0x2cf4f8[_0x1b5996(0xfd)](_0x70f718),_0x31b70e++,_0x34372a++;}}}const _0x3e07e3=await buildXrayBestPingConfig(_0x6efc16,_0x3f735c,_0x228221,_0x258c52,_0xa962b6),_0x5a1150=[..._0x2cf4f8,_0x3e07e3];if(_0xa962b6){const _0x1eb96a=await buildXrayBestFragmentConfig(_0x6efc16,globalThis[_0x1b5996(0xb0)],_0x228221,_0x258c52),_0x541723=await buildXrayWorkerLessConfig(_0x6efc16);_0x5a1150['push'](_0x1eb96a,_0x541723);}return new Response(JSON['stringify'](_0x5a1150,null,0x4),{'status':0xc8,'headers':{'Content-Type':_0x1b5996(0xd5),'Cache-Control':_0x1b5996(0xc0),'CDN-Cache-Control':_0x1b5996(0x10c)}});}export async function getXrayWarpConfigs(_0x1b44de,_0x165711,_0x15143b){const _0x5b1935=a0_0x50ee,{proxySettings:_0x39e6f1,warpConfigs:_0x37999b}=await getDataset(_0x1b44de,_0x165711),_0x4f891f=[],_0x24f147=[],_0x4b3b59=[],_0x1ff001=[],{warpEndpoints:_0xe45f58}=_0x39e6f1,_0x2e8153=_0xe45f58[_0x5b1935(0x10f)](',')[_0x5b1935(0xdb)](_0x22f227=>_0x22f227[_0x5b1935(0x10f)](':')[0x0])[_0x5b1935(0xe3)](_0x597e41=>isDomain(_0x597e41)),_0x1772ac=_0x15143b===_0x5b1935(0x71)?_0x5b1935(0xd9):'\x20';for(const [_0x4000eb,_0x1a5ccc]of _0xe45f58[_0x5b1935(0x10f)](',')[_0x5b1935(0x7f)]()){const _0x1e4a14=_0x1a5ccc[_0x5b1935(0x10f)](':')[0x0],_0x4541d5=buildXrayConfig(_0x39e6f1,_0x5b1935(0xd7)+(_0x4000eb+0x1)+_0x5b1935(0xe5)+_0x1772ac+_0x5b1935(0xcd),![],![],![],![],!![]),_0x1115a2=buildXrayConfig(_0x39e6f1,_0x5b1935(0xd7)+(_0x4000eb+0x1)+_0x5b1935(0x9c)+_0x1772ac+'🌍',![],![],!![],![],!![]);_0x4541d5[_0x5b1935(0xfc)]=_0x1115a2[_0x5b1935(0xfc)]=await buildXrayDNS(_0x39e6f1,[_0x1e4a14],undefined,![],!![]),_0x4541d5['routing'][_0x5b1935(0x8e)]=buildXrayRoutingRules(_0x39e6f1,[_0x1e4a14],![],![],![],!![]),_0x1115a2[_0x5b1935(0xad)]['rules']=buildXrayRoutingRules(_0x39e6f1,[_0x1e4a14],!![],![],![],!![]);const _0x3ac8cf=buildXrayWarpOutbound(_0x39e6f1,_0x37999b,_0x1a5ccc,![],_0x15143b),_0x10fd7b=buildXrayWarpOutbound(_0x39e6f1,_0x37999b,_0x1a5ccc,!![],_0x15143b);_0x4541d5['outbounds'][_0x5b1935(0xf8)](_0x3ac8cf),_0x1115a2[_0x5b1935(0x94)][_0x5b1935(0xf8)](_0x10fd7b,_0x3ac8cf),_0x4f891f['push'](_0x4541d5),_0x24f147[_0x5b1935(0xfd)](_0x1115a2);const _0x59b6fd=structuredClone(_0x3ac8cf);_0x59b6fd[_0x5b1935(0xde)]=_0x5b1935(0xee)+(_0x4000eb+0x1);const _0x55c9ba=structuredClone(_0x10fd7b);_0x55c9ba[_0x5b1935(0xde)]=_0x5b1935(0x78)+(_0x4000eb+0x1),_0x55c9ba[_0x5b1935(0x89)][_0x5b1935(0xbf)]['dialerProxy']=_0x5b1935(0xee)+(_0x4000eb+0x1),_0x4b3b59[_0x5b1935(0xfd)](_0x59b6fd),_0x1ff001[_0x5b1935(0xfd)](_0x55c9ba);}const _0x393f30=await buildXrayDNS(_0x39e6f1,_0x2e8153,undefined,![],!![]),_0x2dd840=buildXrayConfig(_0x39e6f1,'💦\x20Warp'+_0x1772ac+_0x5b1935(0x99),![],!![],![],![],!![]);_0x2dd840[_0x5b1935(0xfc)]=_0x393f30,_0x2dd840[_0x5b1935(0xad)][_0x5b1935(0x8e)]=buildXrayRoutingRules(_0x39e6f1,_0x2e8153,![],!![],![],!![]),_0x2dd840['outbounds']['unshift'](..._0x4b3b59);const _0x38c5ca=buildXrayConfig(_0x39e6f1,'💦\x20WoW'+_0x1772ac+_0x5b1935(0x99),![],!![],!![],![],!![]);_0x38c5ca[_0x5b1935(0xfc)]=_0x393f30,_0x38c5ca['routing'][_0x5b1935(0x8e)]=buildXrayRoutingRules(_0x39e6f1,_0x2e8153,!![],!![],![],!![]),_0x38c5ca['outbounds'][_0x5b1935(0xf8)](..._0x1ff001,..._0x4b3b59);const _0x420718=[..._0x4f891f,..._0x24f147,_0x2dd840,_0x38c5ca];return new Response(JSON[_0x5b1935(0x113)](_0x420718,null,0x4),{'status':0xc8,'headers':{'Content-Type':_0x5b1935(0xd5),'Cache-Control':_0x5b1935(0xc0),'CDN-Cache-Control':'no-store'}});}const xrayConfigTemp={'remarks':'','log':{'loglevel':'warning'},'dns':{},'inbounds':[{'port':0x2a38,'protocol':'socks','settings':{'auth':'noauth','udp':!![],'userLevel':0x8},'sniffing':{'destOverride':[a0_0x72653(0xfa),'tls'],'enabled':!![],'routeOnly':!![]},'tag':'socks-in'},{'port':0x2a39,'protocol':a0_0x72653(0xfa),'settings':{'auth':a0_0x72653(0xa0),'udp':!![],'userLevel':0x8},'sniffing':{'destOverride':[a0_0x72653(0xfa),a0_0x72653(0x100)],'enabled':!![],'routeOnly':!![]},'tag':a0_0x72653(0xa7)},{'listen':a0_0x72653(0xa8),'port':0x2a65,'protocol':a0_0x72653(0x7d),'settings':{'address':a0_0x72653(0xc2),'network':a0_0x72653(0xec),'port':0x35},'tag':a0_0x72653(0xf3)}],'outbounds':[{'tag':a0_0x72653(0xbe),'protocol':'freedom','settings':{'fragment':{'packets':'tlshello','length':'','interval':''},'domainStrategy':'UseIP'},'streamSettings':{'sockopt':{'tcpKeepAliveIdle':0x1e,'tcpNoDelay':!![]}}},{'protocol':a0_0x72653(0xfc),'tag':a0_0x72653(0x86)},{'protocol':a0_0x72653(0xd6),'settings':{},'tag':a0_0x72653(0x72)},{'protocol':'blackhole','settings':{'response':{'type':a0_0x72653(0xfa)}},'tag':a0_0x72653(0xcb)}],'policy':{'levels':{0x8:{'connIdle':0x12c,'downlinkOnly':0x1,'handshake':0x4,'uplinkOnly':0x1}},'system':{'statsOutboundUplink':!![],'statsOutboundDownlink':!![]}},'routing':{'domainStrategy':a0_0x72653(0x74),'rules':[],'balancers':[{'tag':'all','selector':[a0_0x72653(0x84)],'strategy':{'type':a0_0x72653(0x7e)}}]},'observatory':{'probeInterval':a0_0x72653(0xf2),'probeURL':'https://www.gstatic.com/generate_204','subjectSelector':[a0_0x72653(0x84)],'EnableConcurrency':!![]},'stats':{}};
+import { resolveDNS, isDomain } from '../helpers/helpers';
+import { getConfigAddresses, extractWireguardParams, base64ToDecimal, generateRemark, randomUpperCase, getRandomPath } from './helpers';
+import { getDataset } from '../kv/handlers';
+
+async function buildXrayDNS (proxySettings, outboundAddrs, domainToStaticIPs, isWorkerLess, isWarp) { 
+    const { 
+        remoteDNS, 
+        resolvedRemoteDNS, 
+        localDNS, 
+        vnpTrojanFakeDNS, 
+        enableIPv6, 
+        warpFakeDNS,
+        warpEnableIPv6,
+        blockAds, 
+        bypassIran, 
+        bypassChina,
+        blockPorn, 
+        bypassRussia,
+        customBypassRules,
+        customBlockRules
+    } = proxySettings;
+
+    const bypassRules = [
+        { rule: bypassIran, domain: "geosite:category-ir", ip: "geoip:ir" },
+        { rule: bypassChina, domain: "geosite:cn", ip: "geoip:cn" },
+        { rule: bypassRussia, domain: "geosite:category-ru", ip: "geoip:ru" }
+    ];
+
+    const blockRules = [
+        { rule: blockAds, host: "geosite:category-ads-all" },
+        { rule: blockAds, host: "geosite:category-ads-ir" },
+        { rule: blockPorn, host: "geosite:category-porn" }
+    ];
+
+    const isFakeDNS = (vnpTrojanFakeDNS && !isWarp) || (warpFakeDNS && isWarp);
+    const isIPv6 = (enableIPv6 && !isWarp) || (warpEnableIPv6 && isWarp);
+    const outboundDomains = outboundAddrs.filter(address => isDomain(address));
+    const customBypassRulesDomains = customBypassRules.split(',').filter(address => isDomain(address));
+    const customBlockRulesDomains = customBlockRules.split(',').filter(address => isDomain(address));
+    const uniqueOutboundDomains = [...new Set(outboundDomains)];
+    const isDomainRule = [...uniqueOutboundDomains, ...customBypassRulesDomains].length > 0;
+    const isBypass = bypassIran || bypassChina || bypassRussia;
+    const isBlock = blockAds || blockPorn || customBlockRulesDomains.length > 0;
+    const finalRemoteDNS = isWorkerLess
+        ? ["https://cloudflare-dns.com/dns-query"]
+        : isWarp
+            ? warpEnableIPv6 
+                ? ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"] 
+                : ["1.1.1.1", "1.0.0.1"]
+            : [remoteDNS];
+
+    const dnsHost = {};
+    if (isBlock) { 
+        blockRules.forEach( ({ rule, host }) => {
+            if (rule) dnsHost[host] = ["127.0.0.1"]; 
+        }); 
+        customBlockRulesDomains.forEach( domain => {
+            dnsHost[`domain:${domain}`] = ["127.0.0.1"];
+        });
+    }
+    
+    const staticIPs = domainToStaticIPs ? await resolveDNS(domainToStaticIPs) : undefined;
+    if (staticIPs) dnsHost[domainToStaticIPs] = enableIPv6 ? [...staticIPs.ipv4, ...staticIPs.ipv6] : staticIPs.ipv4;
+    if (resolvedRemoteDNS.server && !isWorkerLess && !isWarp) dnsHost[resolvedRemoteDNS.server] = resolvedRemoteDNS.staticIPs;
+    if (isWorkerLess) {
+        const domains = ["cloudflare-dns.com", "cloudflare.com", "dash.cloudflare.com"];
+        const resolved = await Promise.all(domains.map(resolveDNS));
+        const hostIPv4 = resolved.flatMap(r => r.ipv4);
+        const hostIPv6 = enableIPv6 ? resolved.flatMap(r => r.ipv6) : [];
+        dnsHost["cloudflare-dns.com"] = [
+            ...hostIPv4,
+            ...hostIPv6
+        ];
+    }
+
+    const hosts = Object.keys(dnsHost).length ? { hosts: dnsHost } : {};
+    const dnsObject = {
+        ...hosts,
+        servers: finalRemoteDNS,
+        queryStrategy: isIPv6 ? "UseIP" : "UseIPv4",
+        tag: "dns",
+    };
+      
+    if (isDomainRule) {  
+        const outboundDomainRules = uniqueOutboundDomains.map(domain => `full:${domain}`);
+        const bypassDomainRules = customBypassRulesDomains.map(domain => `domain:${domain}`);    
+        dnsObject.servers.push({
+            address: localDNS,
+            domains: [...outboundDomainRules, ...bypassDomainRules],
+            skipFallback: true
+        });
+    }
+
+    const localDNSServer = {
+        address: localDNS,
+        domains: [],
+        expectIPs: [],
+        skipFallback: true
+    };
+
+    if (!isWorkerLess && isBypass) {
+        bypassRules.forEach(({ rule, domain, ip }) => {
+            if (rule) {
+                localDNSServer.domains.push(domain);
+                localDNSServer.expectIPs.push(ip);
+            }
+        });
+
+        dnsObject.servers.push(localDNSServer);
+    }
+
+    if (isFakeDNS) {
+        const fakeDNSServer = isBypass && !isWorkerLess 
+            ? { address: "fakedns", domains: localDNSServer.domains } 
+            : "fakedns";
+        dnsObject.servers.unshift(fakeDNSServer);
+    }
+
+    return dnsObject;
+}
+
+function buildXrayRoutingRules (proxySettings, outboundAddrs, isChain, isBalancer, isWorkerLess, isWarp) {
+    const {
+        remoteDNS,
+        localDNS,
+        bypassLAN, 
+        bypassIran, 
+        bypassChina, 
+        bypassRussia, 
+        blockAds, 
+        blockPorn, 
+        blockUDP443,
+        customBypassRules,
+        customBlockRules 
+    } = proxySettings;
+
+    const geoRules = [ 
+        { rule: bypassLAN, type: 'direct', domain: "geosite:private", ip: "geoip:private" },
+        { rule: bypassIran, type: 'direct', domain: "geosite:category-ir", ip: "geoip:ir" },
+        { rule: bypassChina, type: 'direct', domain: "geosite:cn", ip: "geoip:cn" },
+        { rule: blockAds, type: 'block', domain: "geosite:category-ads-all" },
+        { rule: blockAds, type: 'block', domain: "geosite:category-ads-ir" },
+        { rule: blockPorn, type: 'block', domain: "geosite:category-porn" }
+    ];
+    const outboundDomains = outboundAddrs.filter(address => isDomain(address));
+    const customBypassRulesTotal = customBypassRules ? customBypassRules.split(',') : [];
+    const customBlockRulesTotal = customBlockRules ? customBlockRules.split(',') : [];
+    const customBypassRulesDomains = customBypassRulesTotal.filter(address => isDomain(address));
+    const isDomainRule = [...outboundDomains, ...customBypassRulesDomains].length > 0;
+    const isBlock = blockAds || blockPorn || customBlockRulesTotal.length > 0;
+    const isBypass = bypassIran || bypassChina || bypassRussia || customBypassRulesTotal.length > 0;
+    const rules = [
+        {
+            inboundTag: [
+                "dns-in"
+            ],
+            outboundTag: "dns-out",
+            type: "field"
+        },
+        {
+            inboundTag: [
+                "socks-in",
+                "http-in"
+            ],
+            port: "53",
+            outboundTag: "dns-out",
+            type: "field"
+        }
+    ];
+
+    if (!isWorkerLess && (isDomainRule || isBypass)) rules.push({
+        ip: [localDNS],
+        port: "53",
+        network: "udp",
+        outboundTag: "direct",
+        type: "field"
+    });
+
+    if (isBypass || isBlock) {
+        const createRule = (type, outbound) => ({
+            [type]: [],
+            outboundTag: outbound,
+            type: "field"
+        });
+
+        let domainDirectRule, ipDirectRule;
+        if (!isWorkerLess) {
+            domainDirectRule = createRule("domain", "direct");
+            ipDirectRule = createRule("ip", "direct");
+        }
+
+        let domainBlockRule = createRule("domain", "block");
+        let ipBlockRule = createRule("ip", "block");
+        geoRules.forEach(({ rule, type, domain, ip }) => {
+            if (rule) {
+                if (type === 'direct') {
+                    domainDirectRule?.domain.push(domain);
+                    ipDirectRule?.ip?.push(ip);
+                } else {
+                    domainBlockRule.domain.push(domain);
+                }
+            }
+        });
+
+        customBypassRulesTotal.forEach( address => {
+            if (isDomain(address)) { 
+                domainDirectRule?.domain.push(`domain:${address}`);
+            } else {
+                ipDirectRule?.ip.push(address);
+            }
+        });
+        
+        customBlockRulesTotal.forEach( address => {
+            if (isDomain(address)) { 
+                domainBlockRule.domain.push(`domain:${address}`);
+            } else {
+                ipBlockRule.ip.push(address);
+            }
+        });
+        
+        if (!isWorkerLess) {
+            domainDirectRule.domain.length && rules.push(domainDirectRule);
+            ipDirectRule.ip.length && rules.push(ipDirectRule);
+        }
+
+        domainBlockRule.domain.length && rules.push(domainBlockRule);
+        ipBlockRule.ip.length && rules.push(ipBlockRule);
+    }
+
+    blockUDP443 && rules.push({
+        network: "udp",
+        port: "443",
+        outboundTag: "block",
+        type: "field",
+    });
+
+    if (isChain) {
+        const rule = {
+            [isBalancer ? "balancerTag" : "outboundTag"]: isBalancer ? "all-proxy" : "proxy",
+            type: "field"
+        };
+    
+        if (!isWarp) {
+            const url = new URL(remoteDNS);
+            const remoteDNSServer = url.hostname;
+            rules.push({
+                [isDomain(remoteDNSServer) ? "domain" : "ip"]: [remoteDNSServer],
+                network: "tcp",
+                ...rule
+            });
+        } else {
+            rules.push({
+                network: "udp",
+                port: "53",
+                ...rule
+            });
+        }
+    }
+
+    if (isBalancer) {
+        rules.push({
+            network: "tcp,udp",
+            balancerTag: "all",
+            type: "field"
+        });
+    } else  {
+        rules.push({
+            network: "tcp,udp",
+            outboundTag: isChain ? "chain" : isWorkerLess ? "fragment" : "proxy",
+            type: "field"
+        });
+    }
+
+    return rules;
+}
+
+function buildXrayVLESSOutbound (tag, address, port, host, sni, proxyIP, isFragment, allowInsecure, enableIPv6) {
+    const outbound = {
+        protocol: "vnp",
+        settings: {
+            vnext: [
+                {
+                    address: address,
+                    port: +port,
+                    users: [
+                        {
+                            id: globalThis.userID,
+                            encryption: "none",
+                            level: 8
+                        }
+                    ]
+                }
+            ]
+        },
+        streamSettings: {
+            network: "ws",
+            security: "none",
+            sockopt: {},
+            wsSettings: {
+                headers: {
+                    Host: host,
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+                },
+                path: `/${getRandomPath(16)}${proxyIP ? `/${btoa(proxyIP)}` : ''}?ed=2560`
+            }
+        },
+        tag: tag
+    };
+
+    if (globalThis.defaultHttpsPorts.includes(port)) {
+        outbound.streamSettings.security = "tls";
+        outbound.streamSettings.tlsSettings = {
+            allowInsecure: allowInsecure,
+            fingerprint: "randomized",
+            alpn: ["h2", "http/1.1"],
+            serverName: sni
+        };
+    }
+
+    const sockopt = outbound.streamSettings.sockopt;
+    if (isFragment) {
+        sockopt.dialerProxy = "fragment";
+    } else {
+        sockopt.tcpKeepAliveIdle = 30;
+        sockopt.tcpNoDelay = true;
+        sockopt.domainStrategy = enableIPv6 ? "UseIPv4v6" : "UseIPv4";
+    }
+    
+    return outbound;
+}
+
+function buildXrayTrojanOutbound (tag, address, port, host, sni, proxyIP, isFragment, allowInsecure, enableIPv6) {
+    const outbound = {
+        protocol: "tnp",
+        settings: {
+            servers: [
+                {
+                    address: address,
+                    port: +port,
+                    password: globalThis.tnpPassword,
+                    level: 8
+                }
+            ]
+        },
+        streamSettings: {
+            network: "ws",
+            security: "none",
+            sockopt: {},
+            wsSettings: {
+                headers: {
+                    Host: host
+                },
+                path: `/tr${getRandomPath(16)}${proxyIP ? `/${btoa(proxyIP)}` : ''}?ed=2560`
+            }
+        },
+        tag: tag
+    };
+
+    if (globalThis.defaultHttpsPorts.includes(port)) {
+        outbound.streamSettings.security = "tls";
+        outbound.streamSettings.tlsSettings = {
+            allowInsecure: allowInsecure,
+            fingerprint: "randomized",
+            alpn: ["h2", "http/1.1"],
+            serverName: sni
+        };
+    }
+
+    const sockopt = outbound.streamSettings.sockopt;
+    if (isFragment) {
+        sockopt.dialerProxy = "fragment";
+    } else {
+        sockopt.tcpKeepAliveIdle = 30;
+        sockopt.tcpNoDelay = true;
+        sockopt.domainStrategy = enableIPv6 ? "UseIPv4v6" : "UseIPv4";
+    }
+    
+    return outbound;
+}
+
+function buildXrayWarpOutbound (proxySettings, warpConfigs, endpoint, isChain, client) {
+    const { 
+        warpEnableIPv6,
+		nikaNGNoiseMode,  
+		noiseCountMin, 
+		noiseCountMax, 
+		noiseSizeMin, 
+		noiseSizeMax, 
+		noiseDelayMin, 
+		noiseDelayMax 
+	} = proxySettings;
+
+    const {
+        warpIPv6,
+        reserved,
+        publicKey,
+        privateKey
+    } = extractWireguardParams(warpConfigs, isChain);
+
+    const outbound = {
+        protocol: "wireguard",
+        settings: {
+            address: [
+                "172.16.0.2/32",
+                warpIPv6
+            ],
+            mtu: 1280,
+            peers: [
+                {
+                    endpoint: endpoint,
+                    publicKey: publicKey,
+                    keepAlive: 5
+                }
+            ],
+            reserved: base64ToDecimal(reserved),
+            secretKey: privateKey
+        },
+        streamSettings: {
+            sockopt: {
+                dialerProxy: "proxy",
+                domainStrategy: warpEnableIPv6 ? "UseIPv4v6" : "UseIPv4",
+            }
+        },
+        tag: isChain ? "chain" : "proxy"
+    };
+
+    !isChain && delete outbound.streamSettings;
+    client === 'nikang' && !isChain && Object.assign(outbound.settings, {
+        wnoise: nikaNGNoiseMode,
+        wnoisecount: noiseCountMin === noiseCountMax ? noiseCountMin : `${noiseCountMin}-${noiseCountMax}`,
+        wpayloadsize: noiseSizeMin === noiseSizeMax ? noiseSizeMin : `${noiseSizeMin}-${noiseSizeMax}`,
+        wnoisedelay: noiseDelayMin === noiseDelayMax ? noiseDelayMin : `${noiseDelayMin}-${noiseDelayMax}`
+    });
+
+    return outbound;
+}
+
+function buildXrayChainOutbound(chainProxyParams, enableIPv6) {
+    if (['socks', 'http'].includes(chainProxyParams.protocol)) {
+        const { protocol, server, port, user, pass } = chainProxyParams;
+        return {
+            protocol: protocol,
+            settings: {
+                servers: [
+                    {
+                        address: server,
+                        port: +port,
+                        users: [
+                            {
+                                user: user,
+                                pass: pass,
+                                level: 8
+                            }
+                        ]
+                    }
+                ]
+            },
+            streamSettings: {
+                network: "tcp",
+                sockopt: {
+                    dialerProxy: "proxy",
+                    domainStrategy: enableIPv6 ? "UseIPv4v6" : "UseIPv4",
+                    tcpNoDelay: true
+                }
+            },
+            mux: {
+                enabled: true,
+                concurrency: 8,
+                xudpConcurrency: 16,
+                xudpProxyUDP443: "reject"
+            },
+            tag: "chain"
+        };
+    }
+
+    const { 
+        server, 
+        port, 
+        uuid, 
+        flow, 
+        security, 
+        type, 
+        sni, 
+        fp, 
+        alpn, 
+        pbk, 
+        sid, 
+        spx, 
+        headerType, 
+        host, 
+        path, 
+        authority, 
+        serviceName, 
+        mode 
+    } = chainProxyParams;
+
+    const proxyOutbound = {
+        mux: {
+            concurrency: 8,
+            enabled: true,
+            xudpConcurrency: 16,
+            xudpProxyUDP443: "reject"
+        },
+        protocol: "vnp",
+        settings: {
+            vnext: [
+                {
+                    address: server,
+                    port: +port,
+                    users: [
+                        {
+                            encryption: "none",
+                            flow: flow,
+                            id: uuid,
+                            level: 8,
+                            security: "auto"
+                        }
+                    ]
+                }
+            ]
+        },
+        streamSettings: {
+            network: type,
+            security: security,
+            sockopt: {
+                dialerProxy: "proxy",
+                domainStrategy: enableIPv6 ? "UseIPv4v6" : "UseIPv4",
+                tcpNoDelay: true
+            }
+        },
+        tag: "chain"
+    };
+    
+    if (security === 'tls') {
+        const tlsAlpns = alpn ? alpn?.split(',') : [];
+        proxyOutbound.streamSettings.tlsSettings = {
+            allowInsecure: false,
+            fingerprint: fp,
+            alpn: tlsAlpns,
+            serverName: sni
+        };
+    }
+
+    if (security === 'reality') { 
+        delete proxyOutbound.mux;
+        proxyOutbound.streamSettings.realitySettings = {
+            fingerprint: fp,
+            publicKey: pbk,
+            serverName: sni,
+            shortId: sid,
+            spiderX: spx
+        };
+    }
+
+    if (headerType === 'http') {
+        const httpPaths = path?.split(',');
+        const httpHosts = host?.split(',');
+        proxyOutbound.streamSettings.tcpSettings = {
+            header: {
+                request: {
+                    headers: { Host: httpHosts },
+                    method: "GET",
+                    path: httpPaths,
+                    version: "1.1"
+                },
+                response: {
+                    headers: { "Content-Type": ["application/octet-stream"] },
+                    reason: "OK",
+                    status: "200",
+                    version: "1.1"
+                },
+                type: "http"
+            }
+        };
+    }
+
+    if (type === 'tcp' && security !== 'reality' && !headerType) proxyOutbound.streamSettings.tcpSettings = {
+        header: {
+            type: "none"
+        }
+    };
+    
+    if (type === 'ws') proxyOutbound.streamSettings.wsSettings = {
+        headers: { Host: host },
+        path: path
+    };
+    
+    if (type === 'grpc') {
+        delete proxyOutbound.mux;
+        proxyOutbound.streamSettings.grpcSettings = {
+            authority: authority,
+            multiMode: mode === 'multi',
+            serviceName: serviceName
+        };
+    }
+    
+    return proxyOutbound;
+}
+
+function buildXrayConfig (proxySettings, remark, isFragment, isBalancer, isChain, balancerFallback, isWarp) {
+    const { 
+        vnpTrojanFakeDNS, 
+        enableIPv6, 
+        warpFakeDNS,
+        bestVLESSTrojanInterval, 
+        bestWarpInterval, 
+        lengthMin, 
+        lengthMax, 
+        intervalMin, 
+        intervalMax, 
+        fragmentPackets 
+    } = proxySettings;
+
+    const isFakeDNS = (vnpTrojanFakeDNS && !isWarp) || (warpFakeDNS && isWarp);
+    const config = structuredClone(xrayConfigTemp);
+    config.remarks = remark;
+    if (isFakeDNS) {
+        config.inbounds[0].sniffing.destOverride.push("fakedns");
+        config.inbounds[1].sniffing.destOverride.push("fakedns");
+    }
+
+    if (isFragment) {
+        const fragment = config.outbounds[0].settings.fragment;
+        fragment.length = `${lengthMin}-${lengthMax}`;
+        fragment.interval = `${intervalMin}-${intervalMax}`;
+        fragment.packets = fragmentPackets;
+        config.outbounds[0].settings.domainStrategy = enableIPv6 ? "UseIPv4v6" : "UseIPv4";
+    } else {
+        config.outbounds.shift();
+    }
+
+    if (isBalancer) {
+        const interval = isWarp ? bestWarpInterval : bestVLESSTrojanInterval;
+        config.observatory.probeInterval = `${interval}s`;
+        if (balancerFallback) config.routing.balancers[0].fallbackTag = "prox-2";
+        if (isChain) {
+            config.observatory.subjectSelector.push("chain");
+            const chainBalancer = structuredClone(config.routing.balancers[0]);
+            if (balancerFallback) chainBalancer.fallbackTag = "chain-2";
+            config.routing.balancers.push({...chainBalancer, selector: ["chain"]});
+            config.routing.balancers[0].tag = "all-proxy";
+        }
+    } else {
+        delete config.observatory;
+        delete config.routing.balancers;
+    }
+
+    return config;
+}
+
+async function buildXrayBestPingConfig(proxySettings, totalAddresses, chainProxy, outbounds, isFragment) {
+    const remark = isFragment ? '💦 BPB F - Best Ping 💥' : '💦 BPB - Best Ping 💥';
+    const config = buildXrayConfig(proxySettings, remark, isFragment, true, chainProxy, true);
+    config.dns = await buildXrayDNS(proxySettings, totalAddresses, undefined, false, false);
+    config.routing.rules = buildXrayRoutingRules(proxySettings, totalAddresses, chainProxy, true, false, false);
+    config.outbounds.unshift(...outbounds);
+
+    return config;
+}
+
+async function buildXrayBestFragmentConfig(proxySettings, hostName, chainProxy, outbounds) {
+    const bestFragValues = ['10-20', '20-30', '30-40', '40-50', '50-60', '60-70', 
+                            '70-80', '80-90', '90-100', '10-30', '20-40', '30-50', 
+                            '40-60', '50-70', '60-80', '70-90', '80-100', '100-200'];
+
+    const config = buildXrayConfig(proxySettings, '💦 BPB F - Best Fragment 😎', true, true, chainProxy, false, false);
+    config.dns = await buildXrayDNS(proxySettings, [], hostName, false, false);
+    config.routing.rules = buildXrayRoutingRules(proxySettings, [], chainProxy, true, false, false);
+    const fragment = config.outbounds.shift();
+    const bestFragOutbounds = [];
+    
+    bestFragValues.forEach( (fragLength, index) => { 
+        if (chainProxy) {
+            const chainOutbound = structuredClone(chainProxy);
+            chainOutbound.tag = `chain-${index + 1}`;
+            chainOutbound.streamSettings.sockopt.dialerProxy = `prox-${index + 1}`;
+            bestFragOutbounds.push(chainOutbound);
+        }
+        
+        const proxyOutbound = structuredClone(outbounds[chainProxy ? 1 : 0]);
+        proxyOutbound.tag = `prox-${index + 1}`;
+        proxyOutbound.streamSettings.sockopt.dialerProxy = `frag-${index + 1}`;
+        const fragmentOutbound = structuredClone(fragment);
+        fragmentOutbound.tag = `frag-${index + 1}`;
+        fragmentOutbound.settings.fragment.length = fragLength;
+        fragmentOutbound.settings.fragment.interval = '1-1';
+        bestFragOutbounds.push(proxyOutbound, fragmentOutbound);
+    });
+    
+    config.outbounds.unshift(...bestFragOutbounds);
+    return config;
+}
+
+async function buildXrayWorkerLessConfig(proxySettings) {
+    const config = buildXrayConfig(proxySettings, '💦 BPB F - WorkerLess ⭐', true, false, false, false, false);
+    config.dns = await buildXrayDNS(proxySettings, [], undefined, true);
+    config.routing.rules = buildXrayRoutingRules(proxySettings, [], false, false, true, false);
+    const fakeOutbound = buildXrayVLESSOutbound('fake-outbound', 'google.com', '443', globalThis.userID, 'google.com', 'google.com', '', true, false);
+    delete fakeOutbound.streamSettings.sockopt;
+    fakeOutbound.streamSettings.wsSettings.path = '/';
+    config.outbounds.push(fakeOutbound);
+    return config;
+}
+
+export async function getXrayCustomConfigs(request, env, isFragment) {
+    const { proxySettings } = await getDataset(request, env);
+    let configs = [];
+    let outbounds = [];
+    let protocols = [];
+    let chainProxy;
+    const {
+        proxyIP,
+        outProxy,
+        outProxyParams,
+        cleanIPs,
+        enableIPv6,
+        customCdnAddrs,
+        customCdnHost,
+        customCdnSni,
+        vnpConfigs,
+        tnpConfigs,
+        ports
+    } = proxySettings;
+
+    if (outProxy) {
+        const proxyParams = JSON.parse(outProxyParams);
+        try {
+            chainProxy = buildXrayChainOutbound(proxyParams, enableIPv6);
+        } catch (error) {
+            console.log('An error occured while parsing chain proxy: ', error);
+            chainProxy = undefined;
+            await env.bn2.put("proxySettings", JSON.stringify({
+                ...proxySettings, 
+                outProxy: '',
+                outProxyParams: {}
+            }));
+        }
+    }
+    
+    const Addresses = await getConfigAddresses(cleanIPs, enableIPv6);
+    const customCdnAddresses = customCdnAddrs ? customCdnAddrs.split(',') : [];
+    const totalAddresses = isFragment ? [...Addresses] : [...Addresses, ...customCdnAddresses];
+    const totalPorts = ports.filter(port => isFragment ? globalThis.defaultHttpsPorts.includes(port): true);
+    vnpConfigs && protocols.push('VLESS');
+    tnpConfigs && protocols.push('Trojan');
+    let proxyIndex = 1;
+    
+    for (const protocol of protocols) {
+        let protocolIndex = 1;
+        for (const port of totalPorts)  {
+            for (const addr of totalAddresses) {
+                const isCustomAddr = customCdnAddresses.includes(addr);
+                const configType = isCustomAddr ? 'C' : isFragment ? 'F' : '';
+                const sni = isCustomAddr ? customCdnSni : randomUpperCase(globalThis.hostName);
+                const host = isCustomAddr ? customCdnHost : globalThis.hostName;
+                const remark = generateRemark(protocolIndex, port, addr, cleanIPs, protocol, configType);
+                const customConfig = buildXrayConfig(proxySettings, remark, isFragment, false, chainProxy, false, false);
+                customConfig.dns = await buildXrayDNS(proxySettings, [addr], undefined);
+                customConfig.routing.rules = buildXrayRoutingRules(proxySettings, [addr], chainProxy, false, false, false);
+                const outbound = protocol === 'VLESS'
+                    ? buildXrayVLESSOutbound('proxy', addr, port, host, sni, proxyIP, isFragment, isCustomAddr, enableIPv6)
+                    : buildXrayTrojanOutbound('proxy', addr, port, host, sni, proxyIP, isFragment, isCustomAddr, enableIPv6);
+
+                customConfig.outbounds.unshift({...outbound});
+                outbound.tag = `prox-${proxyIndex}`;
+
+                if (chainProxy) {
+                    customConfig.outbounds.unshift(chainProxy);
+                    const chainOutbound = structuredClone(chainProxy);
+                    chainOutbound.tag = `chain-${proxyIndex}`;
+                    chainOutbound.streamSettings.sockopt.dialerProxy = `prox-${proxyIndex}`;
+                    outbounds.push(chainOutbound);
+                }
+                
+                outbounds.push(outbound);
+                configs.push(customConfig);
+                proxyIndex++;
+                protocolIndex++;
+            }
+        }
+    }
+    
+    const bestPing = await buildXrayBestPingConfig(proxySettings, totalAddresses, chainProxy, outbounds, isFragment);
+    const finalConfigs = [...configs, bestPing];
+    if (isFragment) {
+        const bestFragment = await buildXrayBestFragmentConfig(proxySettings, globalThis.hostName, chainProxy, outbounds);
+        const workerLessConfig = await buildXrayWorkerLessConfig(proxySettings); 
+        finalConfigs.push(bestFragment, workerLessConfig);
+    }
+    return new Response(JSON.stringify(finalConfigs, null, 4), { 
+        status: 200,
+        headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+            'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+            'CDN-Cache-Control': 'no-store'
+        }
+    });
+}
+
+export async function getXrayWarpConfigs (request, env, client) {
+    const { proxySettings, warpConfigs } = await getDataset(request, env);
+    const xrayWarpConfigs = [];
+    const xrayWoWConfigs = [];
+    const xrayWarpOutbounds = [];
+    const xrayWoWOutbounds = [];
+    const { warpEndpoints } = proxySettings;
+    const outboundDomains = warpEndpoints.split(',').map(endpoint => endpoint.split(':')[0]).filter(address => isDomain(address));
+    const proIndicator = client === 'nikang' ? ' Pro ' : ' ';
+    
+    for (const [index, endpoint] of warpEndpoints.split(',').entries()) {
+        const endpointHost = endpoint.split(':')[0];
+        const warpConfig = buildXrayConfig(proxySettings, `💦 ${index + 1} - Warp${proIndicator}🇮🇷`, false, false, false, false, true);
+        const WoWConfig = buildXrayConfig(proxySettings, `💦 ${index + 1} - WoW${proIndicator}🌍`, false, false, true, false, true);
+        warpConfig.dns = WoWConfig.dns = await buildXrayDNS(proxySettings, [endpointHost], undefined, false, true);    
+        warpConfig.routing.rules = buildXrayRoutingRules(proxySettings, [endpointHost], false, false, false, true);
+        WoWConfig.routing.rules = buildXrayRoutingRules(proxySettings, [endpointHost], true, false, false, true);
+        const warpOutbound = buildXrayWarpOutbound(proxySettings, warpConfigs, endpoint, false, client);
+        const WoWOutbound = buildXrayWarpOutbound(proxySettings, warpConfigs, endpoint, true, client);
+        warpConfig.outbounds.unshift(warpOutbound);
+        WoWConfig.outbounds.unshift(WoWOutbound, warpOutbound);
+        xrayWarpConfigs.push(warpConfig);
+        xrayWoWConfigs.push(WoWConfig);
+        const proxyOutbound = structuredClone(warpOutbound);
+        proxyOutbound.tag = `prox-${index + 1}`;
+        const chainOutbound = structuredClone(WoWOutbound);
+        chainOutbound.tag = `chain-${index + 1}`;
+        chainOutbound.streamSettings.sockopt.dialerProxy = `prox-${index + 1}`;
+        xrayWarpOutbounds.push(proxyOutbound);
+        xrayWoWOutbounds.push(chainOutbound);
+    }
+
+    const dnsObject = await buildXrayDNS(proxySettings, outboundDomains, undefined, false, true);
+    const xrayWarpBestPing = buildXrayConfig(proxySettings, `💦 Warp${proIndicator}- Best Ping 🚀`, false, true, false, false, true);
+    xrayWarpBestPing.dns = dnsObject;    
+    xrayWarpBestPing.routing.rules = buildXrayRoutingRules(proxySettings, outboundDomains, false, true, false, true);
+    xrayWarpBestPing.outbounds.unshift(...xrayWarpOutbounds);
+    const xrayWoWBestPing = buildXrayConfig(proxySettings, `💦 WoW${proIndicator}- Best Ping 🚀`, false, true, true, false, true);
+    xrayWoWBestPing.dns = dnsObject;
+    xrayWoWBestPing.routing.rules = buildXrayRoutingRules(proxySettings, outboundDomains, true, true, false, true);
+    xrayWoWBestPing.outbounds.unshift(...xrayWoWOutbounds, ...xrayWarpOutbounds);
+    const configs = [...xrayWarpConfigs, ...xrayWoWConfigs, xrayWarpBestPing, xrayWoWBestPing];
+    return new Response(JSON.stringify(configs, null, 4), { 
+        status: 200,
+        headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+            'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+            'CDN-Cache-Control': 'no-store'
+        }
+    });
+}
+
+const xrayConfigTemp = {
+    remarks: "",
+    log: {
+        loglevel: "warning",
+    },
+    dns: {},
+    inbounds: [
+        {
+            port: 10808,
+            protocol: "socks",
+            settings: {
+                auth: "noauth",
+                udp: true,
+                userLevel: 8,
+            },
+            sniffing: {
+                destOverride: ["http", "tls"],
+                enabled: true,
+                routeOnly: true
+            },
+            tag: "socks-in",
+        },
+        {
+            port: 10809,
+            protocol: "http",
+            settings: {
+                auth: "noauth",
+                udp: true,
+                userLevel: 8,
+            },
+            sniffing: {
+                destOverride: ["http", "tls"],
+                enabled: true,
+                routeOnly: true
+            },
+            tag: "http-in",
+        },
+        {
+            listen: "127.0.0.1",
+            port: 10853,
+            protocol: "dokodemo-door",
+            settings: {
+              address: "1.1.1.1",
+              network: "tcp,udp",
+              port: 53
+            },
+            tag: "dns-in"
+        }
+    ],
+    outbounds: [
+        {
+            tag: "fragment",
+            protocol: "freedom",
+            settings: {
+                fragment: {
+                    packets: "tlshello",
+                    length: "",
+                    interval: "",
+                },
+                domainStrategy: "UseIP"
+            },
+            streamSettings: {
+                sockopt: {
+                    tcpKeepAliveIdle: 30,
+                    tcpNoDelay: true
+                },
+            },
+        },
+        {
+            protocol: "dns",
+            tag: "dns-out"
+        },
+        {
+            protocol: "freedom",
+            settings: {},
+            tag: "direct",
+        },
+        {
+            protocol: "blackhole",
+            settings: {
+                response: {
+                    type: "http",
+                },
+            },
+            tag: "block",
+        },
+    ],
+    policy: {
+        levels: {
+            8: {
+                connIdle: 300,
+                downlinkOnly: 1,
+                handshake: 4,
+                uplinkOnly: 1,
+            }
+        },
+        system: {
+            statsOutboundUplink: true,
+            statsOutboundDownlink: true,
+        }
+    },
+    routing: {
+        domainStrategy: "IPIfNonMatch",
+        rules: [],
+        balancers: [
+            {
+                tag: "all",
+                selector: ["prox"],
+                strategy: {
+                    type: "leastPing",
+                },
+            }
+        ]
+    },
+    observatory: {
+        probeInterval: "30s",
+        probeURL: "https://www.gstatic.com/generate_204",
+        subjectSelector: ["prox"],
+        EnableConcurrency: true,
+    },
+    stats: {}
+};

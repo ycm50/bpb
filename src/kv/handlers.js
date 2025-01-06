@@ -1,1 +1,173 @@
-(function(_0x5081f1,_0x17d61b){const _0x101ebf=a0_0x585c,_0x40c8c4=_0x5081f1();while(!![]){try{const _0x16b329=parseInt(_0x101ebf(0xd9))/0x1*(parseInt(_0x101ebf(0xef))/0x2)+-parseInt(_0x101ebf(0x112))/0x3*(parseInt(_0x101ebf(0x105))/0x4)+parseInt(_0x101ebf(0x107))/0x5*(parseInt(_0x101ebf(0xda))/0x6)+-parseInt(_0x101ebf(0x122))/0x7+-parseInt(_0x101ebf(0xdc))/0x8*(-parseInt(_0x101ebf(0x111))/0x9)+-parseInt(_0x101ebf(0xfc))/0xa+parseInt(_0x101ebf(0x100))/0xb*(parseInt(_0x101ebf(0xe8))/0xc);if(_0x16b329===_0x17d61b)break;else _0x40c8c4['push'](_0x40c8c4['shift']());}catch(_0x489c8e){_0x40c8c4['push'](_0x40c8c4['shift']());}}}(a0_0x4533,0xee86c));import{fetchWarpConfigs}from'../protocols/warp';function a0_0x4533(){const _0x3b2825=['resetSettings','88jKGAgt','bypass-lan','password','trim','noiseSizeMax','4228OJlSzm','search','8385tuSEYs','enableIPv6','An\x20error\x20occurred\x20while\x20getting\x20KV\x20-\x20','port','engage.cloudflareclient.com:2408','bypass-china','200','ipv4','noiseSizeMin','put','59301fMXSxf','5163jzlKUL','formData','bestVLESSTrojanInterval','An\x20error\x20occurred\x20while\x20updating\x20KV\x20-\x20','warpPlusLicense','Unsupported\x20request','proxySettings','bypassChina','true','proxyIP','block-ads','username','customCdnAddrs','bestWarpInterval','noiseDelayMin','noiseDelayMax','12420226PLsNaY','ports','remoteDNS','replaceAll','blockUDP443','json','hiddifyNoiseMode','nikaNGNoiseMode','fragmentPackets','fragmentIntervalMin','tnpConfigs','customBypassRules','quic','stringify','outProxyParams','Warp\x20configs\x20updated\x20successfully','An\x20error\x20occurred\x20while\x20getting\x20Warp\x20configs\x20-\x20','3OBrxkv','6282CTJqEj','noiseCountMax','152PhQIAp','bypass-iran','tlshello','customCdnHost','blockAds','forEach','warpFakeDNS','warpEnableIPv6','Unauthorized','cleanIPs','lengthMax','hostname','3968952SDXPqC','noiseCountMin','panelVersion','vnpTrojanFakeDNS','lengthMin','block-udp-443','split','1193420mgzbTX','log','bypass-russia','method','https://8.8.8.8/dns-query','outProxy','warpEndpoints','slice','vnp','get','bypassLAN','customCdnSni','localDNS','17466890YuUExa','bn1','false'];a0_0x4533=function(){return _0x3b2825;};return a0_0x4533();}import{isDomain,resolveDNS}from'../helpers/helpers';import{Authenticate}from'../authentication/auth';function a0_0x585c(_0x5dc239,_0x29964b){const _0x45332a=a0_0x4533();return a0_0x585c=function(_0x585c53,_0x24ec13){_0x585c53=_0x585c53-0xcd;let _0x2e3cb3=_0x45332a[_0x585c53];return _0x2e3cb3;},a0_0x585c(_0x5dc239,_0x29964b);}export async function getDataset(_0x335ebf,_0x144a0e){const _0x5f0492=a0_0x585c;let _0x486338,_0x4657c3;try{_0x486338=await _0x144a0e['bn1'][_0x5f0492(0xf8)](_0x5f0492(0x118),{'type':_0x5f0492(0xcd)}),_0x4657c3=await _0x144a0e['bn1'][_0x5f0492(0xf8)]('warpConfigs',{'type':'json'});}catch(_0x341427){console['log'](_0x341427);throw new Error(_0x5f0492(0x109)+_0x341427);}if(!_0x486338){_0x486338=await updateDataset(_0x335ebf,_0x144a0e);const {error:_0x5b8bfb,configs:_0x2094c7}=await fetchWarpConfigs(_0x144a0e,_0x486338);if(_0x5b8bfb)throw new Error(_0x5f0492(0xd8)+_0x5b8bfb);_0x4657c3=_0x2094c7;}if(globalThis[_0x5f0492(0xea)]!==_0x486338[_0x5f0492(0xea)])_0x486338=await updateDataset(_0x335ebf,_0x144a0e);return{'proxySettings':_0x486338,'warpConfigs':_0x4657c3};}export async function updateDataset(_0xec8341,_0x3fa4bb){const _0x53dfd5=a0_0x585c;let _0xd445d4=_0xec8341['method']==='POST'?await _0xec8341[_0x53dfd5(0x113)]():null;const _0x25da88=_0xd445d4?.[_0x53dfd5(0xf8)](_0x53dfd5(0xff))===_0x53dfd5(0x11a);let _0x4d76cb;if(!_0x25da88)try{_0x4d76cb=await _0x3fa4bb[_0x53dfd5(0xfd)][_0x53dfd5(0xf8)]('proxySettings',{'type':'json'});}catch(_0xbaae1e){console[_0x53dfd5(0xf0)](_0xbaae1e);throw new Error('An\x20error\x20occurred\x20while\x20getting\x20current\x20KV\x20settings\x20-\x20'+_0xbaae1e);}else _0xd445d4=null;const _0x501110=_0x4d2487=>{const _0x1a30ce=_0x53dfd5,_0x463a42=_0xd445d4?.[_0x1a30ce(0xf8)](_0x4d2487);if(_0x463a42===undefined)return null;if(_0x463a42==='true')return!![];if(_0x463a42===_0x1a30ce(0xfe))return![];return _0x463a42;},_0x49b98e=_0x501110('remoteDNS')??_0x4d76cb?.[_0x53dfd5(0x124)]??_0x53dfd5(0xf3),_0x55953a=_0x501110(_0x53dfd5(0x108))??_0x4d76cb?.[_0x53dfd5(0x108)]??!![],_0xf6ba72=new URL(_0x49b98e),_0xbec68a=_0xf6ba72[_0x53dfd5(0xe7)],_0x1f06ae=isDomain(_0xbec68a);let _0x122f81={};if(_0x1f06ae)try{const _0x589426=await resolveDNS(_0xbec68a);_0x122f81={'server':_0xbec68a,'staticIPs':_0x55953a?[..._0x589426['ipv4'],..._0x589426['ipv6']]:_0x589426[_0x53dfd5(0x10e)]};}catch(_0x26df24){console[_0x53dfd5(0xf0)](_0x26df24);throw new Error('An\x20error\x20occurred\x20while\x20resolving\x20remote\x20DNS\x20server,\x20please\x20try\x20agian!\x20-\x20'+_0x26df24);}const _0x36f8a3={'remoteDNS':_0x49b98e,'resolvedRemoteDNS':_0x122f81,'localDNS':_0x501110(_0x53dfd5(0xfb))??_0x4d76cb?.[_0x53dfd5(0xfb)]??'8.8.8.8','vnpTrojanFakeDNS':_0x501110(_0x53dfd5(0xeb))??_0x4d76cb?.[_0x53dfd5(0xeb)]??![],'proxyIP':_0x501110(_0x53dfd5(0x11b))?.[_0x53dfd5(0x125)]('\x20','')??_0x4d76cb?.[_0x53dfd5(0x11b)]??'','outProxy':_0x501110(_0x53dfd5(0xf4))??_0x4d76cb?.[_0x53dfd5(0xf4)]??'','outProxyParams':extractChainProxyParams(_0x501110('outProxy'))??_0x4d76cb?.[_0x53dfd5(0xd6)]??{},'cleanIPs':_0x501110(_0x53dfd5(0xe5))?.[_0x53dfd5(0x125)]('\x20','')??_0x4d76cb?.[_0x53dfd5(0xe5)]??'','enableIPv6':_0x55953a,'customCdnAddrs':_0x501110('customCdnAddrs')?.[_0x53dfd5(0x125)]('\x20','')??_0x4d76cb?.[_0x53dfd5(0x11e)]??'','customCdnHost':_0x501110(_0x53dfd5(0xdf))?.[_0x53dfd5(0x103)]()??_0x4d76cb?.['customCdnHost']??'','customCdnSni':_0x501110(_0x53dfd5(0xfa))?.[_0x53dfd5(0x103)]()??_0x4d76cb?.[_0x53dfd5(0xfa)]??'','bestVLESSTrojanInterval':_0x501110(_0x53dfd5(0x114))??_0x4d76cb?.[_0x53dfd5(0x114)]??'30','vnpConfigs':_0x501110('vnpConfigs')??_0x4d76cb?.['vnpConfigs']??!![],'tnpConfigs':_0x501110('tnpConfigs')??_0x4d76cb?.[_0x53dfd5(0xd2)]??![],'ports':_0x501110(_0x53dfd5(0x123))?.[_0x53dfd5(0xee)](',')??_0x4d76cb?.[_0x53dfd5(0x123)]??['443'],'lengthMin':_0x501110('fragmentLengthMin')??_0x4d76cb?.[_0x53dfd5(0xec)]??'100','lengthMax':_0x501110('fragmentLengthMax')??_0x4d76cb?.[_0x53dfd5(0xe6)]??_0x53dfd5(0x10d),'intervalMin':_0x501110(_0x53dfd5(0xd1))??_0x4d76cb?.['intervalMin']??'1','intervalMax':_0x501110('fragmentIntervalMax')??_0x4d76cb?.['intervalMax']??'1','fragmentPackets':_0x501110(_0x53dfd5(0xd0))??_0x4d76cb?.[_0x53dfd5(0xd0)]??_0x53dfd5(0xde),'bypassLAN':_0x501110(_0x53dfd5(0x101))??_0x4d76cb?.[_0x53dfd5(0xf9)]??![],'bypassIran':_0x501110(_0x53dfd5(0xdd))??_0x4d76cb?.['bypassIran']??![],'bypassChina':_0x501110(_0x53dfd5(0x10c))??_0x4d76cb?.[_0x53dfd5(0x119)]??![],'bypassRussia':_0x501110(_0x53dfd5(0xf1))??_0x4d76cb?.['bypassRussia']??![],'blockAds':_0x501110(_0x53dfd5(0x11c))??_0x4d76cb?.[_0x53dfd5(0xe0)]??![],'blockPorn':_0x501110('block-porn')??_0x4d76cb?.['blockPorn']??![],'blockUDP443':_0x501110(_0x53dfd5(0xed))??_0x4d76cb?.[_0x53dfd5(0x126)]??![],'customBypassRules':_0x501110(_0x53dfd5(0xd3))?.[_0x53dfd5(0x125)]('\x20','')??_0x4d76cb?.[_0x53dfd5(0xd3)]??'','customBlockRules':_0x501110('customBlockRules')?.['replaceAll']('\x20','')??_0x4d76cb?.['customBlockRules']??'','warpEndpoints':_0x501110(_0x53dfd5(0xf5))?.[_0x53dfd5(0x125)]('\x20','')??_0x4d76cb?.['warpEndpoints']??_0x53dfd5(0x10b),'warpFakeDNS':_0x501110(_0x53dfd5(0xe2))??_0x4d76cb?.[_0x53dfd5(0xe2)]??![],'warpEnableIPv6':_0x501110(_0x53dfd5(0xe3))??_0x4d76cb?.['warpEnableIPv6']??!![],'warpPlusLicense':_0x501110('warpPlusLicense')??_0x4d76cb?.[_0x53dfd5(0x116)]??'','bestWarpInterval':_0x501110('bestWarpInterval')??_0x4d76cb?.[_0x53dfd5(0x11f)]??'30','hiddifyNoiseMode':_0x501110(_0x53dfd5(0xce))??_0x4d76cb?.['hiddifyNoiseMode']??'m4','nikaNGNoiseMode':_0x501110(_0x53dfd5(0xcf))??_0x4d76cb?.[_0x53dfd5(0xcf)]??_0x53dfd5(0xd4),'noiseCountMin':_0x501110(_0x53dfd5(0xe9))??_0x4d76cb?.[_0x53dfd5(0xe9)]??'10','noiseCountMax':_0x501110(_0x53dfd5(0xdb))??_0x4d76cb?.['noiseCountMax']??'15','noiseSizeMin':_0x501110(_0x53dfd5(0x10f))??_0x4d76cb?.[_0x53dfd5(0x10f)]??'5','noiseSizeMax':_0x501110(_0x53dfd5(0x104))??_0x4d76cb?.[_0x53dfd5(0x104)]??'10','noiseDelayMin':_0x501110(_0x53dfd5(0x120))??_0x4d76cb?.['noiseDelayMin']??'1','noiseDelayMax':_0x501110(_0x53dfd5(0x121))??_0x4d76cb?.['noiseDelayMax']??'1','panelVersion':globalThis['panelVersion']};try{await _0x3fa4bb[_0x53dfd5(0xfd)][_0x53dfd5(0x110)](_0x53dfd5(0x118),JSON[_0x53dfd5(0xd5)](_0x36f8a3));if(_0x25da88)await updateWarpConfigs(_0xec8341,_0x3fa4bb);}catch(_0x38e63e){console[_0x53dfd5(0xf0)](_0x38e63e);throw new Error(_0x53dfd5(0x115)+_0x38e63e);}return _0x36f8a3;}function extractChainProxyParams(_0x339b4e){const _0x2071d7=a0_0x585c;let _0x2ebfc3={};if(!_0x339b4e)return{};const _0x10e375=new URL(_0x339b4e),_0x2dbe99=_0x10e375['protocol'][_0x2071d7(0xf6)](0x0,-0x1);if(_0x2dbe99===_0x2071d7(0xf7)){const _0x47629d=new URLSearchParams(_0x10e375[_0x2071d7(0x106)]);_0x2ebfc3={'protocol':_0x2dbe99,'uuid':_0x10e375[_0x2071d7(0x11d)],'server':_0x10e375[_0x2071d7(0xe7)],'port':_0x10e375[_0x2071d7(0x10a)]},_0x47629d[_0x2071d7(0xe1)]((_0x554e0c,_0x494a38)=>{_0x2ebfc3[_0x494a38]=_0x554e0c;});}else _0x2ebfc3={'protocol':_0x2dbe99,'user':_0x10e375[_0x2071d7(0x11d)],'pass':_0x10e375[_0x2071d7(0x102)],'server':_0x10e375['host'],'port':_0x10e375[_0x2071d7(0x10a)]};return JSON[_0x2071d7(0xd5)](_0x2ebfc3);}export async function updateWarpConfigs(_0x2f3c4c,_0x328a5b){const _0x5c0567=a0_0x585c,_0x3c132f=await Authenticate(_0x2f3c4c,_0x328a5b);if(!_0x3c132f)return new Response(_0x5c0567(0xe4),{'status':0x191});if(_0x2f3c4c[_0x5c0567(0xf2)]==='POST')try{const {proxySettings:_0x409911}=await getDataset(_0x2f3c4c,_0x328a5b),{error:_0x201321}=await fetchWarpConfigs(_0x328a5b,_0x409911);if(_0x201321)return new Response(_0x201321,{'status':0x190});return new Response(_0x5c0567(0xd7),{'status':0xc8});}catch(_0x1a312f){return console['log'](_0x1a312f),new Response('An\x20error\x20occurred\x20while\x20updating\x20Warp\x20configs!\x20-\x20'+_0x1a312f,{'status':0x1f4});}else return new Response(_0x5c0567(0x117),{'status':0x195});}
+import { fetchWarpConfigs } from '../protocols/warp';
+import { isDomain, resolveDNS } from '../helpers/helpers';
+import { Authenticate } from '../authentication/auth';
+
+export async function getDataset(request, env) {
+    let proxySettings, warpConfigs;
+
+    try {
+        proxySettings = await env.bn2.get("proxySettings", {type: 'json'});
+        warpConfigs = await env.bn2.get('warpConfigs', {type: 'json'});
+    } catch (error) {
+        console.log(error);
+        throw new Error(`An error occurred while getting KV - ${error}`);
+    }
+
+    if (!proxySettings) {
+        proxySettings = await updateDataset(request, env);
+        const { error, configs } = await fetchWarpConfigs(env, proxySettings);
+        if (error) throw new Error(`An error occurred while getting Warp configs - ${error}`);
+        warpConfigs = configs;
+    }
+    
+    if (globalThis.panelVersion !== proxySettings.panelVersion) proxySettings = await updateDataset(request, env);
+    return { proxySettings, warpConfigs }
+}
+
+export async function updateDataset (request, env) {
+    let newSettings = request.method === 'POST' ? await request.formData() : null;
+    const isReset = newSettings?.get('resetSettings') === 'true';
+    let currentSettings;
+    if (!isReset) {
+        try {
+            currentSettings = await env.bn2.get("proxySettings", {type: 'json'});
+        } catch (error) {
+            console.log(error);
+            throw new Error(`An error occurred while getting current KV settings - ${error}`);
+        }
+    } else {
+        newSettings = null;
+    }
+
+    const validateField = (field) => {
+        const fieldValue = newSettings?.get(field);
+        if (fieldValue === undefined) return null;
+        if (fieldValue === 'true') return true;
+        if (fieldValue === 'false') return false;
+        return fieldValue;
+    }
+
+    const remoteDNS = validateField('remoteDNS') ?? currentSettings?.remoteDNS ?? 'https://8.8.8.8/dns-query';
+    const enableIPv6 = validateField('enableIPv6') ?? currentSettings?.enableIPv6 ?? true;
+    const url = new URL(remoteDNS);
+    const remoteDNSServer = url.hostname;
+    const isServerDomain = isDomain(remoteDNSServer);
+    let resolvedRemoteDNS = {};
+    if (isServerDomain) {
+        try {
+            const resolvedDomain = await resolveDNS(remoteDNSServer);
+            resolvedRemoteDNS = {
+                server: remoteDNSServer,
+                staticIPs: enableIPv6 ? [...resolvedDomain.ipv4, ...resolvedDomain.ipv6] : resolvedDomain.ipv4
+            };
+        } catch (error) {
+            console.log(error);
+            throw new Error(`An error occurred while resolving remote DNS server, please try agian! - ${error}`);
+        }
+    } 
+
+    const proxySettings = {
+        remoteDNS: remoteDNS,
+        resolvedRemoteDNS: resolvedRemoteDNS,
+        localDNS: validateField('localDNS') ?? currentSettings?.localDNS ?? '8.8.8.8',
+        vnpTrojanFakeDNS: validateField('vnpTrojanFakeDNS') ?? currentSettings?.vnpTrojanFakeDNS ?? false,
+        proxyIP: validateField('proxyIP')?.replaceAll(' ', '') ?? currentSettings?.proxyIP ?? '',
+        outProxy: validateField('outProxy') ?? currentSettings?.outProxy ?? '',
+        outProxyParams: extractChainProxyParams(validateField('outProxy')) ?? currentSettings?.outProxyParams ?? {},
+        cleanIPs: validateField('cleanIPs')?.replaceAll(' ', '') ?? currentSettings?.cleanIPs ?? '',
+        enableIPv6: enableIPv6,
+        customCdnAddrs: validateField('customCdnAddrs')?.replaceAll(' ', '') ?? currentSettings?.customCdnAddrs ?? '',
+        customCdnHost: validateField('customCdnHost')?.trim() ?? currentSettings?.customCdnHost ?? '',
+        customCdnSni: validateField('customCdnSni')?.trim() ?? currentSettings?.customCdnSni ?? '',
+        bestVLESSTrojanInterval: validateField('bestVLESSTrojanInterval') ?? currentSettings?.bestVLESSTrojanInterval ?? '30',
+        vnpConfigs: validateField('vnpConfigs') ?? currentSettings?.vnpConfigs ?? true,
+        tnpConfigs: validateField('tnpConfigs') ?? currentSettings?.tnpConfigs ?? false,
+        ports: validateField('ports')?.split(',') ?? currentSettings?.ports ?? ['443'],
+        lengthMin: validateField('fragmentLengthMin') ?? currentSettings?.lengthMin ?? '100',
+        lengthMax: validateField('fragmentLengthMax') ?? currentSettings?.lengthMax ?? '200',
+        intervalMin: validateField('fragmentIntervalMin') ?? currentSettings?.intervalMin ?? '1',
+        intervalMax: validateField('fragmentIntervalMax') ?? currentSettings?.intervalMax ?? '1',
+        fragmentPackets: validateField('fragmentPackets') ?? currentSettings?.fragmentPackets ?? 'tlshello',
+        bypassLAN: validateField('bypass-lan') ?? currentSettings?.bypassLAN ?? false,
+        bypassIran: validateField('bypass-iran') ?? currentSettings?.bypassIran ?? false,
+        bypassChina: validateField('bypass-china') ?? currentSettings?.bypassChina ?? false,
+        bypassRussia: validateField('bypass-russia') ?? currentSettings?.bypassRussia ?? false,
+        blockAds: validateField('block-ads') ?? currentSettings?.blockAds ?? false,
+        blockPorn: validateField('block-porn') ?? currentSettings?.blockPorn ?? false,
+        blockUDP443: validateField('block-udp-443') ?? currentSettings?.blockUDP443 ?? false,
+        customBypassRules: validateField('customBypassRules')?.replaceAll(' ', '') ?? currentSettings?.customBypassRules ?? '',
+        customBlockRules: validateField('customBlockRules')?.replaceAll(' ', '') ?? currentSettings?.customBlockRules ?? '',
+        warpEndpoints: validateField('warpEndpoints')?.replaceAll(' ', '') ?? currentSettings?.warpEndpoints ?? 'engage.cloudflareclient.com:2408',
+        warpFakeDNS: validateField('warpFakeDNS') ?? currentSettings?.warpFakeDNS ?? false,
+        warpEnableIPv6: validateField('warpEnableIPv6') ?? currentSettings?.warpEnableIPv6 ?? true,
+        warpPlusLicense: validateField('warpPlusLicense') ?? currentSettings?.warpPlusLicense ?? '',
+        bestWarpInterval: validateField('bestWarpInterval') ?? currentSettings?.bestWarpInterval ?? '30',
+        hiddifyNoiseMode: validateField('hiddifyNoiseMode') ?? currentSettings?.hiddifyNoiseMode ?? 'm4',
+        nikaNGNoiseMode: validateField('nikaNGNoiseMode') ?? currentSettings?.nikaNGNoiseMode ?? 'quic',
+        noiseCountMin: validateField('noiseCountMin') ?? currentSettings?.noiseCountMin ?? '10',
+        noiseCountMax: validateField('noiseCountMax') ?? currentSettings?.noiseCountMax ?? '15',
+        noiseSizeMin: validateField('noiseSizeMin') ?? currentSettings?.noiseSizeMin ?? '5',
+        noiseSizeMax: validateField('noiseSizeMax') ?? currentSettings?.noiseSizeMax ?? '10',
+        noiseDelayMin: validateField('noiseDelayMin') ?? currentSettings?.noiseDelayMin ?? '1',
+        noiseDelayMax: validateField('noiseDelayMax') ?? currentSettings?.noiseDelayMax ?? '1',
+        panelVersion: globalThis.panelVersion
+    };
+
+    try {    
+        await env.bn2.put("proxySettings", JSON.stringify(proxySettings));
+        if (isReset) await updateWarpConfigs(request, env);          
+    } catch (error) {
+        console.log(error);
+        throw new Error(`An error occurred while updating KV - ${error}`);
+    }
+
+    return proxySettings;
+}
+
+function extractChainProxyParams(chainProxy) {
+    let configParams = {};
+    if (!chainProxy) return {};
+    const url = new URL(chainProxy);
+    const protocol = url.protocol.slice(0, -1);
+    if (protocol === 'vnp') {
+        const params = new URLSearchParams(url.search);
+        configParams = {
+            protocol: protocol,
+            uuid : url.username,
+            server : url.hostname,
+            port : url.port
+        };
+    
+        params.forEach( (value, key) => {
+            configParams[key] = value;
+        });
+    } else {
+        configParams = {
+            protocol: protocol, 
+            user : url.username,
+            pass : url.password,
+            server : url.host,
+            port : url.port
+        };
+    }
+
+    return JSON.stringify(configParams);
+}
+
+export async function updateWarpConfigs(request, env) {
+    const auth = await Authenticate(request, env); 
+    if (!auth) return new Response('Unauthorized', { status: 401 });
+    if (request.method === 'POST') {
+        try {
+            const { proxySettings } = await getDataset(request, env);
+            const { error: warpPlusError } = await fetchWarpConfigs(env, proxySettings);
+            if (warpPlusError) return new Response(warpPlusError, { status: 400 });
+            return new Response('Warp configs updated successfully', { status: 200 });
+        } catch (error) {
+            console.log(error);
+            return new Response(`An error occurred while updating Warp configs! - ${error}`, { status: 500 });
+        }
+    } else {
+        return new Response('Unsupported request', { status: 405 });
+    }
+}

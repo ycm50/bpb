@@ -1,1 +1,70 @@
-(function(_0x12e8df,_0x443e24){const _0x1ac4e8=a0_0x5779,_0x3411c6=_0x12e8df();while(!![]){try{const _0x5b7de3=parseInt(_0x1ac4e8(0x1b5))/0x1+parseInt(_0x1ac4e8(0x1ca))/0x2*(-parseInt(_0x1ac4e8(0x1c2))/0x3)+parseInt(_0x1ac4e8(0x1b9))/0x4*(parseInt(_0x1ac4e8(0x1d1))/0x5)+parseInt(_0x1ac4e8(0x1c3))/0x6*(parseInt(_0x1ac4e8(0x1d0))/0x7)+-parseInt(_0x1ac4e8(0x1c6))/0x8+parseInt(_0x1ac4e8(0x1d3))/0x9+-parseInt(_0x1ac4e8(0x1b7))/0xa;if(_0x5b7de3===_0x443e24)break;else _0x3411c6['push'](_0x3411c6['shift']());}catch(_0x15863f){_0x3411c6['push'](_0x3411c6['shift']());}}}(a0_0x3c2f,0xf409f));import{resolveDNS,isDomain}from'../helpers/helpers';export async function getConfigAddresses(_0x3067c4,_0x155bc2){const _0xca81a8=a0_0x5779,_0x47c7ad=await resolveDNS(globalThis[_0xca81a8(0x1b4)]),_0x5af92a=_0x155bc2?_0x47c7ad['ipv6'][_0xca81a8(0x1d4)](_0x34a65f=>'['+_0x34a65f+']'):[];return[globalThis['hostName'],_0xca81a8(0x1c8),..._0x47c7ad['ipv4'],..._0x5af92a,..._0x3067c4?_0x3067c4[_0xca81a8(0x1ba)](','):[]];}export function extractWireguardParams(_0x3b86b7,_0x140ddc){const _0x26e4ed=a0_0x5779,_0x11c747=_0x140ddc?0x1:0x0,_0x14af57=_0x3b86b7[_0x11c747][_0x26e4ed(0x1c0)][_0x26e4ed(0x1cc)];return{'warpIPv6':_0x14af57['interface'][_0x26e4ed(0x1cd)]['v6']+'/128','reserved':_0x14af57['client_id'],'publicKey':_0x14af57['peers'][0x0]['public_key'],'privateKey':_0x3b86b7[_0x11c747][_0x26e4ed(0x1bb)]};}export function generateRemark(_0x25e397,_0x218c97,_0x42ffc9,_0x43c959,_0x5739ab,_0x150c69){const _0x12b287=a0_0x5779;let _0x2bd959;const _0x51c772=_0x150c69?'\x20'+_0x150c69:'';return _0x43c959[_0x12b287(0x1c4)](_0x42ffc9)?_0x2bd959='Clean\x20IP':_0x2bd959=isDomain(_0x42ffc9)?'Domain':isIPv4(_0x42ffc9)?'IPv4':isIPv6(_0x42ffc9)?_0x12b287(0x1b8):'',_0x12b287(0x1bc)+_0x25e397+_0x12b287(0x1bd)+_0x5739ab+_0x51c772+_0x12b287(0x1bd)+_0x2bd959+_0x12b287(0x1cf)+_0x218c97;}export function randomUpperCase(_0x5df3b6){const _0x4e7da0=a0_0x5779;let _0x559f6b='';for(let _0x2e59ca=0x0;_0x2e59ca<_0x5df3b6['length'];_0x2e59ca++){_0x559f6b+=Math[_0x4e7da0(0x1c9)]()<0.5?_0x5df3b6[_0x2e59ca][_0x4e7da0(0x1bf)]():_0x5df3b6[_0x2e59ca];}return _0x559f6b;}export function getRandomPath(_0x1f1e74){const _0x59f391=a0_0x5779;let _0x1a6848='';const _0x4d23ea=_0x59f391(0x1cb),_0x816f62=_0x4d23ea[_0x59f391(0x1c5)];for(let _0x41bbce=0x0;_0x41bbce<_0x1f1e74;_0x41bbce++){_0x1a6848+=_0x4d23ea[_0x59f391(0x1d2)](Math['floor'](Math[_0x59f391(0x1c9)]()*_0x816f62));}return _0x1a6848;}export function base64ToDecimal(_0x3139b0){const _0x3ce35a=a0_0x5779,_0x1b79a7=atob(_0x3139b0),_0x5ba936=Array[_0x3ce35a(0x1b6)](_0x1b79a7)[_0x3ce35a(0x1d4)](_0x2f79fc=>_0x2f79fc['charCodeAt'](0x0)['toString'](0x10)[_0x3ce35a(0x1c7)](0x2,'0'))[_0x3ce35a(0x1c1)](''),_0x564ec2=_0x5ba936[_0x3ce35a(0x1be)](/.{2}/g)['map'](_0x27a414=>parseInt(_0x27a414,0x10));return _0x564ec2;}function a0_0x3c2f(){const _0x54bd67=['ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789','config','addresses','test','\x20:\x20','862078ZYJSUC','5WCmXEm','charAt','13078674DYcIMB','map','hostName','1109230bliAAX','from','12704160JvZmZu','IPv6','6595024roufUU','split','privateKey','💦\x20','\x20-\x20','match','toUpperCase','account','join','12ZXhCSX','24brgHOC','includes','length','14166760BCUpYk','padStart','www.speedtest.net','random','331472uPtndh'];a0_0x3c2f=function(){return _0x54bd67;};return a0_0x3c2f();}function a0_0x5779(_0x546fc7,_0x10f338){const _0x3c2f4f=a0_0x3c2f();return a0_0x5779=function(_0x5779f6,_0x2bc0ba){_0x5779f6=_0x5779f6-0x1b4;let _0x26ddd2=_0x3c2f4f[_0x5779f6];return _0x26ddd2;},a0_0x5779(_0x546fc7,_0x10f338);}export function isIPv4(_0x17f442){const _0x3ac493=a0_0x5779,_0x3cd960=/^(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\/([0-9]|[1-2][0-9]|3[0-2]))?$/;return _0x3cd960[_0x3ac493(0x1ce)](_0x17f442);}export function isIPv6(_0x52f5d3){const _0x55801c=a0_0x5779,_0x6c2907=/^\[(?:(?:[a-fA-F0-9]{1,4}:){7}[a-fA-F0-9]{1,4}|(?:[a-fA-F0-9]{1,4}:){1,7}:|::(?:[a-fA-F0-9]{1,4}:){0,7}|(?:[a-fA-F0-9]{1,4}:){1,6}:[a-fA-F0-9]{1,4}|(?:[a-fA-F0-9]{1,4}:){1,5}(?::[a-fA-F0-9]{1,4}){1,2}|(?:[a-fA-F0-9]{1,4}:){1,4}(?::[a-fA-F0-9]{1,4}){1,3}|(?:[a-fA-F0-9]{1,4}:){1,3}(?::[a-fA-F0-9]{1,4}){1,4}|(?:[a-fA-F0-9]{1,4}:){1,2}(?::[a-fA-F0-9]{1,4}){1,5}|[a-fA-F0-9]{1,4}:(?::[a-fA-F0-9]{1,4}){1,6})\](?:\/(1[0-1][0-9]|12[0-8]|[0-9]?[0-9]))?$/;return _0x6c2907[_0x55801c(0x1ce)](_0x52f5d3);}
+import { resolveDNS, isDomain } from '../helpers/helpers';
+
+export async function getConfigAddresses(cleanIPs, enableIPv6) {
+    const resolved = await resolveDNS(globalThis.hostName);
+    const defaultIPv6 = enableIPv6 ? resolved.ipv6.map((ip) => `[${ip}]`) : []
+    return [
+        globalThis.hostName,
+        'www.speedtest.net',
+        ...resolved.ipv4,
+        ...defaultIPv6,
+        ...(cleanIPs ? cleanIPs.split(',') : [])
+    ];
+}
+
+export function extractWireguardParams(warpConfigs, isWoW) {
+    const index = isWoW ? 1 : 0;
+    const warpConfig = warpConfigs[index].account.config;
+    return {
+        warpIPv6: `${warpConfig.interface.addresses.v6}/128`,
+        reserved: warpConfig.client_id,
+        publicKey: warpConfig.peers[0].public_key,
+        privateKey: warpConfigs[index].privateKey,
+    };
+}
+
+export function generateRemark(index, port, address, cleanIPs, protocol, configType) {
+    let addressType;
+    const type = configType ? ` ${configType}` : '';
+
+    cleanIPs.includes(address)
+        ? addressType = 'Clean IP'
+        : addressType = isDomain(address) ? 'Domain': isIPv4(address) ? 'IPv4' : isIPv6(address) ? 'IPv6' : '';
+
+    return `💦 ${index} - ${protocol}${type} - ${addressType} : ${port}`;
+}
+
+export function randomUpperCase (str) {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        result += Math.random() < 0.5 ? str[i].toUpperCase() : str[i];
+    }
+    return result;
+}
+
+export function getRandomPath (length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+export function base64ToDecimal (base64) {
+    const binaryString = atob(base64);
+    const hexString = Array.from(binaryString).map(char => char.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+    const decimalArray = hexString.match(/.{2}/g).map(hex => parseInt(hex, 16));
+    return decimalArray;
+}
+
+export function isIPv4(address) {
+    const ipv4Pattern = /^(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\/([0-9]|[1-2][0-9]|3[0-2]))?$/;
+    return ipv4Pattern.test(address);
+}
+
+export function isIPv6(address) {
+    const ipv6Pattern = /^\[(?:(?:[a-fA-F0-9]{1,4}:){7}[a-fA-F0-9]{1,4}|(?:[a-fA-F0-9]{1,4}:){1,7}:|::(?:[a-fA-F0-9]{1,4}:){0,7}|(?:[a-fA-F0-9]{1,4}:){1,6}:[a-fA-F0-9]{1,4}|(?:[a-fA-F0-9]{1,4}:){1,5}(?::[a-fA-F0-9]{1,4}){1,2}|(?:[a-fA-F0-9]{1,4}:){1,4}(?::[a-fA-F0-9]{1,4}){1,3}|(?:[a-fA-F0-9]{1,4}:){1,3}(?::[a-fA-F0-9]{1,4}){1,4}|(?:[a-fA-F0-9]{1,4}:){1,2}(?::[a-fA-F0-9]{1,4}){1,5}|[a-fA-F0-9]{1,4}:(?::[a-fA-F0-9]{1,4}){1,6})\](?:\/(1[0-1][0-9]|12[0-8]|[0-9]?[0-9]))?$/;
+    return ipv6Pattern.test(address);
+}

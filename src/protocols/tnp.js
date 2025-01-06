@@ -1,1 +1,357 @@
-(function(_0x1789f9,_0x4fe166){const _0x3c5e6d=a0_0x176f,_0x38ee49=_0x1789f9();while(!![]){try{const _0x38f871=parseInt(_0x3c5e6d(0xe4))/0x1+parseInt(_0x3c5e6d(0xe6))/0x2*(-parseInt(_0x3c5e6d(0xd1))/0x3)+parseInt(_0x3c5e6d(0xdd))/0x4*(parseInt(_0x3c5e6d(0xcd))/0x5)+-parseInt(_0x3c5e6d(0xfa))/0x6+-parseInt(_0x3c5e6d(0xb8))/0x7+-parseInt(_0x3c5e6d(0xe5))/0x8*(parseInt(_0x3c5e6d(0xef))/0x9)+parseInt(_0x3c5e6d(0xc3))/0xa*(parseInt(_0x3c5e6d(0xf4))/0xb);if(_0x38f871===_0x4fe166)break;else _0x38ee49['push'](_0x38ee49['shift']());}catch(_0x49cc43){_0x38ee49['push'](_0x38ee49['shift']());}}}(a0_0x4224,0x1b0cb));function a0_0x4224(){const _0x22776b=['328UbTKcG','518lUgVqi','send','sec-websocket-protocol','headers','remoteSocket.readable\x20abort','pipeTo','log','from','data','29313yaKaxZ','closed','releaseLock','invalid\x20password','buffer','11fSdEJl','get','addEventListener','charCodeAt','readableWebSocketStream\x20pipeTo\x20error','toString','349542sYhUHH','invalid\x20header\x20format\x20(missing\x20CR\x20LF)','accept','stringify','push','join','slice','split','184786VgplDD','length','getUint16','address\x20is\x20empty,\x20addressType\x20is\x20','tnpRemoteSocketToWS\x20error:','replace','close','d3d3Lg==','decode','value','sha224','3585830IDUIYX','stack','retry\x20tcpSocket\x20closed\x20error','readableWebSocketStream\x20is\x20closed','proxyIP','\x20tcp','writable','getWriter','error','retry','320ZfkfvO','LnNzbGlwLmlv','remoteSocket.readable\x20is\x20closed,\x20hasIncomingData:\x20','random','1545YfremM','readableWebSocketStream\x20is\x20aborted','getUint8','webSocket\x20connection\x20is\x20not\x20open','unsupported\x20command,\x20only\x20TCP\x20(CONNECT)\x20is\x20allowed','finally','message','webSocketServer\x20has\x20error','tnpPassword','readyState','byteLength','invalid\x20data','5376kPLRkW','catch','write','values','pathName','invalid\x20SOCKS5\x20request\x20data','safeCloseWebSocket\x20error','17773xItLJw'];a0_0x4224=function(){return _0x22776b;};return a0_0x4224();}import{connect}from'cloudflare:sockets';import a0_0x385624 from'js-sha256';export async function tnpOverWSHandler(_0x531501){const _0xae81f9=a0_0x176f,_0x3b339c=new WebSocketPair(),[_0x3cbcc8,_0x1a48bc]=Object[_0xae81f9(0xe0)](_0x3b339c);_0x1a48bc[_0xae81f9(0xfc)]();let _0x55ba86='',_0x4a1cb1='';const _0x411ed5=(_0x237de3,_0x5e488e)=>{console['log']('['+_0x55ba86+':'+_0x4a1cb1+']\x20'+_0x237de3,_0x5e488e||'');},_0x2643b8=_0x531501[_0xae81f9(0xe9)][_0xae81f9(0xf5)](_0xae81f9(0xe8))||'',_0x253af3=makeReadableWebSocketStream(_0x1a48bc,_0x2643b8,_0x411ed5);let _0x345a7f={'value':null},_0x55cbde=null;return _0x253af3[_0xae81f9(0xeb)](new WritableStream({async 'write'(_0x4fd8c2,_0x985efc){const _0x249b6f=_0xae81f9;if(_0x55cbde)return _0x55cbde(_0x4fd8c2);if(_0x345a7f[_0x249b6f(0xc1)]){const _0x53e8c9=_0x345a7f[_0x249b6f(0xc1)][_0x249b6f(0xc9)]['getWriter']();await _0x53e8c9[_0x249b6f(0xdf)](_0x4fd8c2),_0x53e8c9[_0x249b6f(0xf1)]();return;}const {hasError:_0x1dd2d1,message:_0x16ba65,portRemote:portRemote=0x1bb,addressRemote:addressRemote='',rawClientData:_0x318060}=await parseTrojanHeader(_0x4fd8c2);_0x55ba86=addressRemote,_0x4a1cb1=portRemote+'--'+Math['random']()+_0x249b6f(0xc8);if(_0x1dd2d1){throw new Error(_0x16ba65);return;}handleTCPOutBound(_0x345a7f,addressRemote,portRemote,_0x318060,_0x1a48bc,_0x411ed5);},'close'(){const _0x5f0f5a=_0xae81f9;_0x411ed5(_0x5f0f5a(0xc6));},'abort'(_0x1e59e){const _0xd0b6b3=_0xae81f9;_0x411ed5(_0xd0b6b3(0xd2),JSON[_0xd0b6b3(0xfd)](_0x1e59e));}}))['catch'](_0x26c67d=>{const _0x31cbd4=_0xae81f9;_0x411ed5(_0x31cbd4(0xf8),_0x26c67d);}),new Response(null,{'status':0x65,'webSocket':_0x3cbcc8});}async function parseTrojanHeader(_0x5a27ff){const _0x4577f1=a0_0x176f;if(_0x5a27ff[_0x4577f1(0xdb)]<0x38)return{'hasError':!![],'message':_0x4577f1(0xdc)};let _0x5bf84c=0x38;if(new Uint8Array(_0x5a27ff[_0x4577f1(0xb6)](0x38,0x39))[0x0]!==0xd||new Uint8Array(_0x5a27ff['slice'](0x39,0x3a))[0x0]!==0xa)return{'hasError':!![],'message':_0x4577f1(0xfb)};const _0x340d30=new TextDecoder()['decode'](_0x5a27ff[_0x4577f1(0xb6)](0x0,_0x5bf84c));if(_0x340d30!==a0_0x385624[_0x4577f1(0xc2)](globalThis[_0x4577f1(0xd9)]))return{'hasError':!![],'message':_0x4577f1(0xf2)};const _0x18f52a=_0x5a27ff[_0x4577f1(0xb6)](_0x5bf84c+0x2);if(_0x18f52a[_0x4577f1(0xdb)]<0x6)return{'hasError':!![],'message':_0x4577f1(0xe2)};const _0x4e2be1=new DataView(_0x18f52a),_0xabff89=_0x4e2be1[_0x4577f1(0xd3)](0x0);if(_0xabff89!==0x1)return{'hasError':!![],'message':_0x4577f1(0xd5)};const _0x48df68=_0x4e2be1['getUint8'](0x1);let _0x2086ff=0x0,_0x303679=0x2,_0x521f66='';switch(_0x48df68){case 0x1:_0x2086ff=0x4,_0x521f66=new Uint8Array(_0x18f52a[_0x4577f1(0xb6)](_0x303679,_0x303679+_0x2086ff))[_0x4577f1(0xb5)]('.');break;case 0x3:_0x2086ff=new Uint8Array(_0x18f52a[_0x4577f1(0xb6)](_0x303679,_0x303679+0x1))[0x0],_0x303679+=0x1,_0x521f66=new TextDecoder()[_0x4577f1(0xc0)](_0x18f52a[_0x4577f1(0xb6)](_0x303679,_0x303679+_0x2086ff));break;case 0x4:_0x2086ff=0x10;const _0x45ed78=new DataView(_0x18f52a['slice'](_0x303679,_0x303679+_0x2086ff)),_0x42c06e=[];for(let _0x2679c3=0x0;_0x2679c3<0x8;_0x2679c3++){_0x42c06e[_0x4577f1(0xb4)](_0x45ed78['getUint16'](_0x2679c3*0x2)[_0x4577f1(0xf9)](0x10));}_0x521f66=_0x42c06e[_0x4577f1(0xb5)](':');break;default:return{'hasError':!![],'message':'invalid\x20addressType\x20is\x20'+_0x48df68};}if(!_0x521f66)return{'hasError':!![],'message':_0x4577f1(0xbb)+_0x48df68};const _0x51273e=_0x303679+_0x2086ff,_0x5b5787=_0x18f52a[_0x4577f1(0xb6)](_0x51273e,_0x51273e+0x2),_0x3ba5a4=new DataView(_0x5b5787)[_0x4577f1(0xba)](0x0);return{'hasError':![],'addressRemote':_0x521f66,'portRemote':_0x3ba5a4,'rawClientData':_0x18f52a['slice'](_0x51273e+0x4)};}async function handleTCPOutBound(_0x162de2,_0x1158df,_0x5ab0c5,_0x9b1613,_0x44ab31,_0xced338){async function _0x401a0b(_0x5cd208,_0x148d57){const _0x562059=a0_0x176f;if(/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/['test'](_0x5cd208))_0x5cd208=''+atob(_0x562059(0xbf))+_0x5cd208+atob(_0x562059(0xce));const _0x16e1c0=connect({'hostname':_0x5cd208,'port':_0x148d57});_0x162de2['value']=_0x16e1c0,_0xced338('connected\x20to\x20'+_0x5cd208+':'+_0x148d57);const _0x1d4e9d=_0x16e1c0[_0x562059(0xc9)][_0x562059(0xca)]();return await _0x1d4e9d[_0x562059(0xdf)](_0x9b1613),_0x1d4e9d['releaseLock'](),_0x16e1c0;}async function _0x11e629(){const _0x53573c=a0_0x176f,_0xbc5f7=globalThis[_0x53573c(0xe1)][_0x53573c(0xb7)]('/')[0x2],_0x7c763d=_0xbc5f7?atob(_0xbc5f7)[_0x53573c(0xb7)](','):undefined,_0x4ee7c6=_0x7c763d?_0x7c763d[Math['floor'](Math[_0x53573c(0xd0)]()*_0x7c763d[_0x53573c(0xb9)])]:globalThis[_0x53573c(0xc7)]||_0x1158df,_0x4b5a67=await _0x401a0b(_0x4ee7c6,_0x5ab0c5);_0x4b5a67[_0x53573c(0xf0)][_0x53573c(0xde)](_0x219423=>{const _0x41d49e=_0x53573c;console[_0x41d49e(0xec)](_0x41d49e(0xc5),_0x219423);})[_0x53573c(0xd6)](()=>{safeCloseWebSocket(_0x44ab31);}),tnpRemoteSocketToWS(_0x4b5a67,_0x44ab31,null,_0xced338);}const _0x9c3363=await _0x401a0b(_0x1158df,_0x5ab0c5);tnpRemoteSocketToWS(_0x9c3363,_0x44ab31,_0x11e629,_0xced338);}function makeReadableWebSocketStream(_0x47fb2b,_0x51927c,_0x25b355){let _0x858380=![];const _0x225762=new ReadableStream({'start'(_0x41da2c){const _0x4d3bc6=a0_0x176f;_0x47fb2b[_0x4d3bc6(0xf6)](_0x4d3bc6(0xd7),_0x1f6383=>{const _0x1f4e00=_0x4d3bc6;if(_0x858380)return;const _0x1aaac0=_0x1f6383[_0x1f4e00(0xee)];_0x41da2c['enqueue'](_0x1aaac0);}),_0x47fb2b[_0x4d3bc6(0xf6)](_0x4d3bc6(0xbe),()=>{safeCloseWebSocket(_0x47fb2b);if(_0x858380)return;_0x41da2c['close']();}),_0x47fb2b['addEventListener'](_0x4d3bc6(0xcb),_0x21ebe6=>{const _0x810ce9=_0x4d3bc6;_0x25b355(_0x810ce9(0xd8)),_0x41da2c[_0x810ce9(0xcb)](_0x21ebe6);});const {earlyData:_0x2aea2c,error:_0x3f0f1f}=base64ToArrayBuffer(_0x51927c);if(_0x3f0f1f)_0x41da2c[_0x4d3bc6(0xcb)](_0x3f0f1f);else _0x2aea2c&&_0x41da2c['enqueue'](_0x2aea2c);},'pull'(_0x1b3039){},'cancel'(_0x558c1f){if(_0x858380)return;_0x25b355('ReadableStream\x20was\x20canceled,\x20due\x20to\x20'+_0x558c1f),_0x858380=!![],safeCloseWebSocket(_0x47fb2b);}});return _0x225762;}async function tnpRemoteSocketToWS(_0x4dd9ee,_0x48e859,_0x1d40ea,_0x169287){const _0xd3be2e=a0_0x176f;let _0x3faaac=![];await _0x4dd9ee['readable'][_0xd3be2e(0xeb)](new WritableStream({'start'(){},async 'write'(_0x3a5760,_0x152806){const _0x57f703=_0xd3be2e;_0x3faaac=!![],_0x48e859[_0x57f703(0xda)]!==WS_READY_STATE_OPEN&&_0x152806[_0x57f703(0xcb)](_0x57f703(0xd4)),_0x48e859[_0x57f703(0xe7)](_0x3a5760);},'close'(){const _0x23a72c=_0xd3be2e;_0x169287(_0x23a72c(0xcf)+_0x3faaac);},'abort'(_0x1c5020){const _0x5f29da=_0xd3be2e;console[_0x5f29da(0xcb)](_0x5f29da(0xea),_0x1c5020);}}))[_0xd3be2e(0xde)](_0x3cdd9e=>{const _0x246dc8=_0xd3be2e;console[_0x246dc8(0xcb)](_0x246dc8(0xbc),_0x3cdd9e[_0x246dc8(0xc4)]||_0x3cdd9e),safeCloseWebSocket(_0x48e859);}),_0x3faaac===![]&&_0x1d40ea&&(_0x169287(_0xd3be2e(0xcc)),_0x1d40ea());}function base64ToArrayBuffer(_0x420eb0){const _0x22b8b8=a0_0x176f;if(!_0x420eb0)return{'earlyData':null,'error':null};try{_0x420eb0=_0x420eb0['replace'](/-/g,'+')[_0x22b8b8(0xbd)](/_/g,'/');const _0x13e081=atob(_0x420eb0),_0x57769b=Uint8Array[_0x22b8b8(0xed)](_0x13e081,_0x137d44=>_0x137d44[_0x22b8b8(0xf7)](0x0));return{'earlyData':_0x57769b[_0x22b8b8(0xf3)],'error':null};}catch(_0x9f7125){return{'earlyData':null,'error':_0x9f7125};}}function a0_0x176f(_0x33ca65,_0x700c6e){const _0x422481=a0_0x4224();return a0_0x176f=function(_0x176f94,_0x525a2c){_0x176f94=_0x176f94-0xb4;let _0x4339f0=_0x422481[_0x176f94];return _0x4339f0;},a0_0x176f(_0x33ca65,_0x700c6e);}const WS_READY_STATE_OPEN=0x1,WS_READY_STATE_CLOSING=0x2;function safeCloseWebSocket(_0x3ab484){const _0xf084c4=a0_0x176f;try{(_0x3ab484['readyState']===WS_READY_STATE_OPEN||_0x3ab484[_0xf084c4(0xda)]===WS_READY_STATE_CLOSING)&&_0x3ab484[_0xf084c4(0xbe)]();}catch(_0x1c7d02){console['error'](_0xf084c4(0xe3),_0x1c7d02);}}
+import { connect } from 'cloudflare:sockets';
+import sha256 from 'js-sha256';
+
+export async function tnpOverWSHandler(request) {
+    const webSocketPair = new WebSocketPair();
+    const [client, webSocket] = Object.values(webSocketPair);
+    webSocket.accept();
+    let address = "";
+    let portWithRandomLog = "";
+    const log = (info, event) => {
+        console.log(`[${address}:${portWithRandomLog}] ${info}`, event || "");
+    };
+    const earlyDataHeader = request.headers.get("sec-websocket-protocol") || "";
+    const readableWebSocketStream = makeReadableWebSocketStream(webSocket, earlyDataHeader, log);
+    let remoteSocketWapper = {
+      value: null,
+    };
+    let udpStreamWrite = null;
+
+    readableWebSocketStream
+        .pipeTo(
+            new WritableStream({
+                async write(chunk, controller) {
+                    if (udpStreamWrite) {
+                        return udpStreamWrite(chunk);
+                    }
+
+                    if (remoteSocketWapper.value) {
+                        const writer = remoteSocketWapper.value.writable.getWriter();
+                        await writer.write(chunk);
+                        writer.releaseLock();
+                        return;
+                    }
+
+                    const {
+                        hasError,
+                        message,
+                        portRemote = 443,
+                        addressRemote = "",
+                        rawClientData,
+                    } = await parseTrojanHeader(chunk);
+
+                    address = addressRemote;
+                    portWithRandomLog = `${portRemote}--${Math.random()} tcp`;
+
+                    if (hasError) {
+                        throw new Error(message);
+                        return;
+                    }
+
+                    handleTCPOutBound(remoteSocketWapper, addressRemote, portRemote, rawClientData, webSocket, log);
+                },
+                close() {
+                    log(`readableWebSocketStream is closed`);
+                },
+                abort(reason) {
+                    log(`readableWebSocketStream is aborted`, JSON.stringify(reason));
+                },
+            })
+        )
+        .catch((err) => {
+            log("readableWebSocketStream pipeTo error", err);
+        });
+
+        return new Response(null, {
+        status: 101,
+        // @ts-ignore
+        webSocket: client,
+    });
+}
+
+async function parseTrojanHeader(buffer) {
+    if (buffer.byteLength < 56) {
+        return {
+            hasError: true,
+            message: "invalid data",
+        };
+    }
+
+    let crLfIndex = 56;
+    if (new Uint8Array(buffer.slice(56, 57))[0] !== 0x0d || new Uint8Array(buffer.slice(57, 58))[0] !== 0x0a) {
+        return {
+            hasError: true,
+            message: "invalid header format (missing CR LF)",
+        };
+    }
+
+    const password = new TextDecoder().decode(buffer.slice(0, crLfIndex));
+    if (password !== sha256.sha224(globalThis.tnpPassword)) {
+        return {
+            hasError: true,
+            message: "invalid password",
+        };
+    }
+
+    const socks5DataBuffer = buffer.slice(crLfIndex + 2);
+    if (socks5DataBuffer.byteLength < 6) {
+        return {
+            hasError: true,
+            message: "invalid SOCKS5 request data",
+        };
+    }
+
+    const view = new DataView(socks5DataBuffer);
+    const cmd = view.getUint8(0);
+    if (cmd !== 1) {
+        return {
+            hasError: true,
+            message: "unsupported command, only TCP (CONNECT) is allowed",
+        };
+    }
+
+    const atype = view.getUint8(1);
+    // 0x01: IPv4 address
+    // 0x03: Domain name
+    // 0x04: IPv6 address
+    let addressLength = 0;
+    let addressIndex = 2;
+    let address = "";
+    switch (atype) {
+        case 1:
+            addressLength = 4;
+            address = new Uint8Array(socks5DataBuffer.slice(addressIndex, addressIndex + addressLength)).join(".");
+            break;
+        case 3:
+            addressLength = new Uint8Array(socks5DataBuffer.slice(addressIndex, addressIndex + 1))[0];
+            addressIndex += 1;
+            address = new TextDecoder().decode(socks5DataBuffer.slice(addressIndex, addressIndex + addressLength));
+            break;
+        case 4:
+            addressLength = 16;
+            const dataView = new DataView(socks5DataBuffer.slice(addressIndex, addressIndex + addressLength));
+            const ipv6 = [];
+            for (let i = 0; i < 8; i++) {
+                ipv6.push(dataView.getUint16(i * 2).toString(16));
+            }
+            address = ipv6.join(":");
+            break;
+        default:
+            return {
+                hasError: true,
+                message: `invalid addressType is ${atype}`,
+            };
+    }
+
+    if (!address) {
+        return {
+            hasError: true,
+            message: `address is empty, addressType is ${atype}`,
+        };
+    }
+
+    const portIndex = addressIndex + addressLength;
+    const portBuffer = socks5DataBuffer.slice(portIndex, portIndex + 2);
+    const portRemote = new DataView(portBuffer).getUint16(0);
+    return {
+        hasError: false,
+        addressRemote: address,
+        portRemote,
+        rawClientData: socks5DataBuffer.slice(portIndex + 4),
+    };
+}
+
+/**
+ * Handles outbound TCP connections.
+ *
+ * @param {any} remoteSocket
+ * @param {string} addressRemote The remote address to connect to.
+ * @param {number} portRemote The remote port to connect to.
+ * @param {Uint8Array} rawClientData The raw client data to write.
+ * @param {import("@cloudflare/workers-types").WebSocket} webSocket The WebSocket to pass the remote socket to.
+ * @param {function} log The logging function.
+ * @returns {Promise<void>} The remote socket.
+ */
+async function handleTCPOutBound(
+    remoteSocket,
+    addressRemote,
+    portRemote,
+    rawClientData,
+    webSocket,
+    log
+) {
+    async function connectAndWrite(address, port) {
+        if (/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(address)) address = `${atob('d3d3Lg==')}${address}${atob('LnNzbGlwLmlv')}`;
+        /** @type {import("@cloudflare/workers-types").Socket} */
+        const tcpSocket = connect({
+            hostname: address,
+            port: port,
+        });
+        remoteSocket.value = tcpSocket;
+        log(`connected to ${address}:${port}`);
+        const writer = tcpSocket.writable.getWriter();
+        await writer.write(rawClientData); // first write, nomal is tls client hello
+        writer.releaseLock();
+        return tcpSocket;
+    }
+  
+    // if the cf connect tcp socket have no incoming data, we retry to redirect ip
+    async function retry() {
+        const panelProxyIP = globalThis.pathName.split('/')[2];
+        const panelProxyIPs = panelProxyIP ? atob(panelProxyIP).split(',') : undefined;
+        const finalProxyIP = panelProxyIPs ? panelProxyIPs[Math.floor(Math.random() * panelProxyIPs.length)] : globalThis.proxyIP || addressRemote;
+		const tcpSocket = await connectAndWrite(finalProxyIP, portRemote);
+        // no matter retry success or not, close websocket
+        tcpSocket.closed
+            .catch((error) => {
+                console.log("retry tcpSocket closed error", error);
+            })
+            .finally(() => {
+                safeCloseWebSocket(webSocket);
+            });
+            
+        tnpRemoteSocketToWS(tcpSocket, webSocket, null, log);
+    }
+  
+    const tcpSocket = await connectAndWrite(addressRemote, portRemote);
+  
+    // when remoteSocket is ready, pass to websocket
+    // remote--> ws
+    tnpRemoteSocketToWS(tcpSocket, webSocket, retry, log);
+}
+
+/**
+ * Creates a readable stream from a WebSocket server, allowing for data to be read from the WebSocket.
+ * @param {import("@cloudflare/workers-types").WebSocket} webSocketServer The WebSocket server to create the readable stream from.
+ * @param {string} earlyDataHeader The header containing early data for WebSocket 0-RTT.
+ * @param {(info: string)=> void} log The logging function.
+ * @returns {ReadableStream} A readable stream that can be used to read data from the WebSocket.
+ */
+function makeReadableWebSocketStream(webSocketServer, earlyDataHeader, log) {
+    let readableStreamCancel = false;
+    const stream = new ReadableStream({
+        start(controller) {
+            webSocketServer.addEventListener("message", (event) => {
+                if (readableStreamCancel) {
+                    return;
+                }
+                const message = event.data;
+                controller.enqueue(message);
+            });
+    
+            // The event means that the client closed the client -> server stream.
+            // However, the server -> client stream is still open until you call close() on the server side.
+            // The WebSocket protocol says that a separate close message must be sent in each direction to fully close the socket.
+            webSocketServer.addEventListener("close", () => {
+                // client send close, need close server
+                // if stream is cancel, skip controller.close
+                safeCloseWebSocket(webSocketServer);
+                if (readableStreamCancel) {
+                    return;
+                }
+                controller.close();
+            });
+            webSocketServer.addEventListener("error", (err) => {
+                log("webSocketServer has error");
+                controller.error(err);
+            });
+            // for ws 0rtt
+            const { earlyData, error } = base64ToArrayBuffer(earlyDataHeader);
+            if (error) {
+                controller.error(error);
+            } else if (earlyData) {
+                controller.enqueue(earlyData);
+            }
+        },
+        pull(controller) {
+            // if ws can stop read if stream is full, we can implement backpressure
+            // https://streams.spec.whatwg.org/#example-rs-push-backpressure
+        },
+        cancel(reason) {
+            // 1. pipe WritableStream has error, this cancel will called, so ws handle server close into here
+            // 2. if readableStream is cancel, all controller.close/enqueue need skip,
+            // 3. but from testing controller.error still work even if readableStream is cancel
+            if (readableStreamCancel) {
+                return;
+            }
+            log(`ReadableStream was canceled, due to ${reason}`);
+            readableStreamCancel = true;
+            safeCloseWebSocket(webSocketServer);
+        },
+    });
+  
+    return stream;
+}
+
+async function tnpRemoteSocketToWS(remoteSocket, webSocket, retry, log) {
+    let hasIncomingData = false;
+    await remoteSocket.readable
+        .pipeTo(
+            new WritableStream({
+                start() {},
+                /**
+                 *
+                 * @param {Uint8Array} chunk
+                 * @param {*} controller
+                 */
+                async write(chunk, controller) {
+                    hasIncomingData = true;
+                    if (webSocket.readyState !== WS_READY_STATE_OPEN) {
+                        controller.error("webSocket connection is not open");
+                    }
+                    webSocket.send(chunk);
+                },
+                close() {
+                    log(`remoteSocket.readable is closed, hasIncomingData: ${hasIncomingData}`);
+                },
+                abort(reason) {
+                    console.error("remoteSocket.readable abort", reason);
+                },
+            })
+        )
+        .catch((error) => {
+            console.error(`tnpRemoteSocketToWS error:`, error.stack || error);
+            safeCloseWebSocket(webSocket);
+        });
+    
+    if (hasIncomingData === false && retry) {
+        log(`retry`);
+        retry();
+    }
+}
+
+/**
+ * Decodes a base64 string into an ArrayBuffer.
+ * @param {string} base64Str The base64 string to decode.
+ * @returns {{earlyData: ArrayBuffer|null, error: Error|null}} An object containing the decoded ArrayBuffer or null if there was an error, and any error that occurred during decoding or null if there was no error.
+ */
+function base64ToArrayBuffer(base64Str) {
+	if (!base64Str) {
+		return { earlyData: null, error: null };
+	}
+	try {
+		// go use modified Base64 for URL rfc4648 which js atob not support
+		base64Str = base64Str.replace(/-/g, '+').replace(/_/g, '/');
+		const decode = atob(base64Str);
+		const arryBuffer = Uint8Array.from(decode, (c) => c.charCodeAt(0));
+		return { earlyData: arryBuffer.buffer, error: null };
+	} catch (error) {
+		return { earlyData: null, error };
+	}
+}
+
+const WS_READY_STATE_OPEN = 1;
+const WS_READY_STATE_CLOSING = 2;
+/**
+ * Closes a WebSocket connection safely without throwing exceptions.
+ * @param {import("@cloudflare/workers-types").WebSocket} socket The WebSocket connection to close.
+ */
+function safeCloseWebSocket(socket) {
+	try {
+		if (socket.readyState === WS_READY_STATE_OPEN || socket.readyState === WS_READY_STATE_CLOSING) {
+			socket.close();
+		}
+	} catch (error) {
+		console.error('safeCloseWebSocket error', error);
+	}
+}

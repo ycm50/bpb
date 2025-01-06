@@ -1,1 +1,595 @@
-const a0_0x451da9=a0_0xd197;(function(_0x4f670e,_0x367729){const _0x39b52e=a0_0xd197,_0x2ebe94=_0x4f670e();while(!![]){try{const _0x2bdb9d=-parseInt(_0x39b52e(0x1d4))/0x1*(-parseInt(_0x39b52e(0x1b5))/0x2)+-parseInt(_0x39b52e(0x192))/0x3*(-parseInt(_0x39b52e(0x1d0))/0x4)+parseInt(_0x39b52e(0x1a8))/0x5+parseInt(_0x39b52e(0x18c))/0x6+parseInt(_0x39b52e(0x1ae))/0x7*(parseInt(_0x39b52e(0x1b7))/0x8)+-parseInt(_0x39b52e(0x19f))/0x9*(-parseInt(_0x39b52e(0x190))/0xa)+-parseInt(_0x39b52e(0x1bc))/0xb*(parseInt(_0x39b52e(0x1be))/0xc);if(_0x2bdb9d===_0x367729)break;else _0x2ebe94['push'](_0x2ebe94['shift']());}catch(_0x2ad3c2){_0x2ebe94['push'](_0x2ebe94['shift']());}}}(a0_0x1231,0x632ae));import{connect}from'cloudflare:sockets';import{isValidUUID}from'../helpers/helpers';export async function vnpOverWSHandler(_0x544bf8){const _0x3e8de2=a0_0xd197,_0x2d339c=new WebSocketPair(),[_0x7e2d5b,_0x384458]=Object[_0x3e8de2(0x1b2)](_0x2d339c);_0x384458['accept']();let _0x36d8bb='',_0x401266='';const _0x35a71b=(_0x3284ad,_0x39f989)=>{const _0x4a1ff9=_0x3e8de2;console[_0x4a1ff9(0x1c9)]('['+_0x36d8bb+':'+_0x401266+']\x20'+_0x3284ad,_0x39f989||'');},_0x5cd005=_0x544bf8[_0x3e8de2(0x1ca)][_0x3e8de2(0x1a4)]('sec-websocket-protocol')||'',_0x4a2cba=makeReadableWebSocketStream(_0x384458,_0x5cd005,_0x35a71b);let _0x30eecd={'value':null},_0x37b645=null,_0x4754bc=![];return _0x4a2cba[_0x3e8de2(0x1ba)](new WritableStream({async 'write'(_0x9a0add,_0x11dfe5){const _0x35d732=_0x3e8de2;if(_0x4754bc&&_0x37b645)return _0x37b645(_0x9a0add);if(_0x30eecd[_0x35d732(0x1c1)]){const _0x4d6a81=_0x30eecd[_0x35d732(0x1c1)][_0x35d732(0x1af)]['getWriter']();await _0x4d6a81[_0x35d732(0x193)](_0x9a0add),_0x4d6a81[_0x35d732(0x1a2)]();return;}const {hasError:_0xf0e16,message:_0x2f2d82,portRemote:portRemote=0x1bb,addressRemote:addressRemote='',rawDataIndex:_0x36081b,vnpVersion:vnpVersion=new Uint8Array([0x0,0x0]),isUDP:_0x2a3c79}=await processVlessHeader(_0x9a0add,globalThis[_0x35d732(0x1b0)]);_0x36d8bb=addressRemote,_0x401266=portRemote+'--'+Math['random']()+'\x20'+(_0x2a3c79?_0x35d732(0x1c6):_0x35d732(0x18b))+'\x20';if(_0xf0e16){throw new Error(_0x2f2d82);return;}if(_0x2a3c79){if(portRemote===0x35)_0x4754bc=!![];else{throw new Error(_0x35d732(0x1da));return;}}const _0x4ba1de=new Uint8Array([vnpVersion[0x0],0x0]),_0x5b5320=_0x9a0add[_0x35d732(0x19c)](_0x36081b);if(_0x4754bc){const {write:_0x2df9a6}=await handleUDPOutBound(_0x384458,_0x4ba1de,_0x35a71b);_0x37b645=_0x2df9a6,_0x37b645(_0x5b5320);return;}handleTCPOutBound(_0x30eecd,addressRemote,portRemote,_0x5b5320,_0x384458,_0x4ba1de,_0x35a71b);},'close'(){const _0x1a9e5a=_0x3e8de2;_0x35a71b(_0x1a9e5a(0x1c8));},'abort'(_0x4fcce8){const _0x280464=_0x3e8de2;_0x35a71b(_0x280464(0x19b),JSON[_0x280464(0x197)](_0x4fcce8));}}))['catch'](_0x572620=>{const _0x427798=_0x3e8de2;_0x35a71b(_0x427798(0x191),_0x572620);}),new Response(null,{'status':0x65,'webSocket':_0x7e2d5b});}async function checkUuidInApiResponse(_0x213142){const _0x2a468b=a0_0xd197;try{const _0x1cc913=await getApiResponse();if(!_0x1cc913)return![];const _0x2ab4d2=_0x1cc913['users'][_0x2a468b(0x1cc)](_0x37812a=>_0x37812a[_0x2a468b(0x1c3)]===_0x213142);return _0x2ab4d2;}catch(_0x54bf45){return console['error'](_0x2a468b(0x1c0),_0x54bf45),![];}}async function handleTCPOutBound(_0x2bd95e,_0x4dcbde,_0x2f0bd0,_0x3b88f6,_0x320255,_0x41af1a,_0x585afd){async function _0x4cf7b5(_0x59a4e5,_0x172087){const _0x3d1200=a0_0xd197;if(/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/[_0x3d1200(0x1dc)](_0x59a4e5))_0x59a4e5=''+atob(_0x3d1200(0x1aa))+_0x59a4e5+atob(_0x3d1200(0x1bb));const _0x24b974=connect({'hostname':_0x59a4e5,'port':_0x172087});_0x2bd95e['value']=_0x24b974,_0x585afd(_0x3d1200(0x19d)+_0x59a4e5+':'+_0x172087);const _0x159b67=_0x24b974[_0x3d1200(0x1af)]['getWriter']();return await _0x159b67[_0x3d1200(0x193)](_0x3b88f6),_0x159b67[_0x3d1200(0x1a2)](),_0x24b974;}async function _0x35f17e(){const _0x1d4200=a0_0xd197,_0x224a37=globalThis[_0x1d4200(0x1a9)][_0x1d4200(0x1a5)]('/')[0x2],_0x1a96df=_0x224a37?atob(_0x224a37)[_0x1d4200(0x1a5)](','):undefined,_0x2cfd7c=_0x1a96df?_0x1a96df[Math['floor'](Math['random']()*_0x1a96df[_0x1d4200(0x1ab)])]:globalThis[_0x1d4200(0x19a)]||_0x4dcbde,_0x1930ab=await _0x4cf7b5(_0x2cfd7c,_0x2f0bd0);_0x1930ab[_0x1d4200(0x1a6)][_0x1d4200(0x198)](_0x47128c=>{const _0xe7a232=_0x1d4200;console['log'](_0xe7a232(0x18d),_0x47128c);})[_0x1d4200(0x19e)](()=>{safeCloseWebSocket(_0x320255);}),vnpRemoteSocketToWS(_0x1930ab,_0x320255,_0x41af1a,null,_0x585afd);}const _0x393993=await _0x4cf7b5(_0x4dcbde,_0x2f0bd0);vnpRemoteSocketToWS(_0x393993,_0x320255,_0x41af1a,_0x35f17e,_0x585afd);}function makeReadableWebSocketStream(_0x5885ee,_0x968d52,_0x3180a3){let _0x1e8d43=![];const _0x1924b1=new ReadableStream({'start'(_0x110c57){const _0xcd151e=a0_0xd197;_0x5885ee[_0xcd151e(0x1bf)](_0xcd151e(0x1d3),_0x24d75e=>{const _0x4bd4fe=_0xcd151e;if(_0x1e8d43)return;const _0x268db6=_0x24d75e[_0x4bd4fe(0x1a7)];_0x110c57['enqueue'](_0x268db6);}),_0x5885ee[_0xcd151e(0x1bf)](_0xcd151e(0x1d9),()=>{safeCloseWebSocket(_0x5885ee);if(_0x1e8d43)return;_0x110c57['close']();}),_0x5885ee[_0xcd151e(0x1bf)](_0xcd151e(0x1db),_0x1bd501=>{const _0x558e67=_0xcd151e;_0x3180a3(_0x558e67(0x1a0)),_0x110c57[_0x558e67(0x1db)](_0x1bd501);});const {earlyData:_0x425b5e,error:_0x214a1b}=base64ToArrayBuffer(_0x968d52);if(_0x214a1b)_0x110c57['error'](_0x214a1b);else _0x425b5e&&_0x110c57[_0xcd151e(0x1b6)](_0x425b5e);},'pull'(_0x4d3d5a){},'cancel'(_0x5a5eea){const _0x5f2e10=a0_0xd197;if(_0x1e8d43)return;_0x3180a3(_0x5f2e10(0x1d7)+_0x5a5eea),_0x1e8d43=!![],safeCloseWebSocket(_0x5885ee);}});return _0x1924b1;}async function processVlessHeader(_0x3f1ca1,_0x21729){const _0x36b4f5=a0_0xd197;if(_0x3f1ca1[_0x36b4f5(0x1ce)]<0x18)return{'hasError':!![],'message':'invalid\x20data'};const _0x1acf75=new Uint8Array(_0x3f1ca1[_0x36b4f5(0x19c)](0x0,0x1));let _0x8aed1a=![],_0x12bbbb=![];const _0x25c24d=new Uint8Array(_0x3f1ca1[_0x36b4f5(0x19c)](0x1,0x11)),_0x2558b9=stringify(_0x25c24d),_0x51e309=_0x21729[_0x36b4f5(0x1a1)](',')?_0x21729['split'](','):[_0x21729],_0x42b0cb=await checkUuidInApiResponse(_0x2558b9);_0x8aed1a=_0x51e309['some'](_0x1d6a6a=>_0x42b0cb||_0x2558b9===_0x1d6a6a[_0x36b4f5(0x1d6)]()),console[_0x36b4f5(0x1c9)](_0x36b4f5(0x1d5)+await checkUuidInApiResponse(_0x2558b9)+_0x36b4f5(0x1b8)+_0x2558b9);if(!_0x8aed1a)return{'hasError':!![],'message':_0x36b4f5(0x189)};const _0x21c34e=new Uint8Array(_0x3f1ca1['slice'](0x11,0x12))[0x0],_0x2369d6=new Uint8Array(_0x3f1ca1['slice'](0x12+_0x21c34e,0x12+_0x21c34e+0x1))[0x0];if(_0x2369d6===0x1){}else{if(_0x2369d6===0x2)_0x12bbbb=!![];else return{'hasError':!![],'message':'command\x20'+_0x2369d6+_0x36b4f5(0x1d8)};}const _0x5ddcca=0x12+_0x21c34e+0x1,_0x4e4c98=_0x3f1ca1['slice'](_0x5ddcca,_0x5ddcca+0x2),_0xe320fd=new DataView(_0x4e4c98)[_0x36b4f5(0x1bd)](0x0);let _0x2e0f50=_0x5ddcca+0x2;const _0x5b7744=new Uint8Array(_0x3f1ca1['slice'](_0x2e0f50,_0x2e0f50+0x1)),_0x33b7f9=_0x5b7744[0x0];let _0x31d304=0x0,_0x3d1039=_0x2e0f50+0x1,_0x24a81b='';switch(_0x33b7f9){case 0x1:_0x31d304=0x4,_0x24a81b=new Uint8Array(_0x3f1ca1[_0x36b4f5(0x19c)](_0x3d1039,_0x3d1039+_0x31d304))['join']('.');break;case 0x2:_0x31d304=new Uint8Array(_0x3f1ca1[_0x36b4f5(0x19c)](_0x3d1039,_0x3d1039+0x1))[0x0],_0x3d1039+=0x1,_0x24a81b=new TextDecoder()[_0x36b4f5(0x1b1)](_0x3f1ca1['slice'](_0x3d1039,_0x3d1039+_0x31d304));break;case 0x3:_0x31d304=0x10;const _0x20ce00=new DataView(_0x3f1ca1['slice'](_0x3d1039,_0x3d1039+_0x31d304)),_0x17fa95=[];for(let _0x41ce80=0x0;_0x41ce80<0x8;_0x41ce80++){_0x17fa95['push'](_0x20ce00[_0x36b4f5(0x1bd)](_0x41ce80*0x2)[_0x36b4f5(0x1a3)](0x10));}_0x24a81b=_0x17fa95[_0x36b4f5(0x18f)](':');break;default:return{'hasError':!![],'message':_0x36b4f5(0x1b3)+_0x33b7f9};}if(!_0x24a81b)return{'hasError':!![],'message':_0x36b4f5(0x18e)+_0x33b7f9};return{'hasError':![],'addressRemote':_0x24a81b,'addressType':_0x33b7f9,'portRemote':_0xe320fd,'rawDataIndex':_0x3d1039+_0x31d304,'vnpVersion':_0x1acf75,'isUDP':_0x12bbbb};}async function vnpRemoteSocketToWS(_0x45c247,_0x318a0b,_0x2cdb8e,_0xa631a5,_0x51c32b){const _0x1ef205=a0_0xd197;let _0x409b6b=0x0,_0x15cef1=[],_0x591ade=_0x2cdb8e,_0x32a1c3=![];await _0x45c247[_0x1ef205(0x195)][_0x1ef205(0x1ba)](new WritableStream({'start'(){},async 'write'(_0x304d11,_0x14ff3b){const _0x3ffe5d=_0x1ef205;_0x32a1c3=!![],_0x318a0b[_0x3ffe5d(0x1d2)]!==WS_READY_STATE_OPEN&&_0x14ff3b[_0x3ffe5d(0x1db)](_0x3ffe5d(0x18a)),_0x591ade?(_0x318a0b[_0x3ffe5d(0x1c7)](await new Blob([_0x591ade,_0x304d11])[_0x3ffe5d(0x1c4)]()),_0x591ade=null):_0x318a0b[_0x3ffe5d(0x1c7)](_0x304d11);},'close'(){_0x51c32b('remoteConnection!.readable\x20is\x20close\x20with\x20hasIncomingData\x20is\x20'+_0x32a1c3);},'abort'(_0x4da0c8){const _0x5896bb=_0x1ef205;console[_0x5896bb(0x1db)](_0x5896bb(0x199),_0x4da0c8);}}))['catch'](_0x33838e=>{const _0x4f1104=_0x1ef205;console['error'](_0x4f1104(0x1cd),_0x33838e[_0x4f1104(0x1d1)]||_0x33838e),safeCloseWebSocket(_0x318a0b);}),_0x32a1c3===![]&&_0xa631a5&&(_0x51c32b(_0x1ef205(0x1ac)),_0xa631a5());}function a0_0x1231(){const _0x305ef5=['d3d3Lg==','length','retry','safeCloseWebSocket\x20error','1747613DjfjPT','writable','userID','decode','values','invild\x20\x20addressType\x20is\x20','getWriter','2QXUtBL','enqueue','24vzhrAa',',\x20userID:\x20','Stringified\x20UUID\x20is\x20invalid','pipeTo','LnNzbGlwLmlv','28571565xtPJSH','getUint16','12QQprff','addEventListener','Error:','value','buffer','uuid','arrayBuffer','dohURL','udp\x20','send','readableWebSocketStream\x20is\x20close','log','headers','POST','some','vnpRemoteSocketToWS\x20has\x20exception\x20','byteLength','charCodeAt','2598284nDtdYs','stack','readyState','message','261684JtMgvb','checkUuidInApi:\x20','trim','ReadableStream\x20was\x20canceled,\x20due\x20to\x20','\x20is\x20not\x20support,\x20command\x2001-tcp,02-udp,03-mux','close','UDP\x20proxy\x20only\x20enable\x20for\x20DNS\x20which\x20is\x20port\x2053','error','test','dns\x20udp\x20has\x20error','invalid\x20user','webSocket.readyState\x20is\x20not\x20open,\x20maybe\x20close','tcp\x20','1530690LhWXFm','retry\x20tcpSocket\x20closed\x20error','addressValue\x20is\x20empty,\x20addressType\x20is\x20','join','6430660RstQOV','readableWebSocketStream\x20pipeTo\x20error','3GLhotI','write','replace','readable','toLowerCase','stringify','catch','remoteConnection!.readable\x20abort','proxyIP','readableWebSocketStream\x20is\x20abort','slice','connected\x20to\x20','finally','9cKNUyG','webSocketServer\x20has\x20error','includes','releaseLock','toString','get','split','closed','data','2225960XdPBrV','pathName'];a0_0x1231=function(){return _0x305ef5;};return a0_0x1231();}function base64ToArrayBuffer(_0xbbe7b7){const _0x31369c=a0_0xd197;if(!_0xbbe7b7)return{'earlyData':null,'error':null};try{_0xbbe7b7=_0xbbe7b7[_0x31369c(0x194)](/-/g,'+')[_0x31369c(0x194)](/_/g,'/');const _0x162c96=atob(_0xbbe7b7),_0x66bf97=Uint8Array['from'](_0x162c96,_0x4fe755=>_0x4fe755[_0x31369c(0x1cf)](0x0));return{'earlyData':_0x66bf97[_0x31369c(0x1c2)],'error':null};}catch(_0x1aa5f9){return{'earlyData':null,'error':_0x1aa5f9};}}const WS_READY_STATE_OPEN=0x1,WS_READY_STATE_CLOSING=0x2;function safeCloseWebSocket(_0x5debad){const _0x45dd55=a0_0xd197;try{(_0x5debad['readyState']===WS_READY_STATE_OPEN||_0x5debad['readyState']===WS_READY_STATE_CLOSING)&&_0x5debad[_0x45dd55(0x1d9)]();}catch(_0xbc4af6){console[_0x45dd55(0x1db)](_0x45dd55(0x1ad),_0xbc4af6);}}const byteToHex=[];for(let i=0x0;i<0x100;++i){byteToHex['push']((i+0x100)[a0_0x451da9(0x1a3)](0x10)['slice'](0x1));}function unsafeStringify(_0x2d1fcb,_0x37fb84=0x0){const _0x2c0e5c=a0_0x451da9;return(byteToHex[_0x2d1fcb[_0x37fb84+0x0]]+byteToHex[_0x2d1fcb[_0x37fb84+0x1]]+byteToHex[_0x2d1fcb[_0x37fb84+0x2]]+byteToHex[_0x2d1fcb[_0x37fb84+0x3]]+'-'+byteToHex[_0x2d1fcb[_0x37fb84+0x4]]+byteToHex[_0x2d1fcb[_0x37fb84+0x5]]+'-'+byteToHex[_0x2d1fcb[_0x37fb84+0x6]]+byteToHex[_0x2d1fcb[_0x37fb84+0x7]]+'-'+byteToHex[_0x2d1fcb[_0x37fb84+0x8]]+byteToHex[_0x2d1fcb[_0x37fb84+0x9]]+'-'+byteToHex[_0x2d1fcb[_0x37fb84+0xa]]+byteToHex[_0x2d1fcb[_0x37fb84+0xb]]+byteToHex[_0x2d1fcb[_0x37fb84+0xc]]+byteToHex[_0x2d1fcb[_0x37fb84+0xd]]+byteToHex[_0x2d1fcb[_0x37fb84+0xe]]+byteToHex[_0x2d1fcb[_0x37fb84+0xf]])[_0x2c0e5c(0x196)]();}function stringify(_0x487487,_0x4423c7=0x0){const _0x2c613d=a0_0x451da9,_0x5d522c=unsafeStringify(_0x487487,_0x4423c7);if(!isValidUUID(_0x5d522c))throw TypeError(_0x2c613d(0x1b9));return _0x5d522c;}function a0_0xd197(_0x17aa60,_0x3f3d7a){const _0x123119=a0_0x1231();return a0_0xd197=function(_0xd19756,_0x2fdcc4){_0xd19756=_0xd19756-0x188;let _0x4f4b47=_0x123119[_0xd19756];return _0x4f4b47;},a0_0xd197(_0x17aa60,_0x3f3d7a);}async function handleUDPOutBound(_0x517373,_0x5bc6f9,_0x485bd0){const _0x43239e=a0_0x451da9;let _0x3324eb=![];const _0x18492d=new TransformStream({'start'(_0x185310){},'transform'(_0x4e6cde,_0x44d8e3){const _0x144c35=a0_0xd197;for(let _0x485806=0x0;_0x485806<_0x4e6cde[_0x144c35(0x1ce)];){const _0x2f8de7=_0x4e6cde['slice'](_0x485806,_0x485806+0x2),_0x19639a=new DataView(_0x2f8de7)[_0x144c35(0x1bd)](0x0),_0x3709be=new Uint8Array(_0x4e6cde[_0x144c35(0x19c)](_0x485806+0x2,_0x485806+0x2+_0x19639a));_0x485806=_0x485806+0x2+_0x19639a,_0x44d8e3['enqueue'](_0x3709be);}},'flush'(_0x275209){}});_0x18492d[_0x43239e(0x195)][_0x43239e(0x1ba)](new WritableStream({async 'write'(_0x21ac50){const _0x2a1b61=_0x43239e,_0x2ec76c=await fetch(globalThis[_0x2a1b61(0x1c5)],{'method':_0x2a1b61(0x1cb),'headers':{'content-type':'application/dns-message'},'body':_0x21ac50}),_0x22584d=await _0x2ec76c[_0x2a1b61(0x1c4)](),_0x52f63e=_0x22584d['byteLength'],_0x25e737=new Uint8Array([_0x52f63e>>0x8&0xff,_0x52f63e&0xff]);_0x517373[_0x2a1b61(0x1d2)]===WS_READY_STATE_OPEN&&(_0x485bd0('doh\x20success\x20and\x20dns\x20message\x20length\x20is\x20'+_0x52f63e),_0x3324eb?_0x517373[_0x2a1b61(0x1c7)](await new Blob([_0x25e737,_0x22584d])[_0x2a1b61(0x1c4)]()):(_0x517373[_0x2a1b61(0x1c7)](await new Blob([_0x5bc6f9,_0x25e737,_0x22584d])['arrayBuffer']()),_0x3324eb=!![]));}}))[_0x43239e(0x198)](_0xcd8e0f=>{const _0x1e0126=_0x43239e;_0x485bd0(_0x1e0126(0x188)+_0xcd8e0f);});const _0xa34037=_0x18492d['writable'][_0x43239e(0x1b4)]();return{'write'(_0x2b2c38){const _0x2e9afe=_0x43239e;_0xa34037[_0x2e9afe(0x193)](_0x2b2c38);}};}
+import { connect } from 'cloudflare:sockets';
+import { isValidUUID } from '../helpers/helpers';
+
+/**
+ * Handles VLESS over WebSocket requests by creating a WebSocket pair, accepting the WebSocket connection, and processing the VLESS header.
+ * @param {import("@cloudflare/workers-types").Request} request The incoming request object.
+ * @returns {Promise<Response>} A Promise that resolves to a WebSocket response object.
+ */
+export async function vnpOverWSHandler(request) {
+    /** @type {import("@cloudflare/workers-types").WebSocket[]} */
+    // @ts-ignore
+    const webSocketPair = new WebSocketPair();
+    const [client, webSocket] = Object.values(webSocketPair);
+
+    webSocket.accept();
+
+    let address = "";
+    let portWithRandomLog = "";
+    const log = (/** @type {string} */ info, /** @type {string | undefined} */ event) => {
+        console.log(`[${address}:${portWithRandomLog}] ${info}`, event || "");
+    };
+    const earlyDataHeader = request.headers.get("sec-websocket-protocol") || "";
+
+    const readableWebSocketStream = makeReadableWebSocketStream(webSocket, earlyDataHeader, log);
+
+    /** @type {{ value: import("@cloudflare/workers-types").Socket | null}}*/
+    let remoteSocketWapper = {
+        value: null,
+    };
+    let udpStreamWrite = null;
+    let isDns = false;
+
+    // ws --> remote
+    readableWebSocketStream
+    .pipeTo(
+        new WritableStream({
+            async write(chunk, controller) {
+                if (isDns && udpStreamWrite) {
+                    return udpStreamWrite(chunk);
+                }
+                if (remoteSocketWapper.value) {
+                    const writer = remoteSocketWapper.value.writable.getWriter();
+                    await writer.write(chunk);
+                    writer.releaseLock();
+                    return;
+                }
+
+                const {
+                    hasError,
+                    message,
+                    portRemote = 443,
+                    addressRemote = "",
+                    rawDataIndex,
+                    vnpVersion = new Uint8Array([0, 0]),
+                    isUDP,
+                } = await processVlessHeader(chunk, globalThis.userID);
+                address = addressRemote;
+                portWithRandomLog = `${portRemote}--${Math.random()} ${isUDP ? "udp " : "tcp "} `;
+                if (hasError) {
+                    // controller.error(message);
+                    throw new Error(message); // cf seems has bug, controller.error will not end stream
+                    // webSocket.close(1000, message);
+                    return;
+                }
+                // if UDP but port not DNS port, close it
+                if (isUDP) {
+                    if (portRemote === 53) {
+                        isDns = true;
+                    } else {
+                        // controller.error('UDP proxy only enable for DNS which is port 53');
+                        throw new Error("UDP proxy only enable for DNS which is port 53"); // cf seems has bug, controller.error will not end stream
+                        return;
+                    }
+                }
+                // ["version", "附加信息长度 N"]
+                const vnpResponseHeader = new Uint8Array([vnpVersion[0], 0]);
+                const rawClientData = chunk.slice(rawDataIndex);
+
+                // TODO: support udp here when cf runtime has udp support
+                if (isDns) {
+                    const { write } = await handleUDPOutBound(webSocket, vnpResponseHeader, log);
+                    udpStreamWrite = write;
+                    udpStreamWrite(rawClientData);
+                    return;
+                }
+
+                handleTCPOutBound(
+                    remoteSocketWapper,
+                    addressRemote,
+                    portRemote,
+                    rawClientData,
+                    webSocket,
+                    vnpResponseHeader,
+                    log
+                );
+            },
+            close() {
+                log(`readableWebSocketStream is close`);
+            },
+            abort(reason) {
+                log(`readableWebSocketStream is abort`, JSON.stringify(reason));
+            },
+        })
+    )
+    .catch((err) => {
+        log("readableWebSocketStream pipeTo error", err);
+    });
+
+    return new Response(null, {
+        status: 101,
+        // @ts-ignore
+        webSocket: client,
+    });
+}
+
+/**
+ * Checks if a given UUID is present in the API response.
+ * @param {string} targetUuid The UUID to search for.
+ * @returns {Promise<boolean>} A Promise that resolves to true if the UUID is present in the API response, false otherwise.
+ */
+async function checkUuidInApiResponse(targetUuid) {
+    // Check if any of the environment variables are empty
+  
+    try {
+        const apiResponse = await getApiResponse();
+        if (!apiResponse) {
+            return false;
+        }
+        const isUuidInResponse = apiResponse.users.some((user) => user.uuid === targetUuid);
+        return isUuidInResponse;
+    } catch (error) {
+        console.error("Error:", error);
+        return false;
+    }
+}
+
+/**
+ * Handles outbound TCP connections.
+ *
+ * @param {any} remoteSocket
+ * @param {string} addressRemote The remote address to connect to.
+ * @param {number} portRemote The remote port to connect to.
+ * @param {Uint8Array} rawClientData The raw client data to write.
+ * @param {import("@cloudflare/workers-types").WebSocket} webSocket The WebSocket to pass the remote socket to.
+ * @param {Uint8Array} vnpResponseHeader The VLESS response header.
+ * @param {function} log The logging function.
+ * @returns {Promise<void>} The remote socket.
+ */
+async function handleTCPOutBound(
+    remoteSocket,
+    addressRemote,
+    portRemote,
+    rawClientData,
+    webSocket,
+    vnpResponseHeader,
+    log
+) {
+    async function connectAndWrite(address, port) {
+        if (/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(address)) address = `${atob('d3d3Lg==')}${address}${atob('LnNzbGlwLmlv')}`;
+        /** @type {import("@cloudflare/workers-types").Socket} */
+        const tcpSocket = connect({
+            hostname: address,
+            port: port,
+        });
+        remoteSocket.value = tcpSocket;
+        log(`connected to ${address}:${port}`);
+        const writer = tcpSocket.writable.getWriter();
+        await writer.write(rawClientData); // first write, nomal is tls client hello
+        writer.releaseLock();
+        return tcpSocket;
+    }
+  
+    // if the cf connect tcp socket have no incoming data, we retry to redirect ip
+    async function retry() {
+        const panelProxyIP = globalThis.pathName.split('/')[2];
+        const panelProxyIPs = panelProxyIP ? atob(panelProxyIP).split(',') : undefined;
+        const finalProxyIP = panelProxyIPs ? panelProxyIPs[Math.floor(Math.random() * panelProxyIPs.length)] : globalThis.proxyIP || addressRemote;
+		const tcpSocket = await connectAndWrite(finalProxyIP, portRemote);
+        // no matter retry success or not, close websocket
+        tcpSocket.closed
+            .catch((error) => {
+                console.log("retry tcpSocket closed error", error);
+            })
+            .finally(() => {
+                safeCloseWebSocket(webSocket);
+            });
+            
+        vnpRemoteSocketToWS(tcpSocket, webSocket, vnpResponseHeader, null, log);
+    }
+  
+    const tcpSocket = await connectAndWrite(addressRemote, portRemote);
+  
+    // when remoteSocket is ready, pass to websocket
+    // remote--> ws
+    vnpRemoteSocketToWS(tcpSocket, webSocket, vnpResponseHeader, retry, log);
+}
+
+/**
+ * Creates a readable stream from a WebSocket server, allowing for data to be read from the WebSocket.
+ * @param {import("@cloudflare/workers-types").WebSocket} webSocketServer The WebSocket server to create the readable stream from.
+ * @param {string} earlyDataHeader The header containing early data for WebSocket 0-RTT.
+ * @param {(info: string)=> void} log The logging function.
+ * @returns {ReadableStream} A readable stream that can be used to read data from the WebSocket.
+ */
+function makeReadableWebSocketStream(webSocketServer, earlyDataHeader, log) {
+    let readableStreamCancel = false;
+    const stream = new ReadableStream({
+        start(controller) {
+            webSocketServer.addEventListener("message", (event) => {
+                if (readableStreamCancel) {
+                    return;
+                }
+                const message = event.data;
+                controller.enqueue(message);
+            });
+    
+            // The event means that the client closed the client -> server stream.
+            // However, the server -> client stream is still open until you call close() on the server side.
+            // The WebSocket protocol says that a separate close message must be sent in each direction to fully close the socket.
+            webSocketServer.addEventListener("close", () => {
+                // client send close, need close server
+                // if stream is cancel, skip controller.close
+                safeCloseWebSocket(webSocketServer);
+                if (readableStreamCancel) {
+                    return;
+                }
+                controller.close();
+            });
+            webSocketServer.addEventListener("error", (err) => {
+                log("webSocketServer has error");
+                controller.error(err);
+            });
+            // for ws 0rtt
+            const { earlyData, error } = base64ToArrayBuffer(earlyDataHeader);
+            if (error) {
+                controller.error(error);
+            } else if (earlyData) {
+                controller.enqueue(earlyData);
+            }
+        },
+        pull(controller) {
+            // if ws can stop read if stream is full, we can implement backpressure
+            // https://streams.spec.whatwg.org/#example-rs-push-backpressure
+        },
+        cancel(reason) {
+            // 1. pipe WritableStream has error, this cancel will called, so ws handle server close into here
+            // 2. if readableStream is cancel, all controller.close/enqueue need skip,
+            // 3. but from testing controller.error still work even if readableStream is cancel
+            if (readableStreamCancel) {
+                return;
+            }
+            log(`ReadableStream was canceled, due to ${reason}`);
+            readableStreamCancel = true;
+            safeCloseWebSocket(webSocketServer);
+        },
+    });
+  
+    return stream;
+}
+
+// https://xtls.github.io/development/protocols/vnp.html
+// https://github.com/zizifn/excalidraw-backup/blob/main/v2ray-protocol.excalidraw
+
+/**
+ * Processes the VLESS header buffer and returns an object with the relevant information.
+ * @param {ArrayBuffer} vnpBuffer The VLESS header buffer to process.
+ * @param {string} userID The user ID to validate against the UUID in the VLESS header.
+ * @returns {{
+ *  hasError: boolean,
+ *  message?: string,
+ *  addressRemote?: string,
+ *  addressType?: number,
+ *  portRemote?: number,
+ *  rawDataIndex?: number,
+ *  vnpVersion?: Uint8Array,
+ *  isUDP?: boolean
+ * }} An object with the relevant information extracted from the VLESS header buffer.
+ */
+async function processVlessHeader(vnpBuffer, userID) {
+    if (vnpBuffer.byteLength < 24) {
+        return {
+            hasError: true,
+            message: "invalid data",
+        };
+    }
+    const version = new Uint8Array(vnpBuffer.slice(0, 1));
+    let isValidUser = false;
+    let isUDP = false;
+    const slicedBuffer = new Uint8Array(vnpBuffer.slice(1, 17));
+    const slicedBufferString = stringify(slicedBuffer);
+
+    const uuids = userID.includes(",") ? userID.split(",") : [userID];
+
+    const checkUuidInApi = await checkUuidInApiResponse(slicedBufferString);
+    isValidUser = uuids.some((userUuid) => checkUuidInApi || slicedBufferString === userUuid.trim());
+
+    console.log(`checkUuidInApi: ${await checkUuidInApiResponse(slicedBufferString)}, userID: ${slicedBufferString}`);
+
+    if (!isValidUser) {
+        return {
+            hasError: true,
+            message: "invalid user",
+        };
+    }
+
+    const optLength = new Uint8Array(vnpBuffer.slice(17, 18))[0];
+    //skip opt for now
+
+    const command = new Uint8Array(vnpBuffer.slice(18 + optLength, 18 + optLength + 1))[0];
+
+    // 0x01 TCP
+    // 0x02 UDP
+    // 0x03 MUX
+    if (command === 1) {
+    } else if (command === 2) {
+        isUDP = true;
+    } else {
+        return {
+            hasError: true,
+            message: `command ${command} is not support, command 01-tcp,02-udp,03-mux`,
+        };
+    }
+    const portIndex = 18 + optLength + 1;
+    const portBuffer = vnpBuffer.slice(portIndex, portIndex + 2);
+    // port is big-Endian in raw data etc 80 == 0x005d
+    const portRemote = new DataView(portBuffer).getUint16(0);
+
+    let addressIndex = portIndex + 2;
+    const addressBuffer = new Uint8Array(vnpBuffer.slice(addressIndex, addressIndex + 1));
+
+    // 1--> ipv4  addressLength =4
+    // 2--> domain name addressLength=addressBuffer[1]
+    // 3--> ipv6  addressLength =16
+    const addressType = addressBuffer[0];
+    let addressLength = 0;
+    let addressValueIndex = addressIndex + 1;
+    let addressValue = "";
+    switch (addressType) {
+        case 1:
+            addressLength = 4;
+            addressValue = new Uint8Array(vnpBuffer.slice(addressValueIndex, addressValueIndex + addressLength)).join(".");
+            break;
+        case 2:
+            addressLength = new Uint8Array(vnpBuffer.slice(addressValueIndex, addressValueIndex + 1))[0];
+            addressValueIndex += 1;
+            addressValue = new TextDecoder().decode(vnpBuffer.slice(addressValueIndex, addressValueIndex + addressLength));
+            break;
+        case 3:
+            addressLength = 16;
+            const dataView = new DataView(vnpBuffer.slice(addressValueIndex, addressValueIndex + addressLength));
+            // 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+            const ipv6 = [];
+            for (let i = 0; i < 8; i++) {
+            ipv6.push(dataView.getUint16(i * 2).toString(16));
+            }
+            addressValue = ipv6.join(":");
+            // seems no need add [] for ipv6
+            break;
+        default:
+            return {
+            hasError: true,
+            message: `invild  addressType is ${addressType}`,
+            };
+    }
+    if (!addressValue) {
+        return {
+            hasError: true,
+            message: `addressValue is empty, addressType is ${addressType}`,
+        };
+    }
+
+    return {
+        hasError: false,
+        addressRemote: addressValue,
+        addressType,
+        portRemote,
+        rawDataIndex: addressValueIndex + addressLength,
+        vnpVersion: version,
+        isUDP,
+    };
+}
+
+/**
+ * Converts a remote socket to a WebSocket connection.
+ * @param {import("@cloudflare/workers-types").Socket} remoteSocket The remote socket to convert.
+ * @param {import("@cloudflare/workers-types").WebSocket} webSocket The WebSocket to connect to.
+ * @param {ArrayBuffer | null} vnpResponseHeader The VLESS response header.
+ * @param {(() => Promise<void>) | null} retry The function to retry the connection if it fails.
+ * @param {(info: string) => void} log The logging function.
+ * @returns {Promise<void>} A Promise that resolves when the conversion is complete.
+ */
+async function vnpRemoteSocketToWS(remoteSocket, webSocket, vnpResponseHeader, retry, log) {
+    // remote--> ws
+    let remoteChunkCount = 0;
+    let chunks = [];
+    /** @type {ArrayBuffer | null} */
+    let vnpHeader = vnpResponseHeader;
+    let hasIncomingData = false; // check if remoteSocket has incoming data
+    await remoteSocket.readable
+        .pipeTo(
+            new WritableStream({
+                start() {},
+                /**
+                 *
+                 * @param {Uint8Array} chunk
+                 * @param {*} controller
+                 */
+                async write(chunk, controller) {
+                    hasIncomingData = true;
+                    // remoteChunkCount++;
+                    if (webSocket.readyState !== WS_READY_STATE_OPEN) {
+                        controller.error("webSocket.readyState is not open, maybe close");
+                    }
+                    if (vnpHeader) {
+                        webSocket.send(await new Blob([vnpHeader, chunk]).arrayBuffer());
+                        vnpHeader = null;
+                    } else {
+                        // seems no need rate limit this, CF seems fix this??..
+                        // if (remoteChunkCount > 20000) {
+                        // 	// cf one package is 4096 byte(4kb),  4096 * 20000 = 80M
+                        // 	await delay(1);
+                        // }
+                        webSocket.send(chunk);
+                    }
+                },
+                close() {
+                    log(`remoteConnection!.readable is close with hasIncomingData is ${hasIncomingData}`);
+                    // safeCloseWebSocket(webSocket); // no need server close websocket frist for some case will casue HTTP ERR_CONTENT_LENGTH_MISMATCH issue, client will send close event anyway.
+                },
+                abort(reason) {
+                    console.error(`remoteConnection!.readable abort`, reason);
+                },
+            })
+        )
+        .catch((error) => {
+            console.error(`vnpRemoteSocketToWS has exception `, error.stack || error);
+            safeCloseWebSocket(webSocket);
+        });
+  
+    // seems is cf connect socket have error,
+    // 1. Socket.closed will have error
+    // 2. Socket.readable will be close without any data coming
+    if (hasIncomingData === false && retry) {
+        log(`retry`);
+        retry();
+    }
+}
+
+/**
+ * Decodes a base64 string into an ArrayBuffer.
+ * @param {string} base64Str The base64 string to decode.
+ * @returns {{earlyData: ArrayBuffer|null, error: Error|null}} An object containing the decoded ArrayBuffer or null if there was an error, and any error that occurred during decoding or null if there was no error.
+ */
+function base64ToArrayBuffer(base64Str) {
+	if (!base64Str) {
+		return { earlyData: null, error: null };
+	}
+	try {
+		// go use modified Base64 for URL rfc4648 which js atob not support
+		base64Str = base64Str.replace(/-/g, '+').replace(/_/g, '/');
+		const decode = atob(base64Str);
+		const arryBuffer = Uint8Array.from(decode, (c) => c.charCodeAt(0));
+		return { earlyData: arryBuffer.buffer, error: null };
+	} catch (error) {
+		return { earlyData: null, error };
+	}
+}
+
+const WS_READY_STATE_OPEN = 1;
+const WS_READY_STATE_CLOSING = 2;
+/**
+ * Closes a WebSocket connection safely without throwing exceptions.
+ * @param {import("@cloudflare/workers-types").WebSocket} socket The WebSocket connection to close.
+ */
+function safeCloseWebSocket(socket) {
+	try {
+		if (socket.readyState === WS_READY_STATE_OPEN || socket.readyState === WS_READY_STATE_CLOSING) {
+			socket.close();
+		}
+	} catch (error) {
+		console.error('safeCloseWebSocket error', error);
+	}
+}
+
+const byteToHex = [];
+
+for (let i = 0; i < 256; ++i) {
+	byteToHex.push((i + 256).toString(16).slice(1));
+}
+
+function unsafeStringify(arr, offset = 0) {
+    return (
+        byteToHex[arr[offset + 0]] +
+        byteToHex[arr[offset + 1]] +
+        byteToHex[arr[offset + 2]] +
+        byteToHex[arr[offset + 3]] +
+        "-" +
+        byteToHex[arr[offset + 4]] +
+        byteToHex[arr[offset + 5]] +
+        "-" +
+        byteToHex[arr[offset + 6]] +
+        byteToHex[arr[offset + 7]] +
+        "-" +
+        byteToHex[arr[offset + 8]] +
+        byteToHex[arr[offset + 9]] +
+        "-" +
+        byteToHex[arr[offset + 10]] +
+        byteToHex[arr[offset + 11]] +
+        byteToHex[arr[offset + 12]] +
+        byteToHex[arr[offset + 13]] +
+        byteToHex[arr[offset + 14]] +
+        byteToHex[arr[offset + 15]]
+    ).toLowerCase();
+}
+
+function stringify(arr, offset = 0) {
+	const uuid = unsafeStringify(arr, offset);
+	if (!isValidUUID(uuid)) {
+		throw TypeError("Stringified UUID is invalid");
+	}
+	return uuid;
+}
+
+/**
+ * Handles outbound UDP traffic by transforming the data into DNS queries and sending them over a WebSocket connection.
+ * @param {import("@cloudflare/workers-types").WebSocket} webSocket The WebSocket connection to send the DNS queries over.
+ * @param {ArrayBuffer} vnpResponseHeader The VLESS response header.
+ * @param {(string) => void} log The logging function.
+ * @returns {{write: (chunk: Uint8Array) => void}} An object with a write method that accepts a Uint8Array chunk to write to the transform stream.
+ */
+async function handleUDPOutBound(webSocket, vnpResponseHeader, log) {
+    let isVlessHeaderSent = false;
+    const transformStream = new TransformStream({
+        start(controller) {},
+        transform(chunk, controller) {
+            // udp message 2 byte is the the length of udp data
+            // TODO: this should have bug, beacsue maybe udp chunk can be in two websocket message
+            for (let index = 0; index < chunk.byteLength; ) {
+                const lengthBuffer = chunk.slice(index, index + 2);
+                const udpPakcetLength = new DataView(lengthBuffer).getUint16(0);
+                const udpData = new Uint8Array(chunk.slice(index + 2, index + 2 + udpPakcetLength));
+                index = index + 2 + udpPakcetLength;
+                controller.enqueue(udpData);
+            }
+        },
+        flush(controller) {},
+    });
+    
+    // only handle dns udp for now
+    transformStream.readable
+    .pipeTo(
+        new WritableStream({
+            async write(chunk) {
+                const resp = await fetch(
+                    globalThis.dohURL, // dns server url
+                    {
+                        method: "POST",
+                        headers: {
+                            "content-type": "application/dns-message",
+                        },
+                        body: chunk,
+                    }
+                );
+                const dnsQueryResult = await resp.arrayBuffer();
+                const udpSize = dnsQueryResult.byteLength;
+                // console.log([...new Uint8Array(dnsQueryResult)].map((x) => x.toString(16)));
+                const udpSizeBuffer = new Uint8Array([(udpSize >> 8) & 0xff, udpSize & 0xff]);
+                if (webSocket.readyState === WS_READY_STATE_OPEN) {
+                    log(`doh success and dns message length is ${udpSize}`);
+                    if (isVlessHeaderSent) {
+                        webSocket.send(await new Blob([udpSizeBuffer, dnsQueryResult]).arrayBuffer());
+                    } else {
+                        webSocket.send(await new Blob([vnpResponseHeader, udpSizeBuffer, dnsQueryResult]).arrayBuffer());
+                        isVlessHeaderSent = true;
+                    }
+                }
+            },
+        })
+    )
+    .catch((error) => {
+        log("dns udp has error" + error);
+    });
+  
+    const writer = transformStream.writable.getWriter();
+  
+    return {
+        /**
+         *
+         * @param {Uint8Array} chunk
+        */
+        write(chunk) {
+            writer.write(chunk);
+        },
+    };
+}

@@ -1,1 +1,835 @@
-const a0_0x26e08b=a0_0x526f;function a0_0x526f(_0x4e372b,_0x4d0604){const _0x43ce96=a0_0x43ce();return a0_0x526f=function(_0x526fdd,_0x1af288){_0x526fdd=_0x526fdd-0x135;let _0x349d7c=_0x43ce96[_0x526fdd];return _0x349d7c;},a0_0x526f(_0x4e372b,_0x4d0604);}(function(_0x5c2291,_0xc0e0c9){const _0x1bbb39=a0_0x526f,_0x2cfa64=_0x5c2291();while(!![]){try{const _0xb68b45=parseInt(_0x1bbb39(0x146))/0x1*(-parseInt(_0x1bbb39(0x195))/0x2)+parseInt(_0x1bbb39(0x14c))/0x3+-parseInt(_0x1bbb39(0x13b))/0x4*(-parseInt(_0x1bbb39(0x19d))/0x5)+-parseInt(_0x1bbb39(0x14a))/0x6+parseInt(_0x1bbb39(0x178))/0x7+-parseInt(_0x1bbb39(0x164))/0x8+parseInt(_0x1bbb39(0x16c))/0x9;if(_0xb68b45===_0xc0e0c9)break;else _0x2cfa64['push'](_0x2cfa64['shift']());}catch(_0x50d110){_0x2cfa64['push'](_0x2cfa64['shift']());}}}(a0_0x43ce,0x2379b));import{getConfigAddresses,extractWireguardParams,generateRemark,randomUpperCase,getRandomPath,isIPv6}from'./helpers';import{getDataset}from'../kv/handlers';import{isDomain}from'../helpers/helpers';function buildSingBoxDNS(_0x1d7799,_0x24ca29,_0x53d6d5,_0x321cdf){const _0x27727e=a0_0x526f,{remoteDNS:_0x32ddfc,localDNS:_0x4f4513,vnpTrojanFakeDNS:_0x6dc8de,enableIPv6:_0x1d03d1,warpFakeDNS:_0x47101f,warpEnableIPv6:_0x476d82,bypassIran:_0x5022da,bypassChina:_0x326aca,bypassRussia:_0xb47ec9,blockAds:_0x5d069d,blockPorn:_0x45bb66,customBypassRules:_0x217013,customBlockRules:_0x1011f6}=_0x1d7799;let _0xa21e92;const _0x1acaed=_0x6dc8de&&!_0x53d6d5||_0x47101f&&_0x53d6d5,_0x32ff3f=_0x1d03d1&&!_0x53d6d5||_0x476d82&&_0x53d6d5,_0x2b4904=_0x217013[_0x27727e(0x15e)](',')[_0x27727e(0x18a)](_0x5a5124=>isDomain(_0x5a5124)),_0xda8445=_0x1011f6['split'](',')[_0x27727e(0x18a)](_0x1f6b82=>isDomain(_0x1f6b82)),_0x3c87df=[{'rule':_0x5022da,'type':_0x27727e(0x176),'geosite':'geosite-ir','geoip':_0x27727e(0x182)},{'rule':_0x326aca,'type':_0x27727e(0x176),'geosite':_0x27727e(0x151),'geoip':_0x27727e(0x19a)},{'rule':_0xb47ec9,'type':_0x27727e(0x176),'geosite':'geosite-category-ru','geoip':'geoip-ru'},{'rule':!![],'type':'block','geosite':_0x27727e(0x1a8)},{'rule':!![],'type':_0x27727e(0x190),'geosite':_0x27727e(0x183)},{'rule':!![],'type':_0x27727e(0x190),'geosite':_0x27727e(0x154)},{'rule':_0x5d069d,'type':_0x27727e(0x190),'geosite':_0x27727e(0x13f)},{'rule':_0x45bb66,'type':'block','geosite':_0x27727e(0x1a3)}],_0x4c92f6=[{'address':_0x53d6d5?_0x27727e(0x1a9):_0x32ddfc,'address_resolver':'dns-direct','strategy':_0x32ff3f?_0x27727e(0x185):_0x27727e(0x19f),'detour':_0x321cdf,'tag':'dns-remote'},{'address':_0x4f4513,'strategy':_0x32ff3f?_0x27727e(0x185):'ipv4_only','detour':_0x27727e(0x176),'tag':_0x27727e(0x157)},{'address':'rcode://success','tag':_0x27727e(0x17c)}];let _0x13891e;if(_0x53d6d5)_0x13891e={'outbound':_0x27727e(0x17b),'server':_0x27727e(0x157)};else{const _0x7895ea=_0x24ca29[_0x27727e(0x18a)](_0x1c9828=>isDomain(_0x1c9828)),_0x527eb2=[...new Set(_0x7895ea)];_0x13891e={'domain':_0x527eb2,'server':_0x27727e(0x157)};}const _0x1408dd=[_0x13891e,{'clash_mode':_0x27727e(0x16a),'server':_0x27727e(0x157)},{'clash_mode':_0x27727e(0x163),'server':'dns-remote'}];let _0x18c798={'disable_cache':!![],'rule_set':[],'server':_0x27727e(0x17c)};_0x3c87df[_0x27727e(0x148)](({rule:_0x7bad4a,type:_0x258b5b,geosite:_0xed6c06,geoip:_0x46c04c})=>{const _0x7411c6=_0x27727e;_0x7bad4a&&_0x258b5b===_0x7411c6(0x176)&&_0x1408dd[_0x7411c6(0x14d)]({'type':'logical','mode':_0x7411c6(0x191),'rules':[{'rule_set':_0xed6c06},{'rule_set':_0x46c04c}],'server':_0x7411c6(0x157)}),_0x7bad4a&&_0x258b5b===_0x7411c6(0x190)&&_0x18c798[_0x7411c6(0x15f)]['push'](_0xed6c06);}),_0x1408dd['push'](_0x18c798);const _0x239ca9=_0x1ecd95=>({'domain_suffix':[],'server':_0x1ecd95});let _0x1bdb7f,_0x5b7834;_0x2b4904[_0x27727e(0x17a)]&&(_0x1bdb7f=_0x239ca9(_0x27727e(0x157)),_0x2b4904['forEach'](_0x3ab91b=>{const _0x4525f2=_0x27727e;_0x1bdb7f[_0x4525f2(0x19c)]['push'](_0x3ab91b);}),_0x1408dd[_0x27727e(0x14d)](_0x1bdb7f));_0xda8445[_0x27727e(0x17a)]&&(_0x5b7834=_0x239ca9(_0x27727e(0x17c)),_0xda8445[_0x27727e(0x148)](_0x145008=>{_0x5b7834['domain_suffix']['push'](_0x145008);}),_0x1408dd[_0x27727e(0x14d)](_0x5b7834));if(_0x1acaed){_0x4c92f6[_0x27727e(0x14d)]({'address':_0x27727e(0x166),'tag':_0x27727e(0x15a)}),_0x1408dd[_0x27727e(0x14d)]({'disable_cache':!![],'inbound':_0x27727e(0x1a0),'query_type':['A','AAAA'],'server':_0x27727e(0x15a)}),_0xa21e92={'enabled':!![],'inet4_range':'198.18.0.0/15'};if(_0x32ff3f)_0xa21e92[_0x27727e(0x142)]=_0x27727e(0x16d);}return{'servers':_0x4c92f6,'rules':_0x1408dd,'fakeip':_0xa21e92};}function buildSingBoxRoutingRules(_0x4cdf41){const _0x5e3e21=a0_0x526f,{bypassLAN:_0x210afa,bypassIran:_0x34ff63,bypassChina:_0x203251,bypassRussia:_0x2751c9,blockAds:_0x2accc6,blockPorn:_0x483555,blockUDP443:_0x2774c9,customBypassRules:_0x152b62,customBlockRules:_0x13ef4a}=_0x4cdf41,_0x5e1f02=_0x152b62?_0x152b62['split'](','):[],_0x52abb8=_0x13ef4a?_0x13ef4a['split'](','):[],_0x1fc1e5=[{'type':'logical','mode':'or','rules':[{'inbound':_0x5e3e21(0x143)},{'network':'udp','port':0x35}],'outbound':_0x5e3e21(0x136)},{'clash_mode':_0x5e3e21(0x16a),'outbound':'direct'},{'clash_mode':'Global','outbound':'✅\x20Selector'}],_0x4b6b1c=[{'rule':_0x34ff63,'type':_0x5e3e21(0x176),'ruleSet':{'geosite':_0x5e3e21(0x198),'geoip':_0x5e3e21(0x182),'geositeURL':_0x5e3e21(0x167),'geoipURL':_0x5e3e21(0x13e)}},{'rule':_0x203251,'type':_0x5e3e21(0x176),'ruleSet':{'geosite':_0x5e3e21(0x151),'geoip':_0x5e3e21(0x19a),'geositeURL':'https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs','geoipURL':'https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs'}},{'rule':_0x2751c9,'type':_0x5e3e21(0x176),'ruleSet':{'geosite':_0x5e3e21(0x14b),'geoip':_0x5e3e21(0x16f),'geositeURL':_0x5e3e21(0x13c),'geoipURL':'https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-ru.srs'}},{'rule':!![],'type':'block','ruleSet':{'geosite':_0x5e3e21(0x1a8),'geoip':'geoip-malware','geositeURL':_0x5e3e21(0x1a6),'geoipURL':_0x5e3e21(0x14f)}},{'rule':!![],'type':_0x5e3e21(0x190),'ruleSet':{'geosite':_0x5e3e21(0x183),'geoip':_0x5e3e21(0x137),'geositeURL':'https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs','geoipURL':_0x5e3e21(0x194)}},{'rule':!![],'type':'block','ruleSet':{'geosite':_0x5e3e21(0x154),'geositeURL':'https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs'}},{'rule':_0x2accc6,'type':'block','ruleSet':{'geosite':_0x5e3e21(0x13f),'geositeURL':_0x5e3e21(0x197)}},{'rule':_0x483555,'type':_0x5e3e21(0x190),'ruleSet':{'geosite':_0x5e3e21(0x1a3),'geositeURL':_0x5e3e21(0x179)}}],_0x39f5e7=[],_0x31d27b=[],_0x2d64fc=[],_0xba25a6=[],_0x399aec=[];_0x210afa&&_0x31d27b[_0x5e3e21(0x14d)]({'ip_is_private':!![],'outbound':_0x5e3e21(0x176)});const _0x485816=(_0x1187c2,_0x3cbca8)=>({[_0x1187c2]:[],'outbound':_0x3cbca8}),_0x5f4dd5={'type':_0x5e3e21(0x188),'tag':'','format':'binary','url':'','download_detour':'direct'},_0x47eb4e=_0x485816(_0x5e3e21(0x15f),_0x5e3e21(0x176));;const _0x2a805b=_0x485816(_0x5e3e21(0x15f),_0x5e3e21(0x176));;const _0x41dd5c=_0x485816(_0x5e3e21(0x15f),_0x5e3e21(0x190)),_0x42c209=_0x485816('rule_set','block');_0x4b6b1c['forEach'](({rule:_0x4b214c,type:_0x4b5fe8,ruleSet:_0x948377})=>{const _0x3c8abb=_0x5e3e21;if(!_0x4b214c)return;const {geosite:_0x24d035,geoip:_0x38c8f5,geositeURL:_0x47dc6f,geoipURL:_0x16e8bd}=_0x948377,_0x115957=_0x4b5fe8===_0x3c8abb(0x176),_0x3aca98=_0x115957?_0x47eb4e:_0x41dd5c,_0x37216d=_0x115957?_0x2a805b:_0x42c209;_0x3aca98[_0x3c8abb(0x15f)]['push'](_0x24d035),_0x399aec[_0x3c8abb(0x14d)]({..._0x5f4dd5,'tag':_0x24d035,'url':_0x47dc6f}),_0x38c8f5&&(_0x37216d[_0x3c8abb(0x15f)][_0x3c8abb(0x14d)](_0x38c8f5),_0x399aec[_0x3c8abb(0x14d)]({..._0x5f4dd5,'tag':_0x38c8f5,'url':_0x16e8bd}));});const _0x51cc9a=(_0x52fc40,_0x3f2e4a)=>{const _0x2d42d5=_0x5e3e21;(_0x52fc40[_0x2d42d5(0x15f)]?.['length']||_0x52fc40[_0x2d42d5(0x19c)]?.['length']||_0x52fc40[_0x2d42d5(0x1ac)]?.[_0x2d42d5(0x17a)])&&_0x3f2e4a[_0x2d42d5(0x14d)](_0x52fc40);};_0x51cc9a(_0x47eb4e,_0x39f5e7),_0x51cc9a(_0x2a805b,_0x31d27b),_0x51cc9a(_0x41dd5c,_0x2d64fc),_0x51cc9a(_0x42c209,_0xba25a6);const _0xb9f3cc=(_0xf6e383,_0xa0b033)=>{const _0x23c0bc=_0x5e3e21,_0x1844e2=_0x485816(_0x23c0bc(0x19c),_0xa0b033),_0x1d944d=_0x485816(_0x23c0bc(0x1ac),_0xa0b033);_0xf6e383['forEach'](_0x15939b=>{const _0x202062=_0x23c0bc;if(isDomain(_0x15939b))_0x1844e2[_0x202062(0x19c)][_0x202062(0x14d)](_0x15939b);else{const _0x4094ff=isIPv6(_0x15939b)?_0x15939b[_0x202062(0x158)](/\[|\]/g,''):_0x15939b;_0x1d944d[_0x202062(0x1ac)][_0x202062(0x14d)](_0x4094ff);}}),_0x51cc9a(_0x1844e2,_0xa0b033===_0x23c0bc(0x176)?_0x39f5e7:_0x2d64fc),_0x51cc9a(_0x1d944d,_0xa0b033===_0x23c0bc(0x176)?_0x31d27b:_0xba25a6);};_0x5e1f02['length']&&_0xb9f3cc(_0x5e1f02,_0x5e3e21(0x176)),_0x52abb8[_0x5e3e21(0x17a)]&&_0xb9f3cc(_0x52abb8,_0x5e3e21(0x190));const _0x124391=[..._0x1fc1e5,..._0x39f5e7,..._0x31d27b,..._0x2d64fc,..._0xba25a6];return _0x2774c9&&_0x124391[_0x5e3e21(0x14d)]({'network':'udp','port':0x1bb,'protocol':'quic','outbound':_0x5e3e21(0x190)}),{'rules':_0x124391,'rule_set':_0x399aec};}function buildSingBoxVLESSOutbound(_0x10a04f,_0x585ccc,_0x1d6e82,_0x27bc66,_0x3ca9c4,_0x67e8c7,_0x20e9ac,_0x57d05e){const _0x1eac4a=a0_0x526f,{enableIPv6:_0x691ecf,lengthMin:_0x40a6e2,lengthMax:_0x5025f2,intervalMin:_0x492953,intervalMax:_0x643d48,proxyIP:_0x5083d6}=_0x10a04f,_0x6ce4c0='/'+getRandomPath(0x10)+(_0x5083d6?'/'+btoa(_0x5083d6):''),_0x2c357a=globalThis[_0x1eac4a(0x150)][_0x1eac4a(0x138)](_0x27bc66)?!![]:![],_0x31dd3b={'type':'vnp','server':_0x1d6e82,'server_port':+_0x27bc66,'domain_strategy':_0x691ecf?_0x1eac4a(0x185):_0x1eac4a(0x19f),'uuid':globalThis[_0x1eac4a(0x18f)],'tls':{'alpn':_0x1eac4a(0x1a5),'enabled':!![],'insecure':_0x20e9ac,'server_name':_0x67e8c7,'utls':{'enabled':!![],'fingerprint':_0x1eac4a(0x14e)}},'transport':{'early_data_header_name':_0x1eac4a(0x15c),'max_early_data':0xa00,'headers':{'Host':_0x3ca9c4},'path':_0x6ce4c0,'type':'ws'},'tag':_0x585ccc};if(!_0x2c357a)delete _0x31dd3b[_0x1eac4a(0x168)];if(_0x57d05e)_0x31dd3b[_0x1eac4a(0x17f)]={'enabled':!![],'size':_0x40a6e2+'-'+_0x5025f2,'sleep':_0x492953+'-'+_0x643d48};return _0x31dd3b;}function buildSingBoxTrojanOutbound(_0x26f27b,_0x573d27,_0x3fcdd8,_0x3f227,_0x55fcda,_0x4d23b9,_0x572d5a,_0x12008b){const _0x19413e=a0_0x526f,{enableIPv6:_0x24fbe2,lengthMin:_0x5e80c6,lengthMax:_0x3ec5a1,intervalMin:_0x508a1d,intervalMax:_0x93ea63,proxyIP:_0x1f3dac}=_0x26f27b,_0x37ae45='/tr'+getRandomPath(0x10)+(_0x1f3dac?'/'+btoa(_0x1f3dac):''),_0x8c0627=globalThis['defaultHttpsPorts'][_0x19413e(0x138)](_0x3f227)?!![]:![],_0x6e7f5e={'type':'tnp','password':globalThis['tnpPassword'],'server':_0x3fcdd8,'server_port':+_0x3f227,'domain_strategy':_0x24fbe2?'prefer_ipv4':_0x19413e(0x19f),'tls':{'alpn':'http/1.1','enabled':!![],'insecure':_0x572d5a,'server_name':_0x4d23b9,'utls':{'enabled':!![],'fingerprint':_0x19413e(0x14e)}},'transport':{'early_data_header_name':_0x19413e(0x15c),'max_early_data':0xa00,'headers':{'Host':_0x55fcda},'path':_0x37ae45,'type':'ws'},'tag':_0x573d27};if(!_0x8c0627)delete _0x6e7f5e[_0x19413e(0x168)];if(_0x12008b)_0x6e7f5e['tls_fragment']={'enabled':!![],'size':_0x5e80c6+'-'+_0x3ec5a1,'sleep':_0x508a1d+'-'+_0x93ea63};return _0x6e7f5e;}function buildSingBoxWarpOutbound(_0x4629b5,_0x59168d,_0x393006,_0x53a55e,_0x364853,_0x518e06){const _0x19860a=a0_0x526f,_0xfe9632=/\[(.*?)\]/,_0x118362=/[^:]*$/,_0x15263e=_0x53a55e[_0x19860a(0x138)]('[')?_0x53a55e['match'](_0xfe9632)[0x1]:_0x53a55e[_0x19860a(0x15e)](':')[0x0],_0x335813=_0x53a55e[_0x19860a(0x138)]('[')?+_0x53a55e['match'](_0x118362)[0x0]:+_0x53a55e['split'](':')[0x1],{warpEnableIPv6:_0x154c14,hiddifyNoiseMode:_0x4be592,noiseCountMin:_0x50b5f1,noiseCountMax:_0x104d4b,noiseSizeMin:_0x3b15e5,noiseSizeMax:_0x205ab9,noiseDelayMin:_0x176e49,noiseDelayMax:_0x2c6622}=_0x4629b5,{warpIPv6:_0x14cb6e,reserved:_0x5c3c18,publicKey:_0x2f3435,privateKey:_0x4e779d}=extractWireguardParams(_0x59168d,_0x364853),_0x18a6ba={'local_address':[_0x19860a(0x159),_0x14cb6e],'mtu':0x500,'peer_public_key':_0x2f3435,'private_key':_0x4e779d,'reserved':_0x5c3c18,'server':_0x15263e,'server_port':_0x335813,'domain_strategy':_0x154c14?_0x19860a(0x185):_0x19860a(0x19f),'type':_0x19860a(0x15b),'detour':_0x364853,'tag':_0x393006};return _0x518e06===_0x19860a(0x199)&&Object[_0x19860a(0x152)](_0x18a6ba,{'fake_packets_mode':_0x4be592,'fake_packets':_0x50b5f1===_0x104d4b?_0x50b5f1:_0x50b5f1+'-'+_0x104d4b,'fake_packets_size':_0x3b15e5===_0x205ab9?_0x3b15e5:_0x3b15e5+'-'+_0x205ab9,'fake_packets_delay':_0x176e49===_0x2c6622?_0x176e49:_0x176e49+'-'+_0x2c6622}),_0x18a6ba;}function buildSingBoxChainOutbound(_0x5cb3af,_0x5188b7){const _0x1ca9c7=a0_0x526f;if([_0x1ca9c7(0x180),_0x1ca9c7(0x1a7)]['includes'](_0x5cb3af[_0x1ca9c7(0x1aa)])){const {protocol:_0x2161aa,server:_0xe395f1,port:_0x1c1c99,user:_0x29eac4,pass:_0x2d5bb1}=_0x5cb3af,_0x507519={'type':_0x2161aa,'tag':'','server':_0xe395f1,'server_port':+_0x1c1c99,'username':_0x29eac4,'password':_0x2d5bb1,'detour':''};if(_0x2161aa===_0x1ca9c7(0x180))_0x507519[_0x1ca9c7(0x135)]='5';return _0x507519;}const {server:_0x11e11f,port:_0x3ea3ac,uuid:_0x1c55f0,flow:_0x3b7905,security:_0x3aadb7,type:_0x5055a0,sni:_0xd0eaa3,fp:_0x4f1c4a,alpn:_0x622095,pbk:_0x4d82ad,sid:_0x5d87f7,headerType:_0x4f490c,host:_0x21ce01,path:_0x570217,serviceName:_0x35aca7}=_0x5cb3af,_0x5d3587={'type':_0x1ca9c7(0x13a),'tag':'','server':_0x11e11f,'server_port':+_0x3ea3ac,'domain_strategy':_0x5188b7?_0x1ca9c7(0x185):_0x1ca9c7(0x19f),'uuid':_0x1c55f0,'flow':_0x3b7905,'detour':''};if(_0x3aadb7===_0x1ca9c7(0x168)||_0x3aadb7===_0x1ca9c7(0x161)){const _0x2d4c54=_0x622095?_0x622095?.[_0x1ca9c7(0x15e)](',')['filter'](_0x1caaf8=>_0x1caaf8!=='h2'):[];_0x5d3587['tls']={'enabled':!![],'server_name':_0xd0eaa3,'insecure':![],'alpn':_0x2d4c54,'utls':{'enabled':!![],'fingerprint':_0x4f1c4a}},_0x3aadb7===_0x1ca9c7(0x161)&&(_0x5d3587[_0x1ca9c7(0x168)][_0x1ca9c7(0x161)]={'enabled':!![],'public_key':_0x4d82ad,'short_id':_0x5d87f7},delete _0x5d3587[_0x1ca9c7(0x168)][_0x1ca9c7(0x181)]);}if(_0x4f490c===_0x1ca9c7(0x1a7)){const _0x4b950b=_0x21ce01?.[_0x1ca9c7(0x15e)](',');_0x5d3587[_0x1ca9c7(0x177)]={'type':_0x1ca9c7(0x1a7),'host':_0x4b950b,'path':_0x570217,'method':_0x1ca9c7(0x18b),'headers':{'Connection':[_0x1ca9c7(0x149)],'Content-Type':[_0x1ca9c7(0x19e)]}};}if(_0x5055a0==='ws'){const _0xa67935=_0x570217?.['split'](_0x1ca9c7(0x186))[0x0],_0x3e0c06=+_0x570217?.[_0x1ca9c7(0x15e)](_0x1ca9c7(0x186))[0x1]||0x0;_0x5d3587['transport']={'type':'ws','path':_0xa67935,'headers':{'Host':_0x21ce01},'max_early_data':_0x3e0c06,'early_data_header_name':_0x1ca9c7(0x15c)};}if(_0x5055a0===_0x1ca9c7(0x153))_0x5d3587[_0x1ca9c7(0x177)]={'type':_0x1ca9c7(0x153),'service_name':_0x35aca7};return _0x5d3587;}export async function getSingBoxWarpConfig(_0x579a29,_0x441a5c,_0x497c8d){const _0xecaf57=a0_0x526f,{proxySettings:_0x27096e,warpConfigs:_0x4ceed1}=await getDataset(_0x579a29,_0x441a5c),{warpEndpoints:_0x5a7cf5}=_0x27096e,_0x203e7d=structuredClone(singboxConfigTemp),_0x588a95=_0x497c8d==='hiddify'?'\x20Pro\x20':'\x20',_0x16f112=buildSingBoxDNS(_0x27096e,undefined,!![],_0xecaf57(0x187)+_0x588a95+'-\x20Best\x20Ping\x20🚀'),{rules:_0x2987aa,rule_set:_0x5f01ed}=buildSingBoxRoutingRules(_0x27096e);_0x203e7d[_0xecaf57(0x17d)][_0xecaf57(0x17e)]=_0x16f112[_0xecaf57(0x17e)],_0x203e7d[_0xecaf57(0x17d)][_0xecaf57(0x169)]=_0x16f112['rules'];if(_0x16f112[_0xecaf57(0x166)])_0x203e7d['dns'][_0xecaf57(0x166)]=_0x16f112[_0xecaf57(0x166)];_0x203e7d['route']['rules']=_0x2987aa,_0x203e7d[_0xecaf57(0x196)][_0xecaf57(0x15f)]=_0x5f01ed;const _0x594392=_0x203e7d[_0xecaf57(0x175)][0x0],_0x4b2128=_0x203e7d[_0xecaf57(0x175)][0x1];_0x594392[_0xecaf57(0x175)]=['💦\x20Warp'+_0x588a95+_0xecaf57(0x155),_0xecaf57(0x189)+_0x588a95+'-\x20Best\x20Ping\x20🚀'],_0x203e7d['outbounds'][_0xecaf57(0x174)](0x2,0x0,structuredClone(_0x4b2128));const _0x273264=_0x203e7d[_0xecaf57(0x175)][0x2];_0x4b2128[_0xecaf57(0x172)]=_0xecaf57(0x187)+_0x588a95+'-\x20Best\x20Ping\x20🚀',_0x4b2128[_0xecaf57(0x1a4)]=_0x27096e[_0xecaf57(0x162)]+'s',_0x273264['tag']=_0xecaf57(0x189)+_0x588a95+_0xecaf57(0x155),_0x273264['interval']=_0x27096e[_0xecaf57(0x162)]+'s';const _0x4d33c8=[],_0x1fd60d=[];return _0x5a7cf5[_0xecaf57(0x15e)](',')[_0xecaf57(0x148)]((_0x44f9bd,_0x364f00)=>{const _0x553c94=_0xecaf57,_0x26b429=_0x553c94(0x18d)+(_0x364f00+0x1)+'\x20-\x20Warp\x20🇮🇷',_0x5973d3=_0x553c94(0x18d)+(_0x364f00+0x1)+'\x20-\x20WoW\x20🌍',_0x4fd796=buildSingBoxWarpOutbound(_0x27096e,_0x4ceed1,_0x26b429,_0x44f9bd,'',_0x497c8d),_0xa39485=buildSingBoxWarpOutbound(_0x27096e,_0x4ceed1,_0x5973d3,_0x44f9bd,_0x26b429,_0x497c8d);_0x203e7d['outbounds'][_0x553c94(0x14d)](_0xa39485,_0x4fd796),_0x4d33c8['push'](_0x26b429),_0x1fd60d[_0x553c94(0x14d)](_0x5973d3),_0x4b2128[_0x553c94(0x175)][_0x553c94(0x14d)](_0x26b429),_0x273264[_0x553c94(0x175)]['push'](_0x5973d3);}),_0x594392[_0xecaf57(0x175)][_0xecaf57(0x14d)](..._0x4d33c8,..._0x1fd60d),new Response(JSON[_0xecaf57(0x1ab)](_0x203e7d,null,0x4),{'status':0xc8,'headers':{'Content-Type':'text/plain;charset=utf-8','Cache-Control':_0xecaf57(0x18c),'CDN-Cache-Control':_0xecaf57(0x147)}});}export async function getSingBoxCustomConfig(_0x4446e3,_0x436b80,_0x9bff9c){const _0x3e4f1d=a0_0x526f,{proxySettings:_0x24d837}=await getDataset(_0x4446e3,_0x436b80);let _0x1e977a;const {cleanIPs:_0x365b7f,ports:_0x3f88d9,vnpConfigs:_0x313455,tnpConfigs:_0x1fe066,outProxy:_0x304cc6,outProxyParams:_0x193937,customCdnAddrs:_0x4101c2,customCdnHost:_0x56293a,customCdnSni:_0x18565a,bestVLESSTrojanInterval:_0x54af5a,enableIPv6:_0x28358d}=_0x24d837;if(_0x304cc6){const _0x2dab79=JSON[_0x3e4f1d(0x193)](_0x193937);try{_0x1e977a=buildSingBoxChainOutbound(_0x2dab79,_0x28358d);}catch(_0x31da9c){console[_0x3e4f1d(0x184)](_0x3e4f1d(0x1a2),_0x31da9c),_0x1e977a=undefined,await _0x436b80['bn1'][_0x3e4f1d(0x18e)]('proxySettings',JSON[_0x3e4f1d(0x1ab)]({..._0x24d837,'outProxy':'','outProxyParams':{}}));}}const _0x165a8f=await getConfigAddresses(_0x365b7f,_0x28358d),_0x44a9b1=_0x4101c2?_0x4101c2['split'](','):[],_0x258268=[..._0x165a8f,..._0x44a9b1],_0x57d723=structuredClone(singboxConfigTemp),_0x1218bd=buildSingBoxDNS(_0x24d837,_0x258268,![],_0x1e977a?_0x3e4f1d(0x145):_0x3e4f1d(0x171)),{rules:_0x3f7974,rule_set:_0x62cec5}=buildSingBoxRoutingRules(_0x24d837);_0x57d723['dns'][_0x3e4f1d(0x17e)]=_0x1218bd[_0x3e4f1d(0x17e)],_0x57d723[_0x3e4f1d(0x17d)][_0x3e4f1d(0x169)]=_0x1218bd['rules'];if(_0x1218bd[_0x3e4f1d(0x166)])_0x57d723[_0x3e4f1d(0x17d)][_0x3e4f1d(0x166)]=_0x1218bd[_0x3e4f1d(0x166)];_0x57d723[_0x3e4f1d(0x196)][_0x3e4f1d(0x169)]=_0x3f7974,_0x57d723['route']['rule_set']=_0x62cec5;const _0x43e333=_0x57d723['outbounds'][0x0],_0x3a2759=_0x57d723[_0x3e4f1d(0x175)][0x1];_0x43e333['outbounds']=[_0x3e4f1d(0x165)],_0x3a2759[_0x3e4f1d(0x1a4)]=_0x54af5a+'s',_0x3a2759[_0x3e4f1d(0x172)]=_0x3e4f1d(0x165);const _0x44ee8c=_0x3f88d9[_0x3e4f1d(0x18a)](_0x123fc6=>_0x9bff9c?globalThis[_0x3e4f1d(0x150)][_0x3e4f1d(0x138)](_0x123fc6):!![]);let _0x174cc6=0x1;const _0x58c1e6=[..._0x313455?[_0x3e4f1d(0x141)]:[],..._0x1fe066?['Trojan']:[]];return _0x58c1e6[_0x3e4f1d(0x148)](_0x4c78f2=>{const _0x4b1bae=_0x3e4f1d;let _0x3f9d67=0x1;_0x44ee8c[_0x4b1bae(0x148)](_0x17e14f=>{const _0x310689=_0x4b1bae;_0x258268[_0x310689(0x148)](_0x3cb036=>{const _0x4d6db0=_0x310689;let _0x3dea70,_0x4777b9;const _0x3b1013=_0x44a9b1[_0x4d6db0(0x138)](_0x3cb036),_0x30320e=_0x3b1013?'C':_0x9bff9c?'F':'',_0x300119=_0x3b1013?_0x18565a:randomUpperCase(globalThis[_0x4d6db0(0x16b)]),_0x5ac1f5=_0x3b1013?_0x56293a:globalThis[_0x4d6db0(0x16b)],_0x46487e=generateRemark(_0x3f9d67,_0x17e14f,_0x3cb036,_0x365b7f,_0x4c78f2,_0x30320e);_0x4c78f2==='VLESS'&&(_0x3dea70=buildSingBoxVLESSOutbound(_0x24d837,_0x1e977a?_0x4d6db0(0x15d)+_0x174cc6:_0x46487e,_0x3cb036,_0x17e14f,_0x5ac1f5,_0x300119,_0x3b1013,_0x9bff9c),_0x57d723[_0x4d6db0(0x175)]['push'](_0x3dea70));_0x4c78f2===_0x4d6db0(0x19b)&&(_0x4777b9=buildSingBoxTrojanOutbound(_0x24d837,_0x1e977a?_0x4d6db0(0x15d)+_0x174cc6:_0x46487e,_0x3cb036,_0x17e14f,_0x5ac1f5,_0x300119,_0x3b1013,_0x9bff9c),_0x57d723[_0x4d6db0(0x175)][_0x4d6db0(0x14d)](_0x4777b9));if(_0x1e977a){const _0x5989db=structuredClone(_0x1e977a);_0x5989db[_0x4d6db0(0x172)]=_0x46487e,_0x5989db[_0x4d6db0(0x140)]=_0x4d6db0(0x15d)+_0x174cc6,_0x57d723[_0x4d6db0(0x175)][_0x4d6db0(0x14d)](_0x5989db);}_0x43e333[_0x4d6db0(0x175)][_0x4d6db0(0x14d)](_0x46487e),_0x3a2759[_0x4d6db0(0x175)][_0x4d6db0(0x14d)](_0x46487e),_0x174cc6++,_0x3f9d67++;});});}),new Response(JSON[_0x3e4f1d(0x1ab)](_0x57d723,null,0x4),{'status':0xc8,'headers':{'Content-Type':_0x3e4f1d(0x139),'Cache-Control':_0x3e4f1d(0x18c),'CDN-Cache-Control':_0x3e4f1d(0x147)}});}function a0_0x43ce(){const _0x56cf72=['geosite-phishing','log','prefer_ipv4','?ed=','💦\x20Warp','remote','💦\x20WoW','filter','GET','no-store,\x20no-cache,\x20must-revalidate,\x20proxy-revalidate','💦\x20','put','userID','block','and','0.0.0.0','parse','https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs','6vKRBBZ','route','https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs','geosite-ir','hiddify','geoip-cn','Trojan','domain_suffix','580390ptOpuV','application/octet-stream','ipv4_only','tun-in','time.apple.com','An\x20error\x20occured\x20while\x20parsing\x20chain\x20proxy:\x20','geosite-nsfw','interval','http/1.1','https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs','http','geosite-malware','1.1.1.1','protocol','stringify','ip_cidr','version','dns-out','geoip-phishing','includes','text/plain;charset=utf-8','vnp','4itWiSt','https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ru.srs','fdfe:dcba:9876::1/126','https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs','geosite-category-ads-all','detour','VLESS','inet6_range','dns-in','mixed','proxy-1','94271qxKFrz','no-store','forEach','keep-alive','755496eXRcWD','geosite-category-ru','507144EUtGbt','push','randomized','https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs','defaultHttpsPorts','geosite-cn','assign','grpc','geosite-cryptominers','-\x20Best\x20Ping\x20🚀','Rule','dns-direct','replace','172.16.0.2/32','dns-fake','wireguard','Sec-WebSocket-Protocol','proxy-','split','rule_set','urltest','reality','bestWarpInterval','Global','2117800YmeQJv','💦\x20Best\x20Ping\x20💥','fakeip','https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs','tls','rules','Direct','hostName','3053538tsFVkE','fc00::/18','tun','geoip-ru','127.0.0.1:9090','✅\x20Selector','tag','https://www.gstatic.com/generate_204','splice','outbounds','direct','transport','1360471vjghRJ','https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-nsfw.srs','length','any','dns-block','dns','servers','tls_fragment','socks','alpn','geoip-ir'];a0_0x43ce=function(){return _0x56cf72;};return a0_0x43ce();}const singboxConfigTemp={'log':{'level':'warn','timestamp':!![]},'dns':{'servers':[],'rules':[],'independent_cache':!![]},'inbounds':[{'type':a0_0x26e08b(0x176),'tag':a0_0x26e08b(0x143),'listen':a0_0x26e08b(0x192),'listen_port':0x1932,'override_address':a0_0x26e08b(0x1a9),'override_port':0x35},{'type':a0_0x26e08b(0x16e),'tag':a0_0x26e08b(0x1a0),'address':['172.18.0.1/28',a0_0x26e08b(0x13d)],'mtu':0x2328,'auto_route':!![],'strict_route':!![],'stack':a0_0x26e08b(0x144),'endpoint_independent_nat':!![],'sniff':!![],'sniff_override_destination':!![]},{'type':'mixed','tag':'mixed-in','listen':a0_0x26e08b(0x192),'listen_port':0x820,'sniff':!![],'sniff_override_destination':![]}],'outbounds':[{'type':'selector','tag':a0_0x26e08b(0x171),'outbounds':[]},{'type':a0_0x26e08b(0x160),'tag':'','outbounds':[],'url':a0_0x26e08b(0x173),'interval':''},{'type':a0_0x26e08b(0x176),'tag':a0_0x26e08b(0x176)},{'type':a0_0x26e08b(0x190),'tag':a0_0x26e08b(0x190)},{'type':'dns','tag':'dns-out'}],'route':{'rules':[],'rule_set':[],'auto_detect_interface':!![],'override_android_vpn':!![],'final':'✅\x20Selector'},'ntp':{'enabled':!![],'server':a0_0x26e08b(0x1a1),'server_port':0x7b,'detour':a0_0x26e08b(0x176),'interval':'30m'},'experimental':{'cache_file':{'enabled':!![],'store_fakeip':!![]},'clash_api':{'external_controller':a0_0x26e08b(0x170),'external_ui':'ui','external_ui_download_url':'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip','external_ui_download_detour':a0_0x26e08b(0x176),'default_mode':a0_0x26e08b(0x156)}}};
+import { getConfigAddresses, extractWireguardParams, generateRemark, randomUpperCase, getRandomPath, isIPv6 } from './helpers';
+import { getDataset } from '../kv/handlers';
+import { isDomain } from '../helpers/helpers';
+
+function buildSingBoxDNS (proxySettings, outboundAddrs, isWarp, remoteDNSDetour) {
+    const { 
+        remoteDNS, 
+        localDNS, 
+        vnpTrojanFakeDNS, 
+        enableIPv6,
+        warpFakeDNS,
+        warpEnableIPv6,
+        bypassIran, 
+        bypassChina, 
+        bypassRussia, 
+        blockAds, 
+        blockPorn,
+        customBypassRules,
+        customBlockRules
+    } = proxySettings;
+
+    let fakeip;
+    const isFakeDNS = (vnpTrojanFakeDNS && !isWarp) || (warpFakeDNS && isWarp);
+    const isIPv6 = (enableIPv6 && !isWarp) || (warpEnableIPv6 && isWarp);
+    const customBypassRulesDomains = customBypassRules.split(',').filter(address => isDomain(address));
+    const customBlockRulesDomains = customBlockRules.split(',').filter(address => isDomain(address));
+    const geoRules = [
+        { rule: bypassIran, type: 'direct', geosite: "geosite-ir", geoip: "geoip-ir" },
+        { rule: bypassChina, type: 'direct', geosite: "geosite-cn", geoip: "geoip-cn" },
+        { rule: bypassRussia, type: 'direct', geosite: "geosite-category-ru", geoip: "geoip-ru" },
+        { rule: true, type: 'block', geosite: "geosite-malware" },
+        { rule: true, type: 'block', geosite: "geosite-phishing" },
+        { rule: true, type: 'block', geosite: "geosite-cryptominers" },
+        { rule: blockAds, type: 'block', geosite: "geosite-category-ads-all" },
+        { rule: blockPorn, type: 'block', geosite: "geosite-nsfw" }
+    ];
+    const servers = [
+        {
+            address: isWarp ? "1.1.1.1" : remoteDNS,
+            address_resolver: "dns-direct",
+            strategy: isIPv6 ? "prefer_ipv4" : "ipv4_only",
+            detour: remoteDNSDetour,
+            tag: "dns-remote"
+        },
+        {
+            address: localDNS,
+            strategy: isIPv6 ? "prefer_ipv4" : "ipv4_only",
+            detour: "direct",
+            tag: "dns-direct"
+        },
+        {
+            address: "rcode://success",
+            tag: "dns-block"
+        }
+    ];
+
+    let outboundRule;
+    if (isWarp) {
+        outboundRule = { 
+            outbound: "any", 
+            server: "dns-direct" 
+        };
+    } else {
+        const outboundDomains = outboundAddrs.filter(address => isDomain(address));
+        const uniqueDomains = [...new Set(outboundDomains)];
+        outboundRule = { 
+            domain: uniqueDomains, 
+            server: "dns-direct" 
+        };
+    }
+
+    const rules = [
+        outboundRule,
+        {
+            clash_mode: "Direct",
+            server: "dns-direct"
+        },
+        {
+            clash_mode: "Global",
+            server: "dns-remote"
+        }
+    ];
+    
+    let blockRule = {
+        disable_cache: true,
+        rule_set: [],
+        server: "dns-block"
+    };
+
+    geoRules.forEach(({ rule, type, geosite, geoip }) => {
+        rule && type === 'direct' && rules.push({
+            type: "logical",
+            mode: "and",
+            rules: [
+                { rule_set: geosite },
+                { rule_set: geoip }
+            ],
+            "server": "dns-direct"
+        });
+
+        rule && type === 'block' && blockRule.rule_set.push(geosite);
+    });
+
+    rules.push(blockRule);
+    const createRule = (server) => ({ 
+        domain_suffix: [], 
+        server 
+    });
+
+    let domainDirectRule, domainBlockRule;
+    if (customBypassRulesDomains.length) {
+        domainDirectRule = createRule("dns-direct");
+        customBypassRulesDomains.forEach( domain => {
+            domainDirectRule.domain_suffix.push(domain);
+        });
+        
+        rules.push(domainDirectRule);
+    }
+    
+    if (customBlockRulesDomains.length) {
+        domainBlockRule = createRule("dns-block");
+        customBlockRulesDomains.forEach( domain => {
+            domainBlockRule.domain_suffix.push(domain);
+        });
+
+        rules.push(domainBlockRule);
+    }
+
+    if (isFakeDNS) {
+        servers.push({
+            address: "fakeip",
+            tag: "dns-fake"
+        });
+
+        rules.push({
+            disable_cache: true,
+            inbound: "tun-in",
+            query_type: [
+              "A",
+              "AAAA"
+            ],
+            server: "dns-fake"
+        });
+
+        fakeip = {
+            enabled: true,
+            inet4_range: "198.18.0.0/15"
+        };
+
+        if (isIPv6) fakeip.inet6_range = "fc00::/18";
+    }
+
+    return {servers, rules, fakeip};
+}
+
+function buildSingBoxRoutingRules (proxySettings) {
+    const { 
+        bypassLAN, 
+        bypassIran, 
+        bypassChina, 
+        bypassRussia, 
+        blockAds, 
+        blockPorn, 
+        blockUDP443,
+        customBypassRules,
+        customBlockRules 
+    } = proxySettings;
+
+    const customBypassRulesTotal = customBypassRules ? customBypassRules.split(',') : [];
+    const customBlockRulesTotal = customBlockRules ? customBlockRules.split(',') : [];
+    const defaultRules = [
+        {
+            type: "logical",
+            mode: "or",
+            rules: [
+                {
+                    inbound: "dns-in",
+                },
+                {
+                    network: "udp",
+                    port: 53
+                }
+            ],
+            outbound: "dns-out"
+        },
+        {
+            clash_mode: "Direct",
+            outbound: "direct"
+        },
+        {
+            clash_mode: "Global",
+            outbound: "✅ Selector"
+        }
+    ];
+
+    const geoRules = [
+        { 
+            rule: bypassIran,
+            type: 'direct',
+            ruleSet: { 
+                geosite: "geosite-ir", 
+                geoip: "geoip-ir", 
+                geositeURL: "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs", 
+                geoipURL: "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs"
+            }
+        },
+        { 
+            rule: bypassChina,
+            type: 'direct',
+            ruleSet: { 
+                geosite: "geosite-cn", 
+                geoip: "geoip-cn", 
+                geositeURL: "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs", 
+                geoipURL: "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+            }
+        },
+        { 
+            rule: bypassRussia,
+            type: 'direct', 
+            ruleSet: { 
+                geosite: "geosite-category-ru",
+                geoip: "geoip-ru", 
+                geositeURL: "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ru.srs", 
+                geoipURL: "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-ru.srs"
+            }
+        },
+        { 
+            rule: true,
+            type: 'block', 
+            ruleSet: { 
+                geosite: "geosite-malware", 
+                geoip: "geoip-malware", 
+                geositeURL: "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs", 
+                geoipURL: "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs"
+            }
+        },
+        { 
+            rule: true,
+            type: 'block',
+            ruleSet: { 
+                geosite: "geosite-phishing", 
+                geoip: "geoip-phishing", 
+                geositeURL: "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs", 
+                geoipURL: "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs"
+            }
+        },
+        { 
+            rule: true,
+            type: 'block',
+            ruleSet: { 
+                geosite: "geosite-cryptominers", 
+                geositeURL: "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs", 
+            }
+        },
+        { 
+            rule: blockAds,
+            type: 'block',
+            ruleSet: { 
+                geosite: "geosite-category-ads-all", 
+                geositeURL: "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs", 
+            }
+        },
+        { 
+            rule: blockPorn,
+            type: 'block', 
+            ruleSet: { 
+                geosite: "geosite-nsfw", 
+                geositeURL: "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-nsfw.srs", 
+            }
+        },
+    ];
+
+    const directDomainRules = [], directIPRules = [], blockDomainRules = [], blockIPRules = [], ruleSets = [];
+    bypassLAN && directIPRules.push({
+        ip_is_private: true,
+        outbound: "direct"
+    });
+
+    const createRule = (rule, outbound) => ({
+        [rule]: [],
+        outbound
+    });
+
+    const routingRuleSet = {
+        type: "remote",
+        tag: "",
+        format: "binary",
+        url: "",
+        download_detour: "direct"
+    };
+
+    const directDomainRule = createRule('rule_set', 'direct');;
+    const directIPRule = createRule('rule_set', 'direct');;
+    const blockDomainRule = createRule('rule_set', 'block');
+    const blockIPRule = createRule('rule_set', 'block');
+
+    geoRules.forEach(({ rule, type, ruleSet }) => {
+        if (!rule) return;
+        const { geosite, geoip, geositeURL, geoipURL } = ruleSet;
+        const isDirect = type === 'direct';
+        const domainRule = isDirect ? directDomainRule : blockDomainRule;
+        const ipRule = isDirect ? directIPRule : blockIPRule;
+        
+        domainRule.rule_set.push(geosite);
+        ruleSets.push({ ...routingRuleSet, tag: geosite, url: geositeURL });
+        if (geoip) {
+            ipRule.rule_set.push(geoip);
+            ruleSets.push({ ...routingRuleSet, tag: geoip, url: geoipURL });
+        } 
+    });
+
+    const pushRuleIfNotEmpty = (rule, targetArray) => {
+        if (rule.rule_set?.length || rule.domain_suffix?.length || rule.ip_cidr?.length) {
+            targetArray.push(rule);
+        }
+    };
+    
+    pushRuleIfNotEmpty(directDomainRule, directDomainRules);
+    pushRuleIfNotEmpty(directIPRule, directIPRules);
+    pushRuleIfNotEmpty(blockDomainRule, blockDomainRules);
+    pushRuleIfNotEmpty(blockIPRule, blockIPRules);
+
+    const processRules = (addresses, action) => {
+        const domainRule = createRule('domain_suffix', action);
+        const ipRule = createRule('ip_cidr', action); 
+        addresses.forEach(address => {
+            if (isDomain(address)) {
+                domainRule.domain_suffix.push(address);
+            } else {
+                const ip = isIPv6(address) ? address.replace(/\[|\]/g, '') : address;
+                ipRule.ip_cidr.push(ip);
+            }
+        });
+
+        pushRuleIfNotEmpty(domainRule, action === 'direct' ? directDomainRules : blockDomainRules);
+        pushRuleIfNotEmpty(ipRule, action === 'direct' ? directIPRules : blockIPRules);
+    };
+    
+    customBypassRulesTotal.length && processRules(customBypassRulesTotal, 'direct');    
+    customBlockRulesTotal.length && processRules(customBlockRulesTotal, 'block');
+    const rules = [...defaultRules, ...directDomainRules, ...directIPRules, ...blockDomainRules, ...blockIPRules];
+    blockUDP443 && rules.push({
+        network: "udp",
+        port: 443,
+        protocol: "quic",
+        outbound: "block"
+    });
+
+    return {rules, rule_set: ruleSets};
+}
+
+function buildSingBoxVLESSOutbound (proxySettings, remark, address, port, host, sni, allowInsecure, isFragment) {
+    const { enableIPv6, lengthMin, lengthMax, intervalMin, intervalMax, proxyIP } = proxySettings;
+    const path = `/${getRandomPath(16)}${proxyIP ? `/${btoa(proxyIP)}` : ''}`;
+    const tls = globalThis.defaultHttpsPorts.includes(port) ? true : false;
+    const outbound =  {
+        type: "vnp",
+        server: address,
+        server_port: +port,
+        domain_strategy: enableIPv6 ? "prefer_ipv4" : "ipv4_only",
+        uuid: globalThis.userID,
+        tls: {
+            alpn: "http/1.1",
+            enabled: true,
+            insecure: allowInsecure,
+            server_name: sni,
+            utls: {
+                enabled: true,
+                fingerprint: "randomized"
+            }
+        },
+        transport: {
+            early_data_header_name: "Sec-WebSocket-Protocol",
+            max_early_data: 2560,
+            headers: {
+                Host: host
+            },
+            path: path,
+            type: "ws"
+        },
+        tag: remark
+    };
+
+    if (!tls) delete outbound.tls;
+    if (isFragment) outbound.tls_fragment = {
+        enabled: true,
+        size: `${lengthMin}-${lengthMax}`,
+        sleep: `${intervalMin}-${intervalMax}`
+    };
+
+    return outbound;
+}
+
+function buildSingBoxTrojanOutbound (proxySettings, remark, address, port, host, sni, allowInsecure, isFragment) {
+    const { enableIPv6, lengthMin, lengthMax, intervalMin, intervalMax, proxyIP } = proxySettings;
+    const path = `/tr${getRandomPath(16)}${proxyIP ? `/${btoa(proxyIP)}` : ''}`;
+    const tls = globalThis.defaultHttpsPorts.includes(port) ? true : false;
+    const outbound = {
+        type: "tnp",
+        password: globalThis.tnpPassword,
+        server: address,
+        server_port: +port,
+        domain_strategy: enableIPv6 ? "prefer_ipv4" : "ipv4_only",
+        tls: {
+            alpn: "http/1.1",
+            enabled: true,
+            insecure: allowInsecure,
+            server_name: sni,
+            utls: {
+                enabled: true,
+                fingerprint: "randomized"
+            }
+        },
+        transport: {
+            early_data_header_name: "Sec-WebSocket-Protocol",
+            max_early_data: 2560,
+            headers: {
+                Host: host
+            },
+            path: path,
+            type: "ws"
+        },
+        tag: remark
+    }
+
+    if (!tls) delete outbound.tls;
+    if (isFragment) outbound.tls_fragment = {
+        enabled: true,
+        size: `${lengthMin}-${lengthMax}`,
+        sleep: `${intervalMin}-${intervalMax}`
+    };
+
+    return outbound;    
+}
+
+function buildSingBoxWarpOutbound (proxySettings, warpConfigs, remark, endpoint, chain, client) {
+    const ipv6Regex = /\[(.*?)\]/;
+    const portRegex = /[^:]*$/;
+    const endpointServer = endpoint.includes('[') ? endpoint.match(ipv6Regex)[1] : endpoint.split(':')[0];
+    const endpointPort = endpoint.includes('[') ? +endpoint.match(portRegex)[0] : +endpoint.split(':')[1];
+    const { 
+        warpEnableIPv6,
+		hiddifyNoiseMode, 
+		noiseCountMin, 
+		noiseCountMax, 
+		noiseSizeMin, 
+		noiseSizeMax, 
+		noiseDelayMin, 
+		noiseDelayMax 
+	} = proxySettings;
+
+    const {
+        warpIPv6,
+        reserved,
+        publicKey,
+        privateKey
+    } = extractWireguardParams(warpConfigs, chain);
+
+    const outbound = {
+        local_address: [
+            "172.16.0.2/32",
+            warpIPv6
+        ],
+        mtu: 1280,
+        peer_public_key: publicKey,
+        private_key: privateKey,
+        reserved: reserved,
+        server: endpointServer,
+        server_port: endpointPort,
+        domain_strategy: warpEnableIPv6 ? "prefer_ipv4" : "ipv4_only",
+        type: "wireguard",
+        detour: chain,
+        tag: remark
+    };
+
+    client === 'hiddify' && Object.assign(outbound, {
+        fake_packets_mode: hiddifyNoiseMode,
+        fake_packets: noiseCountMin === noiseCountMax ? noiseCountMin : `${noiseCountMin}-${noiseCountMax}`,
+        fake_packets_size: noiseSizeMin === noiseSizeMax ? noiseSizeMin : `${noiseSizeMin}-${noiseSizeMax}`,
+        fake_packets_delay: noiseDelayMin === noiseDelayMax ? noiseDelayMin : `${noiseDelayMin}-${noiseDelayMax}`
+    });
+
+    return outbound;
+}
+
+function buildSingBoxChainOutbound (chainProxyParams, enableIPv6) {
+    if (["socks", "http"].includes(chainProxyParams.protocol)) {
+        const { protocol, server, port, user, pass } = chainProxyParams;
+    
+        const chainOutbound = {
+            type: protocol,
+            tag: "",
+            server: server,
+            server_port: +port,
+            username: user,
+            password: pass,
+            detour: ""
+        };
+    
+        if (protocol === 'socks') chainOutbound.version = "5";
+        return chainOutbound;
+    }
+
+    const { server, port, uuid, flow, security, type, sni, fp, alpn, pbk, sid, headerType, host, path, serviceName } = chainProxyParams;
+    const chainOutbound = {
+        type: "vnp",
+        tag: "",
+        server: server,
+        server_port: +port,
+        domain_strategy: enableIPv6 ? "prefer_ipv4" : "ipv4_only",
+        uuid: uuid,
+        flow: flow,
+        detour: ""
+    };
+
+    if (security === 'tls' || security === 'reality') {
+        const tlsAlpns = alpn ? alpn?.split(',').filter(value => value !== 'h2') : [];
+        chainOutbound.tls = {
+            enabled: true,
+            server_name: sni,
+            insecure: false,
+            alpn: tlsAlpns,
+            utls: {
+                enabled: true,
+                fingerprint: fp
+            }
+        };
+
+        if (security === 'reality') {
+            chainOutbound.tls.reality = {
+                enabled: true,
+                public_key: pbk,
+                short_id: sid
+            };
+
+            delete chainOutbound.tls.alpn;
+        }
+    }
+
+    if (headerType === 'http') {
+        const httpHosts = host?.split(',');
+        chainOutbound.transport = {
+            type: "http",
+            host: httpHosts,
+            path: path,
+            method: "GET",
+            headers: { 
+                "Connection": ["keep-alive"],
+                "Content-Type": ["application/octet-stream"]
+            },
+        };
+    }
+
+    if (type === 'ws') {
+        const wsPath = path?.split('?ed=')[0];
+        const earlyData = +path?.split('?ed=')[1] || 0;
+        chainOutbound.transport = {
+            type: "ws",
+            path: wsPath,
+            headers: { Host: host },
+            max_early_data: earlyData,
+            early_data_header_name: "Sec-WebSocket-Protocol"
+        };
+    }
+
+    if (type === 'grpc') chainOutbound.transport = {
+        type: "grpc",
+        service_name: serviceName
+    };
+
+    return chainOutbound;
+}
+
+export async function getSingBoxWarpConfig (request, env, client) {
+    const { proxySettings, warpConfigs } = await getDataset(request, env);
+    const { warpEndpoints } = proxySettings;
+    const config = structuredClone(singboxConfigTemp);
+    const proIndicator = client === 'hiddify' ? ' Pro ' : ' ';
+    const dnsObject = buildSingBoxDNS(proxySettings, undefined, true, `💦 Warp${proIndicator}- Best Ping 🚀`);
+    const {rules, rule_set} = buildSingBoxRoutingRules(proxySettings);
+    config.dns.servers = dnsObject.servers;
+    config.dns.rules = dnsObject.rules;
+    if (dnsObject.fakeip) config.dns.fakeip = dnsObject.fakeip;
+    config.route.rules = rules;
+    config.route.rule_set = rule_set;
+    const selector = config.outbounds[0];
+    const warpUrlTest = config.outbounds[1];
+    selector.outbounds = [`💦 Warp${proIndicator}- Best Ping 🚀`, `💦 WoW${proIndicator}- Best Ping 🚀`];
+    config.outbounds.splice(2, 0, structuredClone(warpUrlTest));
+    const WoWUrlTest = config.outbounds[2];
+    warpUrlTest.tag = `💦 Warp${proIndicator}- Best Ping 🚀`;
+    warpUrlTest.interval = `${proxySettings.bestWarpInterval}s`;
+    WoWUrlTest.tag = `💦 WoW${proIndicator}- Best Ping 🚀`;
+    WoWUrlTest.interval = `${proxySettings.bestWarpInterval}s`;
+    const warpRemarks = [], WoWRemarks = [];
+
+    warpEndpoints.split(',').forEach( (endpoint, index) => {
+        const warpRemark = `💦 ${index + 1} - Warp 🇮🇷`;
+        const WoWRemark = `💦 ${index + 1} - WoW 🌍`;
+        const warpOutbound = buildSingBoxWarpOutbound(proxySettings, warpConfigs, warpRemark, endpoint, '', client);
+        const WoWOutbound = buildSingBoxWarpOutbound(proxySettings, warpConfigs, WoWRemark, endpoint, warpRemark, client);
+        config.outbounds.push(WoWOutbound, warpOutbound);
+        warpRemarks.push(warpRemark);
+        WoWRemarks.push(WoWRemark);
+        warpUrlTest.outbounds.push(warpRemark);
+        WoWUrlTest.outbounds.push(WoWRemark);
+    });
+    
+    selector.outbounds.push(...warpRemarks, ...WoWRemarks);
+    return new Response(JSON.stringify(config, null, 4), { 
+        status: 200,
+        headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+            'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+            'CDN-Cache-Control': 'no-store'
+        }
+    });
+}
+
+export async function getSingBoxCustomConfig(request, env, isFragment) {
+    const { proxySettings } = await getDataset(request, env);
+    let chainProxy;
+    const { 
+        cleanIPs,  
+        ports, 
+        vnpConfigs, 
+        tnpConfigs, 
+        outProxy, 
+        outProxyParams,
+        customCdnAddrs,
+        customCdnHost,
+        customCdnSni,
+        bestVLESSTrojanInterval,
+        enableIPv6
+    } = proxySettings;
+ 
+    if (outProxy) {
+        const proxyParams = JSON.parse(outProxyParams);      
+        try {
+            chainProxy = buildSingBoxChainOutbound(proxyParams, enableIPv6);
+        } catch (error) {
+            console.log('An error occured while parsing chain proxy: ', error);
+            chainProxy = undefined;
+            await env.bn2.put("proxySettings", JSON.stringify({
+                ...proxySettings, 
+                outProxy: '',
+                outProxyParams: {}
+            }));
+        }
+    }
+    
+    const Addresses = await getConfigAddresses(cleanIPs, enableIPv6);
+    const customCdnAddresses = customCdnAddrs ? customCdnAddrs.split(',') : [];
+    const totalAddresses = [...Addresses, ...customCdnAddresses];
+    const config = structuredClone(singboxConfigTemp);
+    const dnsObject = buildSingBoxDNS(proxySettings, totalAddresses, false, chainProxy ? 'proxy-1' : '✅ Selector');
+    const {rules, rule_set} = buildSingBoxRoutingRules(proxySettings);
+    config.dns.servers = dnsObject.servers;
+    config.dns.rules = dnsObject.rules;
+    if (dnsObject.fakeip) config.dns.fakeip = dnsObject.fakeip;
+    config.route.rules = rules;
+    config.route.rule_set = rule_set;
+    const selector = config.outbounds[0];
+    const urlTest = config.outbounds[1];
+    selector.outbounds = ['💦 Best Ping 💥'];
+    urlTest.interval = `${bestVLESSTrojanInterval}s`;
+    urlTest.tag = '💦 Best Ping 💥';
+    const totalPorts = ports.filter(port => isFragment ? globalThis.defaultHttpsPorts.includes(port) : true);
+    let proxyIndex = 1;
+    const protocols = [
+        ...(vnpConfigs ? ['VLESS'] : []),
+        ...(tnpConfigs ? ['Trojan'] : [])
+    ];
+
+    protocols.forEach ( protocol => {
+        let protocolIndex = 1;
+        totalPorts.forEach ( port => {
+            totalAddresses.forEach ( addr => {
+                let VLESSOutbound, TrojanOutbound;
+                const isCustomAddr = customCdnAddresses.includes(addr);
+                const configType = isCustomAddr ? 'C' : isFragment ? 'F' : '';
+                const sni = isCustomAddr ? customCdnSni : randomUpperCase(globalThis.hostName);
+                const host = isCustomAddr ? customCdnHost : globalThis.hostName;
+                const remark = generateRemark(protocolIndex, port, addr, cleanIPs, protocol, configType);
+         
+                if (protocol === 'VLESS') {
+                    VLESSOutbound = buildSingBoxVLESSOutbound (
+                        proxySettings,
+                        chainProxy ? `proxy-${proxyIndex}` : remark, 
+                        addr, 
+                        port, 
+                        host,
+                        sni,
+                        isCustomAddr, 
+                        isFragment
+                    );
+                    config.outbounds.push(VLESSOutbound);
+                }
+                
+                if (protocol === 'Trojan') {
+                    TrojanOutbound = buildSingBoxTrojanOutbound (
+                        proxySettings,
+                        chainProxy ? `proxy-${proxyIndex}` : remark, 
+                        addr, 
+                        port, 
+                        host,
+                        sni,
+                        isCustomAddr,
+                        isFragment
+                    );
+                    config.outbounds.push(TrojanOutbound);
+                }
+                
+                if (chainProxy) {
+                    const chain = structuredClone(chainProxy);
+                    chain.tag = remark;
+                    chain.detour = `proxy-${proxyIndex}`;
+                    config.outbounds.push(chain);
+                }
+                
+                selector.outbounds.push(remark);
+                urlTest.outbounds.push(remark);
+                proxyIndex++;
+                protocolIndex++;
+            });
+        });
+    });
+
+    return new Response(JSON.stringify(config, null, 4), { 
+        status: 200,
+        headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+            'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+            'CDN-Cache-Control': 'no-store'
+        }
+    });
+}
+
+const singboxConfigTemp = {
+    log: {
+        level: "warn",
+        timestamp: true
+    },
+    dns: {
+        servers: [],
+        rules: [],
+        independent_cache: true
+    },
+    inbounds: [
+        {
+            type: "direct",
+            tag: "dns-in",
+            listen: "0.0.0.0",
+            listen_port: 6450,
+            override_address: "1.1.1.1",
+            override_port: 53
+        },
+        {
+            type: "tun",
+            tag: "tun-in",
+            address: [
+                "172.18.0.1/28",
+                "fdfe:dcba:9876::1/126"
+            ],
+            mtu: 9000,
+            auto_route: true,
+            strict_route: true,
+            stack: "mixed",
+            endpoint_independent_nat: true,
+            sniff: true,
+            sniff_override_destination: true
+        },
+        {
+            type: "mixed",
+            tag: "mixed-in",
+            listen: "0.0.0.0",
+            listen_port: 2080,
+            sniff: true,
+            sniff_override_destination: false
+        }
+    ],
+    outbounds: [
+        {
+            type: "selector",
+            tag: "✅ Selector",
+            outbounds: []
+        },
+        {
+            type: "urltest",
+            tag: "",
+            outbounds: [],
+            url: "https://www.gstatic.com/generate_204",
+            interval: ""
+        },
+        {
+            type: "direct",
+            tag: "direct"
+        },
+        {
+            type: "block",
+            tag: "block"
+        },
+        {
+            type: "dns",
+            tag: "dns-out"
+        }
+    ],
+    route: {
+        rules: [],
+        rule_set: [],
+        auto_detect_interface: true,
+        override_android_vpn: true,
+        final: "✅ Selector"
+    },
+    ntp: {
+        enabled: true,
+        server: "time.apple.com",
+        server_port: 123,
+        detour: "direct",
+        interval: "30m",
+    },
+    experimental: {
+        cache_file: {
+            enabled: true,
+            store_fakeip: true
+        },
+        clash_api: {
+            external_controller: "127.0.0.1:9090",
+            external_ui: "ui",
+            external_ui_download_url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+            external_ui_download_detour: "direct",
+            default_mode: "Rule"
+        }
+    }
+};

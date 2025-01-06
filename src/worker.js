@@ -1,1 +1,70 @@
-function a0_0x474b(_0x228475,_0x1d515){const _0x4856bb=a0_0x4856();return a0_0x474b=function(_0x474b8e,_0x12ae28){_0x474b8e=_0x474b8e-0x1c7;let _0x53d76=_0x4856bb[_0x474b8e];return _0x53d76;},a0_0x474b(_0x228475,_0x1d515);}(function(_0x1a38eb,_0x469470){const _0x1ff14b=a0_0x474b,_0x1725e5=_0x1a38eb();while(!![]){try{const _0x5f0868=-parseInt(_0x1ff14b(0x1dd))/0x1+parseInt(_0x1ff14b(0x1c8))/0x2*(-parseInt(_0x1ff14b(0x1ce))/0x3)+-parseInt(_0x1ff14b(0x1e1))/0x4+parseInt(_0x1ff14b(0x1cf))/0x5+-parseInt(_0x1ff14b(0x1e4))/0x6+-parseInt(_0x1ff14b(0x1cc))/0x7+parseInt(_0x1ff14b(0x1da))/0x8*(parseInt(_0x1ff14b(0x1d0))/0x9);if(_0x5f0868===_0x469470)break;else _0x1725e5['push'](_0x1725e5['shift']());}catch(_0xf27b31){_0x1725e5['push'](_0x1725e5['shift']());}}}(a0_0x4856,0xbbe33));import{initializeParams}from'./helpers/init';import{vnpOverWSHandler}from'./protocols/vnp';import{tnpOverWSHandler}from'./protocols/tnp';import{updateWarpConfigs}from'./kv/handlers';function a0_0x4856(){const _0x517a21=['5113220XahcmU','/panel','websocket','5421600Jfvdtg','/fragsub/','331962QmTuVN','singbox','/update-warp','/secrets','5541683fbquqJ','sfa','6qJZQKS','3730200CdEWDh','4462902TBCQXV','userID','client','/my-ip','Upgrade','clash','/login','/warpsub/','pathName','headers','64oHbUqj','/logout','xray','637941oogLxK','/panel/password','/sub/','get'];a0_0x4856=function(){return _0x517a21;};return a0_0x4856();}import{logout,resetPassword,login}from'./authentication/auth';import{renderErrorPage}from'./pages/error';import{getXrayCustomConfigs,getXrayWarpConfigs}from'./cores-configs/xray';import{getSingBoxCustomConfig,getSingBoxWarpConfig}from'./cores-configs/sing-box';import{getClashNormalConfig,getClashWarpConfig}from'./cores-configs/clash';import{getNormalConfigs}from'./cores-configs/normalConfigs';import{fallback,getMyIP,handlePanel}from'./helpers/helpers';import{renderSecretsPage}from'./pages/secrets';export default{async 'fetch'(_0x389427,_0x355dd3){const _0x4fff8f=a0_0x474b;try{initializeParams(_0x389427,_0x355dd3);const _0x16c701=_0x389427[_0x4fff8f(0x1d9)][_0x4fff8f(0x1e0)](_0x4fff8f(0x1d4));if(!_0x16c701||_0x16c701!==_0x4fff8f(0x1e3))switch(globalThis['pathName']){case _0x4fff8f(0x1ca):return await updateWarpConfigs(_0x389427,_0x355dd3);case _0x4fff8f(0x1df)+globalThis['userID']:if(globalThis[_0x4fff8f(0x1d2)]===_0x4fff8f(0x1cd))return await getSingBoxCustomConfig(_0x389427,_0x355dd3,![]);if(globalThis[_0x4fff8f(0x1d2)]===_0x4fff8f(0x1d5))return await getClashNormalConfig(_0x389427,_0x355dd3);if(globalThis[_0x4fff8f(0x1d2)]===_0x4fff8f(0x1dc))return await getXrayCustomConfigs(_0x389427,_0x355dd3,![]);return await getNormalConfigs(_0x389427,_0x355dd3);case _0x4fff8f(0x1c7)+globalThis[_0x4fff8f(0x1d1)]:return globalThis[_0x4fff8f(0x1d2)]==='hiddify'?await getSingBoxCustomConfig(_0x389427,_0x355dd3,!![]):await getXrayCustomConfigs(_0x389427,_0x355dd3,!![]);case _0x4fff8f(0x1d7)+globalThis[_0x4fff8f(0x1d1)]:if(globalThis[_0x4fff8f(0x1d2)]===_0x4fff8f(0x1d5))return await getClashWarpConfig(_0x389427,_0x355dd3);if(globalThis[_0x4fff8f(0x1d2)]===_0x4fff8f(0x1c9)||globalThis[_0x4fff8f(0x1d2)]==='hiddify')return await getSingBoxWarpConfig(_0x389427,_0x355dd3,globalThis[_0x4fff8f(0x1d2)]);return await getXrayWarpConfigs(_0x389427,_0x355dd3,globalThis[_0x4fff8f(0x1d2)]);case _0x4fff8f(0x1e2):return await handlePanel(_0x389427,_0x355dd3);case _0x4fff8f(0x1d6):return await login(_0x389427,_0x355dd3);case _0x4fff8f(0x1db):return logout();case _0x4fff8f(0x1de):return await resetPassword(_0x389427,_0x355dd3);case _0x4fff8f(0x1d3):return await getMyIP(_0x389427);case _0x4fff8f(0x1cb):return await renderSecretsPage();default:return await fallback(_0x389427);}else return globalThis[_0x4fff8f(0x1d8)]['startsWith']('/tr')?await tnpOverWSHandler(_0x389427):await vnpOverWSHandler(_0x389427);}catch(_0x2bfb96){return await renderErrorPage(_0x2bfb96);}}};
+import { initializeParams } from './helpers/init';
+import { vnpOverWSHandler } from './protocols/vnp';
+import { tnpOverWSHandler } from './protocols/tnp';
+import { updateWarpConfigs } from './kv/handlers';
+import { logout, resetPassword, login } from './authentication/auth';
+import { renderErrorPage } from './pages/error';
+import { getXrayCustomConfigs, getXrayWarpConfigs } from './cores-configs/xray';
+import { getSingBoxCustomConfig, getSingBoxWarpConfig } from './cores-configs/sing-box';
+import { getClashNormalConfig, getClashWarpConfig } from './cores-configs/clash';
+import { getNormalConfigs } from './cores-configs/normalConfigs';
+import { fallback, getMyIP, handlePanel } from './helpers/helpers';
+import { renderSecretsPage } from './pages/secrets';
+
+export default {
+    async fetch(request, env) {
+        try {    
+            initializeParams(request, env);
+            const upgradeHeader = request.headers.get('Upgrade');
+            if (!upgradeHeader || upgradeHeader !== 'websocket') {            
+                switch (globalThis.pathName) {                    
+                    case '/update-warp':
+                        return await updateWarpConfigs(request, env);
+
+                    case `/sub/${globalThis.userID}`:
+                        if (globalThis.client === 'sfa') return await getSingBoxCustomConfig(request, env, false);
+                        if (globalThis.client === 'clash') return await getClashNormalConfig(request, env);
+                        if (globalThis.client === 'xray') return await getXrayCustomConfigs(request, env, false);
+                        return await getNormalConfigs(request, env);                        
+
+                    case `/fragsub/${globalThis.userID}`:
+                        return globalThis.client === 'hiddify'
+                            ? await getSingBoxCustomConfig(request, env, true)
+                            : await getXrayCustomConfigs(request, env, true);
+
+                    case `/warpsub/${globalThis.userID}`:
+                        if (globalThis.client === 'clash') return await getClashWarpConfig(request, env);   
+                        if (globalThis.client === 'singbox' || globalThis.client === 'hiddify') return await getSingBoxWarpConfig(request, env, globalThis.client);
+                        return await getXrayWarpConfigs(request, env, globalThis.client);
+
+                    case '/panel':
+                        return await handlePanel(request, env);
+                                                      
+                    case '/login':
+                        return await login(request, env);
+                    
+                    case '/logout':                        
+                        return logout();        
+
+                    case '/panel/password':
+                        return await resetPassword(request, env);
+                    
+                    case '/my-ip':
+                        return await getMyIP(request);
+
+                    case '/secrets':
+                        return await renderSecretsPage();
+
+                    default:
+                        return await fallback(request);
+                }
+            } else {
+                return globalThis.pathName.startsWith('/tr') 
+                    ? await tnpOverWSHandler(request) 
+                    : await vnpOverWSHandler(request);
+            }
+        } catch (err) {
+            return await renderErrorPage(err);
+        }
+    }
+};
