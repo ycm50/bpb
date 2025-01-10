@@ -22,7 +22,7 @@ jobs:
     # 安装依赖
     - name: Install dependencies
       run: npm install
-      working-directory: ./bpb/src # 如果 package.json 在子目录，设置工作目录
+      working-directory: ./src # 如果 package.json 在子目录，设置工作目录
 
     # 使用 Rollup 构建
     - name: Build with Rollup
