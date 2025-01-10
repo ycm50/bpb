@@ -1,0 +1,11 @@
+{
+  "name": "bpb",
+  "version": "1.0.0",
+  "description": "confu.js是混淆aaa文件夹及其子文件夹下面的所有js，rep是替换aaa及其子文件夹下的所有文件的某一段文本的具体可供修改：\r ![image](https://github.com/user-attachments/assets/468d45a6-0ed2-4a6d-a3cd-8e3f063c4231)",
+  "main": "confu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
