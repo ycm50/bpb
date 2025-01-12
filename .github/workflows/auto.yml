@@ -1,8 +1,9 @@
 name: Build and Deploy Worker
 
-# 改为手动触发工作流
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - dev
 
 permissions:
   contents: write
@@ -21,24 +22,20 @@ jobs:
           node-version: "latest"
 
       - name: Install dependencies
-        working-directory: ./src/
         run: npm install
 
       - name: Build project
         run: |
           npx wrangler deploy src/worker.js --name bpb-worker-panel --compatibility-flag [nodejs_compat] --compatibility-date 2024-10-26 --dry-run --outdir=dist
           mkdir -p unobfuscated  # 确保目标目录存在
-          cp -f dist/worker.js unobfuscated/worker.js
-          npx javascript-obfuscator --config ./obfs-config.json dist/worker.js --output _worker.js
+          cp -f dist/worker.js unobfuscated/worker.js  # 复制文件，不进行混淆
 
-      - name: Commit and push built worker to main
+      - name: Commit and push built worker
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout main  # 确保切换到 main 分支
-          git add _worker.js
-          git add -f unobfuscated/worker.js
-          git commit -m "Automated build: update _worker.js"
-          git push origin main  # 将更改推送到 main 分支
+          git add unobfuscated/worker.js
+          git commit -m "Automated build: update worker.js"
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
