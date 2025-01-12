@@ -20,7 +20,10 @@ jobs:
           node-version: "latest"
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd ./src/  # 切换到 src 目录
+          npm install
+
 
       - name: Build project
         run: |
