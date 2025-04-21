@@ -1,0 +1,31 @@
+{
+  "name": "bpb1",
+  "version": "1.0.0",
+  "main": "_worker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ycm50/bpb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ycm50/bpb/issues"
+  },
+  "homepage": "https://github.com/ycm50/bpb#readme",
+  "dependencies": {
+    "esbuild": "^0.25.2",
+    "glob": "^11.0.1",
+    "html-minifier": "^4.0.0",
+    "javascript-obfuscator": "^4.1.1",
+    "jose": "^6.0.10",
+    "js-sha256": "^0.11.0",
+    "jszip": "^3.10.1",
+    "terser": "^5.39.0",
+    "tweetnacl": "^1.0.3"
+  },
+  "keywords": [],
+  "description": ""
+}
