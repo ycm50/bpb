@@ -27,7 +27,8 @@
 
 1. 安装依赖（如未安装）：
    ```bash
-   npm install
+   git clone https://github.com/ycm50/bpb.git
+   cd bpb
    ```
 2. 执行打包脚本：
    ```bash
